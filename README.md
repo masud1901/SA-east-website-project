@@ -1,10 +1,10 @@
-# React Landing Page Project
+# SA east website project
 
-This repository contains the source code for a React-based landing page built with Vite and Bootstrap. Follow the instructions below to set up and run the project on your local machine.
+This repository contains the source code for a SA east website project built with Vite and Bootstrap. Follow the instructions below to set up and run the project on your local machine.
 
 ## Table of Contents
 
-- [React Landing Page Project](#react-landing-page-project)
+- [SA east website project](#sa-east-website-project)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
     - [Prerequisites](#prerequisites)
@@ -41,7 +41,7 @@ Before you begin, make sure you have the following installed:
    Move into the project directory:
 
    ```bash
-   cd your-repository-name
+   cd SA-east-website-project
    ```
 
 3. **Install Dependencies**
