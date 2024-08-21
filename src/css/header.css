@@ -1,0 +1,135 @@
+.hotline-section {
+  background-color: #023e8a;
+  padding: 10px 0;
+}
+
+.hotline-text {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.navbar-shrink {
+  padding: 10px 0; /* Shrink the padding to make the navbar smaller */
+  transform: scale(1); /* Slightly scale down the navbar */
+  transition: padding 0.3s ease, transform 0.3s ease;
+}
+.logo {
+  height: auto;
+  width: 280px;
+}
+.logo-item {
+  margin-left: 7rem;
+}
+/* Navbar link styles */
+.navbar a {
+  color: #023e8a;
+  margin-left: 20px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #d71c0e;
+  transition: width 0.3s ease;
+}
+.navbar a:hover::after {
+  width: 100%;
+}
+.sidebar {
+  position: fixed;
+  top: -15px;
+  right: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: #023e8a;
+  overflow-x: hidden;
+  transition: right 0.3s ease;
+  z-index: 1040;
+  padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar a {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.sidebar a::after {
+  content: "";
+  position: absolute;
+  margin-left: 15px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  height: 2.5px;
+  background-color: #d71c0e;
+  transition: width 0.3s ease;
+}
+.sidebar a:hover::after {
+  width: 80%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Adjustments for the hamburger icon */
+.navbar-toggler {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-toggler-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #023e8a;
+  display: block;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Hide sidebar on large screens */
+@media (min-width: 930px) {
+  .sidebar {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+  .logo-item {
+    margin-left: 1rem;
+  }
+  .content {
+    padding-top: 40px; /* Adjust this value based on the height of your navbar */
+  }
+}

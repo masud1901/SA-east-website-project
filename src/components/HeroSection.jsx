@@ -1,21 +1,30 @@
+import "../css/HeroSection.css";
 const HeroSection = () => {
   return (
-    <section
-      className="hero-section text-white"
-      style={{
-        backgroundImage: "url(https://via.placeholder.com/1500x500)",
-        backgroundSize: "cover",
-        padding: "100px 0",
-      }}
-    >
-      <div className="container text-center">
-        <h1 className="display-4">AL SHAHA ALAMIA ESTABLISHMENT</h1>
-        <p className="lead">Subtitle or slogan here</p>
-        <a href="#projects" className="btn btn-primary btn-lg">
-          Learn More
-        </a>
+    <div>
+      <section className="section-top">
+        <div className="content text-white">
+          <h1>AL SHAMS AL AMNA ESTABLISHMENT</h1>
+          <h3>FOR OPERATION AND MAINTENANCE</h3>
+          <br />
+          <p className="ps-4">
+            We {`don't`} build services to make money, <br />
+            We make money to build better services
+          </p>
+        </div>
+      </section>
+      <div className="marquee">
+        <div className="marquee-content">
+          <span>✵</span>
+          <span>AL SHAMS AL AMNA ESTABLISHMENT</span>
+          <span>✵</span>
+          <span>AL SHAMS AL AMNA ESTABLISHMENT</span>
+          <span>✵</span>
+          <span>AL SHAMS AL AMNA ESTABLISHMENT</span>
+          <span>✵</span>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
