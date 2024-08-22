@@ -1,0 +1,110 @@
+.section-top {
+  height: calc(100vh - 90px);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-image: url("/src/assets/heroSection1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: image-change 20s infinite ease-in-out;
+}
+
+.content {
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  animation: slideIn 1s ease-out;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h1,
+h3 {
+  position: relative;
+  padding-left: 25px;
+  /* Space for the vertical line */
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 7px;
+  height: 100%;
+  background-color: #d71c0e; /* You can change this color if needed */
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes image-change {
+  0% {
+    background-image: url("/src/assets/heroSection1.jpeg");
+  }
+  20% {
+    background-image: url("/src/assets/heroSection2.jpeg");
+  }
+  40% {
+    background-image: url("/src/assets/heroSection3.jpeg");
+  }
+  60% {
+    background-image: url("/src/assets/heroSection1.jpeg");
+  }
+  80% {
+    background-image: url("/src/assets/heroSection2.jpeg");
+  }
+  100% {
+    background-image: url("/src/assets/heroSection1.jpeg");
+  }
+}
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+  color: #8c1911;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.marquee-content span {
+  margin: 0 1rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 700px) {
+  .section-top {
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image: url("/src/assets/heroSection1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: image-change 20s infinite ease-in-out;
+  }
+}
