@@ -63,13 +63,13 @@ const Header = () => {
           </div>
           <div>
             <nav className="navbar mt-3 pe-5 me-5 d-none d-md-flex">
-              <a href="">JOB NOTICE</a>
-              <a href="">PROJECTS</a>
-              <a href="">ABOUT</a>
-              <a href="">SERVICES</a>
-              <a href="">GOALS</a>
-              <a href="">CONTACT</a>
-              <a href="">
+              <a href="#">JOB NOTICE</a>
+              <a href="#">PROJECTS</a>
+              <a href="#">ABOUT</a>
+              <a href="#">SERVICES</a>
+              <a href="#">GOALS</a>
+              <a href="#">CONTACT</a>
+              <a href="#">
                 <img
                   src="/src/assets/language.png"
                   alt=""
