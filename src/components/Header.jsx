@@ -6,7 +6,6 @@ const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isNavbarShrunk, setIsNavbarShrunk] = useState(false);
 
-  // Toggle the sidebar
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -62,14 +61,14 @@ const Header = () => {
             </a>
           </div>
           <div>
-            <nav className="navbar mt-3 pe-5 me-5 d-none d-md-flex">
+            <nav className="navbar mt-2 pe-5 me-5 d-none d-md-flex">
               <a href="">JOB NOTICE</a>
               <a href="">PROJECTS</a>
               <a href="">ABOUT</a>
               <a href="">SERVICES</a>
               <a href="">GOALS</a>
               <a href="">CONTACT</a>
-              <a href="">
+              <a href="" id="language">
                 <img
                   src="/src/assets/language.png"
                   alt=""
