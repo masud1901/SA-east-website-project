@@ -10,10 +10,6 @@
     color: #ff6b6b; /* A tint of red */
     font-weight: bold;
 }
-.btn-outline-primary {
-    color: #023e8a;
-    border-color: #023e8a;
-}
 
 .btn-outline-primary:hover {
     background-color: #023e8a;
@@ -57,6 +53,8 @@ p {
     margin-top: 1.5rem;
     padding: 0.5rem 1.5rem;
     font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    color: #023e8a;
+    border-color: #023e8a;
 }
 
 @media (min-width: 768px) {
