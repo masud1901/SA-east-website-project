@@ -3,7 +3,9 @@ const WhyUsSection = () => {
     <section
       id="why-us"
       className="why-us-section py-5"
-      style={{ backgroundColor: "#023E8A" }}
+      style={{
+        background: "linear-gradient(to bottom, #023E8A, #021d5e)",
+      }}
     >
       <div className="container">
         {/* Increased header size and added margin for better spacing */}

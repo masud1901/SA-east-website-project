@@ -4,7 +4,7 @@ import "../css/AboutSection.css";
 
 const About = () => {
   return (
-    <section className="about-section">
+    <section className="about-section" id="About">
       <Container fluid>
         <Card className="border-0 shadow">
           <Card.Body>
