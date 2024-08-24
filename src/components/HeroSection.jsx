@@ -6,7 +6,6 @@ const HeroSection = () => {
         <div className="content text-white">
           <h1 className="sideLine">AL SHAMS AL AMNA ESTABLISHMENT</h1>
           <h3>FOR OPERATION AND MAINTENANCE</h3>
-          <br />
           <p className="ps-4">
             We {`don't`} build services to make money, <br />
             We make money to build better services

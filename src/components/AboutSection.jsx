@@ -24,7 +24,7 @@ const About = () => {
               <img
                 src="/src/assets/heroSection1.jpeg"
                 alt=""
-                style={{ width: "300px", height: "300ox" }}
+                style={{ width: "250px", height: "300px" }}
                 className="rounded"
               />
             </div>
@@ -33,7 +33,8 @@ const About = () => {
             <h1>ABOUT</h1>
             <p className="pt-4 pb-4">
               We live in a world where Facility Management is booming out into a
-              big opportunity for business. We at Al-Shams Al-Amana Company
+              big opportunity for business. We at{" "}
+              <span className="company">Al-Shams Al-Amana Company </span>
               provide services in cleaning, maintenance, event management,
               renovation and development, warehousing. With the continuous
               experimentation of new products under the supervision of qualified
