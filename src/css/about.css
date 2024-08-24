@@ -1,0 +1,37 @@
+.about {
+  background-image: linear-gradient(
+    to bottom,
+    #fbfbfb 0%,
+    #fbfbfb 75%,
+    #ffffff 75%,
+    #ffffff 100%
+  );
+  height: 520px;
+}
+.split {
+  display: flex;
+  margin-left: 110px;
+  margin-right: 100px;
+  gap: 50px;
+}
+.images {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.write h1 {
+  color: #023e8a;
+}
+.write p {
+  color: #d71c0e;
+}
+.write button {
+  color: #023e8a;
+  border: none;
+  padding: 15px 30px;
+  background-color: white;
+}
+.write button:hover {
+  color: white;
+  background-color: #023e8a;
+}
