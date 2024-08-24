@@ -62,7 +62,7 @@ const Header = () => {
             </a>
           </div>
           <div>
-            <nav className="navbar mt-3 pe-5 me-5 d-none d-md-flex">
+            <nav className="navbar mt-2 pe-5 me-5 d-none d-md-flex">
               <a href="#">JOB NOTICE</a>
               <a href="#">PROJECTS</a>
               <a href="#">ABOUT</a>
@@ -71,10 +71,11 @@ const Header = () => {
               <a href="#">CONTACT</a>
               <a href="#">
                 <img
-                  src="/src/assets/language.png"
+                  src="/src/assets/arabic.png"
                   alt=""
                   style={{ width: "35px", height: "auto" }}
                 />
+                ENGLISH
               </a>
             </nav>
             <button
@@ -112,10 +113,11 @@ const Header = () => {
         </a>
         <a href="" onClick={toggleSidebar}>
           <img
-            src="/src/assets/language.png"
+            src="/src/assets/arabic.png"
             alt=""
             style={{ width: "35px", height: "auto" }}
           />
+          ENGLISH
         </a>
       </div>
     </>

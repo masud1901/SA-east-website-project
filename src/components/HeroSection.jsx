@@ -4,7 +4,7 @@ const HeroSection = () => {
     <div>
       <section className="section-top">
         <div className="content text-white">
-          <h1>AL SHAMS AL AMNA ESTABLISHMENT</h1>
+          <h1 className="sideLine">AL SHAMS AL AMNA ESTABLISHMENT</h1>
           <h3>FOR OPERATION AND MAINTENANCE</h3>
           <br />
           <p className="ps-4">

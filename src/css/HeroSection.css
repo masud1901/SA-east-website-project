@@ -19,14 +19,14 @@
   gap: 10px;
 }
 
-h1,
+.sideLine,
 h3 {
   position: relative;
   padding-left: 25px;
   /* Space for the vertical line */
 }
 
-h1::before {
+.sideLine::before {
   content: "";
   position: absolute;
   left: 10px;
@@ -97,7 +97,7 @@ h1::before {
 
 @media (max-width: 700px) {
   .section-top {
-    height: 50vh;
+    height: 60vh;
     width: 100%;
     overflow: hidden;
     position: relative;
