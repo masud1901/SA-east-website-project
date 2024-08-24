@@ -16,22 +16,22 @@
   animation: slideIn 1s ease-out;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.7rem;
 }
 
 .sideLine,
 h3 {
   position: relative;
-  padding-left: 25px;
+  padding-left: 1.7rem;
   /* Space for the vertical line */
 }
 
 .sideLine::before {
   content: "";
   position: absolute;
-  left: 10px;
+  left: 0.6rem;
   top: 0;
-  width: 7px;
+  width: 0.4rem;
   height: 100%;
   background-color: #d71c0e; /* You can change this color if needed */
 }
