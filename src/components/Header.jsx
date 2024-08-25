@@ -64,7 +64,7 @@ const Header = () => {
           <div>
             <nav className="navbar mt-2 pe-5 me-5 d-none d-md-flex">
               <a href="#">JOB NOTICE</a>
-              <a href="#">PROJECTS</a>
+              <a href="#Projects">PROJECTS</a>
               <a href="#About">ABOUT</a>
               <a href="#">SERVICES</a>
               <a href="#">GOALS</a>
