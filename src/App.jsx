@@ -1,3 +1,4 @@
+import NoticeBoard from "./components/noticeBoard";
 import AboutSection from "./components/AboutSection";
 import ClientsSection from "./components/ClientsSection";
 import ContactSection from "./components/ContactSection";
@@ -13,6 +14,7 @@ const App = () => {
     <>
       <Header />
       <HeroSection />
+      <NoticeBoard />
       <ProjectsSlider />
       <AboutSection />
       <WhyUsSection />
