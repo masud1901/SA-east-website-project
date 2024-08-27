@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
+import NoticeBoard from "./components/noticeBoard";
 import ProjectsSection from "./components/ProjectsSection";
 import AboutSection from "./components/AboutSection";
 import WhyUsSection from "./components/WhyUsSection";
@@ -13,6 +14,7 @@ const App = () => {
     <>
       <Header />
       <HeroSection />
+      <NoticeBoard />
       <ProjectsSection />
       <AboutSection />
       <WhyUsSection />
