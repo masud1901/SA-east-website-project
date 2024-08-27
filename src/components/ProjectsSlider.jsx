@@ -53,11 +53,11 @@ const TrendingSlider = () => {
 
   return (
     <section id="Projects">
-      <div className="container">
+      <div className="projects-container">
         {/* <h3 className="text-center section-subheading">- popular Delivery -</h3> */}
         <h1 className="text-center section-heading">Projects</h1>
       </div>
-      <div className="container">
+      <div className="swiper-container">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -110,7 +110,7 @@ const TrendingSlider = () => {
           </div>
         </Swiper>
       </div>
-      <div className="button-container">
+      <div className="button-projects-container">
         <button className="view-all-button" onClick={handleButtonClick}>
           View All Projects
         </button>
