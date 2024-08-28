@@ -1,10 +1,11 @@
 import NoticeBoard from "./components/noticeBoard";
 import AboutSection from "./components/AboutSection";
 import ClientsSection from "./components/ClientsSection";
-import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
 import GoalsSection from "./components/GoalsSection";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
+import ContactUs from "./components/ContactUs";
 import ProjectsSlider from "./components/ProjectsSlider";
 import ServicesSection from "./components/ServicesSection";
 import WhyUsSection from "./components/WhyUsSection";
@@ -21,7 +22,8 @@ const App = () => {
       <ServicesSection />
       <GoalsSection />
       <ClientsSection />
-      <ContactSection />
+      <ContactUs />
+      <Footer />
     </>
   );
 };
