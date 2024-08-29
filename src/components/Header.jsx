@@ -63,15 +63,9 @@ const Header = () => {
           </div>
           <div>
             <nav className="navbar mt-2 pe-5 me-5 d-none d-md-flex">
-<<<<<<< HEAD
-              <a href="#">JOB NOTICE</a>
-              <a href="#Projects">PROJECTS</a>
-              <a href="#About">ABOUT</a>
-=======
               <a href="#notices">JOB NOTICE</a>
               <a href="#">PROJECTS</a>
               <a href="#">ABOUT</a>
->>>>>>> new-branch
               <a href="#">SERVICES</a>
               <a href="#">GOALS</a>
               <a href="#">CONTACT</a>

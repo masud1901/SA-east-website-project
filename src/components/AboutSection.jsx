@@ -41,13 +41,8 @@ const About = () => {
               professionals has led us to come up with competitive products to
               satisfy our clients.
             </p>
-<<<<<<< HEAD
-            <a href="#">
-              <button>READ MORE {`->`}</button>
-=======
             <a href="">
               <button>READ MORE »</button>
->>>>>>> new-branch
             </a>
           </div>
         </div>
