@@ -1,55 +1,68 @@
-const ClientsSection = () => {
+import Slider from "react-infinite-logo-slider";
+
+const Component = () => {
   return (
-    <section id="clients" className="clients-section">
-      <div className="container text-center">
-        <h2>Our Clients</h2>
-        <div className="row">
-          <div className="col-md-2">
+    <>
+      <div className="mb-5">
+        <h1
+          style={{ fontWeight: "bold", color: "#023e8a" }}
+          className="text-center mb-5"
+        >
+          Our Clients
+        </h1>
+        <Slider
+          width="250px"
+          duration={40}
+          pauseOnHover={true}
+          blurBorders={false}
+          blurBoderColor={"#fff"}
+        >
+          <Slider.Slide>
             <img
-              src="https://via.placeholder.com/150"
-              alt="Client 1"
-              className="img-fluid"
+              src="/src/assets/new.png"
+              alt="any"
+              style={{ width: "100px", height: "100px" }}
             />
-          </div>
-          <div className="col-md-2">
+          </Slider.Slide>
+          <Slider.Slide>
             <img
-              src="https://via.placeholder.com/150"
-              alt="Client 2"
-              className="img-fluid"
+              src="/src/assets/new.png"
+              alt="any"
+              style={{ width: "100px", height: "100px" }}
             />
-          </div>
-          <div className="col-md-2">
+          </Slider.Slide>
+          <Slider.Slide>
             <img
-              src="https://via.placeholder.com/150"
-              alt="Client 3"
-              className="img-fluid"
+              src="/src/assets/new.png"
+              alt="any"
+              style={{ width: "100px", height: "100px" }}
             />
-          </div>
-          <div className="col-md-2">
+          </Slider.Slide>
+          <Slider.Slide>
             <img
-              src="https://via.placeholder.com/150"
-              alt="Client 4"
-              className="img-fluid"
+              src="/src/assets/new.png"
+              alt="any"
+              style={{ width: "100px", height: "100px" }}
             />
-          </div>
-          <div className="col-md-2">
+          </Slider.Slide>
+          <Slider.Slide>
             <img
-              src="https://via.placeholder.com/150"
-              alt="Client 5"
-              className="img-fluid"
+              src="/src/assets/new.png"
+              alt="any"
+              style={{ width: "100px", height: "100px" }}
             />
-          </div>
-          <div className="col-md-2">
+          </Slider.Slide>
+          <Slider.Slide>
             <img
-              src="https://via.placeholder.com/150"
-              alt="Client 6"
-              className="img-fluid"
+              src="/src/assets/new.png"
+              alt="any"
+              style={{ width: "100px", height: "100px" }}
             />
-          </div>
-        </div>
+          </Slider.Slide>
+        </Slider>
       </div>
-    </section>
+    </>
   );
 };
 
-export default ClientsSection;
+export default Component;

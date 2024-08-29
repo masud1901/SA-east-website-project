@@ -2,7 +2,7 @@ import "../css/goals.css";
 
 const Goals = () => {
   return (
-    <section className="goals-section">
+    <section className="goals-section reveal">
       <div className="goals-background">
         <h2 className="goals-title">OUR GOALS</h2>
       </div>

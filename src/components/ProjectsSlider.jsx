@@ -46,13 +46,13 @@ const TrendingSlider = () => {
 
   return (
     <section id="CustomProjects">
-      <div className="custom-projects-container">
+      <div className="custom-projects-container reveal">
         <h1 className="custom-section-heading">
           Projects
           <hr />
         </h1>
       </div>
-      <div className="custom-swiper-container">
+      <div className="custom-swiper-container reveal">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}

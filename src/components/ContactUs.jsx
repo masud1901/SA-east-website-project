@@ -3,11 +3,11 @@ import "../css/contactUs.css";
 
 const ContactSection = () => {
   return (
-    <div className="contact-section">
+    <div className="contact-section reveal">
       <h2 className="contact-title">
         <span>Contact Our</span> <span>Service Team</span>
       </h2>
-      <div className="contact-info">
+      <div className="contact-info mt-4">
         <div className="contact-item">
           <Phone className="contact-icon" size={28} />
           <span className="contact-item-text">+880024325345465</span>

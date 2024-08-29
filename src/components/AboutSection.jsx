@@ -3,7 +3,7 @@ import "../css/about.css";
 const About = () => {
   return (
     <>
-      <div className="about" id="about">
+      <div className="about reveal" id="about">
         <div className="split">
           <div className="images">
             <div className="image1 pt-3">
@@ -30,7 +30,7 @@ const About = () => {
             </div>
           </div>
           <div className="write pt-5">
-            <h1>ABOUT</h1>
+            <h1 style={{ fontWeight: "bold" }}>ABOUT</h1>
             <p className="pt-4 pb-4">
               We live in a world where Facility Management is booming out into a
               big opportunity for business. We at{" "}

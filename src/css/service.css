@@ -1,0 +1,83 @@
+#main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1f4b99;
+  text-align: center;
+}
+.container-cards {
+  display: grid;
+  place-items: center;
+  padding-block: 2rem;
+}
+
+.card__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; /* Adjusted gap for a balanced layout */
+}
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(255, 0, 0, 0.5); /* Red border color */
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.card__article:hover {
+  transform: scale(1.05);
+}
+
+.card__img {
+  width: 350px; /* Balanced width for images */
+  height: 270px; /* Balanced height for images */
+}
+
+.card__data {
+  margin-top: 1rem;
+}
+
+.card__title {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+/*=============== BREAKPOINTS ===============*/
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  #main-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card__img {
+    /* width: 220px; */
+    height: 150px;
+    width: 100%;
+  }
+
+  .card__title {
+    font-size: 1.25rem; /* Adjusted font size for better readability on medium screens */
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 500px) {
+  .card__container {
+    grid-template-columns: 1fr;
+  }
+
+  .card__img {
+    /* width: 180px; Smaller images for small devices */
+    height: 120px;
+    width: 100%;
+  }
+
+  .card__title {
+    font-size: 1.15rem; /* Smaller font size for small devices */
+  }
+}

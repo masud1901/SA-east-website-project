@@ -11,6 +11,27 @@ import WhyUsSection from "./components/WhyUsSection";
 import ServicesSection from "./components/ServicesSection";
 
 const App = () => {
+  // Function to reveal elements on scroll
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+    reveals.forEach((element) => {
+      const elementTop = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (elementTop < windowHeight - 50) {
+        element.classList.add("active");
+      } else {
+        element.classList.remove("active");
+      }
+    });
+  }
+
+  // Event listener for scroll
+  window.addEventListener("scroll", revealOnScroll);
+
+  // Trigger the reveal on page load
+  document.addEventListener("DOMContentLoaded", revealOnScroll);
+
   return (
     <>
       <Header />

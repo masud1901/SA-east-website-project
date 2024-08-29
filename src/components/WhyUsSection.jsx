@@ -2,18 +2,19 @@ const WhyUsSection = () => {
   return (
     <section
       id="why-us"
-      className="why-us-section py-5"
+      className="why-us-section py-5 reveal"
       style={{
         background: "linear-gradient(to bottom, #023E8A, #021d5e)",
       }}
     >
       <div className="container">
-        <h2
-          className="text-white text-center mb-5"
-          style={{ fontSize: "48px" }}
+        <h1
+          className="text-white text-center mb-3"
+          style={{ fontWeight: "bold" }}
         >
           WHY US?
-        </h2>
+          <hr />
+        </h1>
         <div className="row justify-content-center fs-2">
           <p className="text-danger text-center text-md-left fs-6 ps-5 pe-5">
             Our services have earned us customer loyalty over the years. The

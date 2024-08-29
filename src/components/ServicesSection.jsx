@@ -1,40 +1,83 @@
-const ServicesSection = () => {
+import "../css/service.css";
+
+const Services = () => {
   return (
-    <section id="services" className="services-section py-5">
-      <div className="container">
-        <h2 className="text-center mb-5">Our Services</h2>
-        <div className="row">
-          <div className="col-md-4">
-            <img
-              src="https://via.placeholder.com/350x200"
-              alt="Service 1"
-              className="img-fluid mb-3"
-            />
-            <h4>Service Title 1</h4>
-            <p>Brief description of the service.</p>
-          </div>
-          <div className="col-md-4">
-            <img
-              src="https://via.placeholder.com/350x200"
-              alt="Service 2"
-              className="img-fluid mb-3"
-            />
-            <h4>Service Title 2</h4>
-            <p>Brief description of the service.</p>
-          </div>
-          <div className="col-md-4">
-            <img
-              src="https://via.placeholder.com/350x200"
-              alt="Service 3"
-              className="img-fluid mb-3"
-            />
-            <h4>Service Title 3</h4>
-            <p>Brief description of the service.</p>
-          </div>
-        </div>
+    <div className="container-cards reveal">
+      <div className="section_of_services">
+        <h1 id="main-title">SERVICES</h1>
+        <hr />
+        {/* Subtitle */}
+        <p className="text-center fs-6">How Our Agency Can Help</p>
       </div>
-    </section>
+      <div className="card__container">
+        <article className="card__article">
+          <img
+            src="/src/assets/s.PNG"
+            alt="Maintenance"
+            className="card__img"
+          />
+          <div className="card__data">
+            <h2 className="card__title">Maintenance</h2>
+          </div>
+        </article>
+
+        <article className="card__article">
+          <img
+            src="/src/assets/ss.PNG"
+            alt="Pest Control"
+            className="card__img"
+          />
+          <div className="card__data">
+            <h2 className="card__title">Pest Control</h2>
+          </div>
+        </article>
+
+        <article className="card__article">
+          <img
+            src="/src/assets/sss.PNG"
+            alt="Contracting Service"
+            className="card__img"
+          />
+          <div className="card__data">
+            <h2 className="card__title">Contracting Service</h2>
+          </div>
+        </article>
+
+        <article className="card__article">
+          <img
+            src="/src/assets/ssss.PNG"
+            alt="Pool Service"
+            className="card__img"
+          />
+          <div className="card__data">
+            <h2 className="card__title">Pool Service</h2>
+          </div>
+        </article>
+
+        <article className="card__article">
+          <img
+            src="/src/assets/sssss.PNG"
+            alt="Renovation"
+            className="card__img"
+          />
+          <div className="card__data">
+            <h2 className="card__title">Renovation</h2>
+          </div>
+        </article>
+
+        <article className="card__article">
+          <img
+            src="/src/assets/sss.PNG"
+            alt="Landscaping"
+            className="card__img"
+          />
+          <div className="card__data">
+            <h2 className="card__title">Landscaping</h2>
+          </div>
+        </article>
+      </div>
+    </div>
   );
 };
 
-export default ServicesSection;
+export default Services;

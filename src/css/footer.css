@@ -20,6 +20,9 @@
   width: 100%;
   text-align: center;
 }
+.footer__links ul {
+  list-style-type: none;
+}
 
 .footer__logo {
   height: 4rem;
