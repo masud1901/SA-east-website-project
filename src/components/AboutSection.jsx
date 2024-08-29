@@ -42,7 +42,7 @@ const AboutSection = () => {
               satisfy our clients.
             </p>
             <a href="">
-              <button>READ MORE {`->`}</button>
+              <button>READ MORE »</button>
             </a>
           </div>
         </div>

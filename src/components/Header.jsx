@@ -63,7 +63,7 @@ const Header = () => {
           </div>
           <div>
             <nav className="navbar mt-2 pe-5 me-5 d-none d-md-flex">
-              <a href="#">JOB NOTICE</a>
+              <a href="#notices">JOB NOTICE</a>
               <a href="#">PROJECTS</a>
               <a href="#">ABOUT</a>
               <a href="#">SERVICES</a>
@@ -93,7 +93,7 @@ const Header = () => {
         <button className="close-btn" onClick={toggleSidebar}>
           ×
         </button>
-        <a href="" onClick={toggleSidebar}>
+        <a href="#notices" onClick={toggleSidebar}>
           JOB NOTICE
         </a>
         <a href="#projects" onClick={toggleSidebar}>

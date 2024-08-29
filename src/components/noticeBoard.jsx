@@ -11,69 +11,84 @@ const Notice = () => {
               <h2 className="section-title">Introduction to Management</h2>
             </div>
 
-            {/* Card 1 */}
-            <div className="col-12 col-sm-6 col-md-4 col-lg-2">
-              <div className="our-team">
-                <div className="picture">
-                  <img
-                    className="img-fluid"
-                    src="/src/assets/abu.PNG"
-                    alt="Ali Bin Abu Talib Al-Ghubaishi"
-                  />
+            {/* Management Cards */}
+            <div className="col-12">
+              <div className="row management-cards">
+                {/* Card 1 */}
+                <div className="col-12 col-sm-6 col-md-4 col-lg-4">
+                  <div className="our-team">
+                    <div className="picture">
+                      <img
+                        className="img-fluid"
+                        src="/src/assets/abu.PNG"
+                        alt="Ali Bin Abu Talib Al-Ghubaishi"
+                      />
+                    </div>
+                    <div className="team-content">
+                      <h4 className="name">
+                        Ali Bin Abu <br />
+                        Talib Al-Ghubaishi
+                      </h4>
+                      <h4 className="title">General Manager</h4>
+                    </div>
+                  </div>
                 </div>
-                <div className="team-content">
-                  <h4 className="name">
-                    Ali Bin Abu <br />
-                    Talib Al-Ghubaishi
-                  </h4>
-                  <h4 className="title">General Manager</h4>
+
+                {/* Card 2 */}
+                <div className="col-12 col-sm-6 col-md-4 col-lg-4">
+                  <div className="our-team">
+                    <div className="picture">
+                      <img
+                        className="img-fluid"
+                        src="/src/assets/ali.PNG"
+                        alt="Mohammad Anowarr Hossain"
+                      />
+                    </div>
+                    <div className="team-content">
+                      <h4 className="name">
+                        Mohammad Anowarr <br /> Hossain
+                      </h4>
+                      <h4 className="title">Manpower Management</h4>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 3 */}
+                <div className="col-12 col-sm-6 col-md-4 col-lg-4">
+                  <div className="our-team">
+                    <div className="picture">
+                      <img
+                        className="img-fluid"
+                        src="/src/assets/kabir.PNG"
+                        alt="Humayun Kabir"
+                      />
+                    </div>
+                    <div className="team-content">
+                      <h4 className="name">
+                        Humayun <br /> Kabir
+                      </h4>
+                      <h4 className="title">Marketing Manager</h4>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Card 2 */}
-            <div className="col-12 col-sm-6 col-md-4 col-lg-2">
-              <div className="our-team">
-                <div className="picture">
-                  <img
-                    className="img-fluid"
-                    src="/src/assets/ali.PNG"
-                    alt="Mohammad Anowarr Hossain"
-                  />
-                </div>
-                <div className="team-content">
-                  <h4 className="name">Mohammad Anowarr Hossain</h4>
-                  <h4 className="title">Manpower Management</h4>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="col-12 col-sm-6 col-md-4 col-lg-2">
-              <div className="our-team">
-                <div className="picture">
-                  <img
-                    className="img-fluid"
-                    src="/src/assets/kabir.PNG"
-                    alt="Humayun Kabir"
-                  />
-                </div>
-                <div className="team-content">
-                  <h4 className="name">
-                    Humayun <br /> Kabir
-                  </h4>
-                  <br />
-                  <h4 className="title">Marketing Manager</h4>
+              {/* View All Button */}
+              <div className="row">
+                <div className="col-12 text-center">
+                  <a href="#" className="view-all-cards">
+                    » View All
+                  </a>
                 </div>
               </div>
             </div>
 
             {/* Notice Board */}
-            <div className="col-12 col-lg-6">
+            <div className="col-12">
               <div className="notice-board">
                 <div className="notice-header">
-                  <h3 className="notice-title">
-                    <i className="bi bi-info-circle"></i> Notices
+                  <h3 className="notice-title" id="notices">
+                    <i className="bi bi-info-circle"></i> Job Notices
                   </h3>
                 </div>
                 <div className="notice-content">

@@ -1,8 +1,8 @@
 .about {
   background-image: linear-gradient(
     to bottom,
-    #fbfbfb 0%,
-    #fbfbfb 80%,
+    #d9dee9 0%,
+    #ffffff 80%,
     #ffffff 80%,
     #ffffff 100%
   );
@@ -35,6 +35,7 @@
   border: none;
   padding: 15px 30px;
   background-color: white;
+  font-weight: bold;
 }
 .write button:hover {
   color: white;

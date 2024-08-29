@@ -7,7 +7,7 @@ const WhyUsSection = () => {
     >
       <div className="container">
         <h2
-          className="text-white text-center mb-4 mt-4"
+          className="text-white text-center mb-5"
           style={{ fontSize: "48px" }}
         >
           WHY US?

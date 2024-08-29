@@ -1,6 +1,6 @@
 const ClientsSection = () => {
   return (
-    <section id="clients" className="clients-section py-5">
+    <section id="clients" className="clients-section">
       <div className="container text-center">
         <h2>Our Clients</h2>
         <div className="row">

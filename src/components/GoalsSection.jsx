@@ -1,20 +1,39 @@
-const GoalsSection = () => {
+import "../css/goals.css";
+
+const Goals = () => {
   return (
-    <section id="goals" className="goals-section py-5 bg-light">
+    <section className="goals-section">
+      <div className="goals-background">
+        <h2 className="goals-title">OUR GOALS</h2>
+      </div>
       <div className="container">
-        <h2 className="text-center mb-5">Our Goals</h2>
-        <div className="row text-center">
-          <div className="col-md-4">
-            <h4>Goal Title 1</h4>
-            <p>Description of the first goal.</p>
+        <div className="row justify-content-center">
+          <div className="col-12 col-md-4">
+            <div className="goal-card">
+              <h3 className="goal-card-title">Provide The Best Products</h3>
+              <p className="goal-card-text">
+                Our goal is to provide the best products, and do some more work
+                in this field, and do some more work in this field.
+              </p>
+            </div>
           </div>
-          <div className="col-md-4">
-            <h4>Goal Title 2</h4>
-            <p>Description of the second goal.</p>
+          <div className="col-12 col-md-4">
+            <div className="goal-card">
+              <h3 className="goal-card-title">Provide The Best Products</h3>
+              <p className="goal-card-text">
+                Our goal is to provide the best products, and do some more work
+                in this field, and do some more work in this field.
+              </p>
+            </div>
           </div>
-          <div className="col-md-4">
-            <h4>Goal Title 3</h4>
-            <p>Description of the third goal.</p>
+          <div className="col-12 col-md-4">
+            <div className="goal-card">
+              <h3 className="goal-card-title">Provide The Best Products</h3>
+              <p className="goal-card-text">
+                Our goal is to provide the best products, and do some more work
+                in this field, and do some more work in this field.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -22,4 +41,4 @@ const GoalsSection = () => {
   );
 };
 
-export default GoalsSection;
+export default Goals;
