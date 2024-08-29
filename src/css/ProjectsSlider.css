@@ -1,212 +1,218 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    text-decoration: none;
-}
 
 :root {
-    --primary: #023e8a;
-    --white: #ffffff;
-    --bg: #f5f5f5;
+    --primary-custom: #003366;
+    --white-custom: #ffffff;
+    --bg-custom: #f5f5f5;
+    --text-custom: #333333;
 }
 
-.text-center {
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--bg-custom);
+    color: var(--text-custom);
+}
+
+#CustomProjects {
+    padding: 2rem 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.custom-section-heading {
+    color: var(--primary-custom);
+    font-size: 2rem;
+    font-weight: 700;
     text-align: center;
+    margin-bottom: 1.5rem;
 }
 
-.section-heading {
-    color: var(--primary);
+.custom-projects-container {
+    position: relative;
+    padding: 0 1rem;
 }
 
-#Projects {
-    padding: 4rem 0;
+.custom-swiper-container {
+    overflow: hidden;
 }
 
-@media (max-width: 1440px) {
-    #Projects {
-        padding: 7rem 0;
-    }
+.custom-projects-slider {
+    height: auto;
+    padding-bottom: 3rem;
 }
 
-#Projects .projects-slider {
-    height: 40rem; /* Changed from 52rem */
-    padding: 2rem 0;
+.custom-projects-slide {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-projects-slide-img {
+    width: 100%;
+    padding-top: 66.67%; /* 3:2 Aspect Ratio */
     position: relative;
 }
 
-@media (max-width: 500px) {
-    #Projects .projects-slider {
-        height: 35rem; /* Adjusted for smaller screens */
-    }
-}
-
-.projects-slide {
-    width: 50rem; /* Changed from 37rem */
-    height: 30rem; /* Changed from 42rem */
-    position: relative;
-}
-
-@media (max-width: 500px) {
-    .projects-slide {
-        width: 100% !important;
-        height: 25rem !important; /* Adjusted for smaller screens */
-    }
-    .projects-slide .projects-slide-img img {
-        width: 100% !important;
-        height: 25rem !important; /* Adjusted for smaller screens */
-    }
-}
-
-.projects-slide .projects-slide-img img {
-    width: 50rem; /* Changed from 37rem */
-    height: 30rem; /* Changed from 42rem */
-    border-radius: 2rem;
+.custom-projects-slide-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.projects-slide .projects-slide-content {
+.custom-projects-slide-content {
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
     bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: var(--white-custom);
 }
 
-.projects-slide-content .food-price {
+.custom-projects-slide-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.custom-projects-slide-content p {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+.custom-projects-slider-control {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
-    color: var(--white);
-}
-
-.projects-slide-content .projects-slide-content-bottom {
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    color: var(--white);
-}
-
-.food-rating {
-    padding-top: 1rem;
-    display: flex;
-    gap: 1rem;
-}
-
-.rating ion-icon {
-    color: var(--primary);
-}
-
-.swiper-slide-shadow-left,
-.swiper-slide-shadow-right {
-    display: none;
-}
-
-.projects-slider-control {
-    position: relative;
-    bottom: 2rem;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
-.projects-slider-control .swiper-button-next {
-    left: 58% !important;
-    transform: translateX(-58%) !important;
-}
-
-@media (max-width: 990px) {
-    .projects-slider-control .swiper-button-next {
-        left: 70% !important;
-        transform: translateX(-70%) !important;
-    }
-}
-
-@media (max-width: 450px) {
-    .projects-slider-control .swiper-button-next {
-        left: 80% !important;
-        transform: translateX(-80%) !important;
-    }
-}
-
-@media (max-width: 990px) {
-    .projects-slider-control .swiper-button-prev {
-        left: 30% !important;
-        transform: translateX(-30%) !important;
-    }
-}
-
-@media (max-width: 450px) {
-    .projects-slider-control .swiper-button-prev {
-        left: 20% !important;
-        transform: translateX(-20%) !important;
-    }
-}
-
-.projects-slider-control .slider-arrow {
-    background: var(--white);
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    left: 42%;
-    transform: translateX(-42%);
-    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
-}
-
-.projects-slider-control .slider-arrow ion-icon {
-    font-size: 2rem;
-    color: #222224;
-}
-
-.projects-slider-control .slider-arrow::after {
-    content: "";
-}
-
-.projects-slider-control .swiper-pagination {
-    position: relative;
-    width: 15rem;
-    bottom: 1rem;
-}
-
-.projects-slider-control .swiper-pagination .swiper-pagination-bullet {
-    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
-}
-
-.projects-slider-control .swiper-pagination .swiper-pagination-bullet-active {
-    background: var(--primary);
-}
-
-.button-projects-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-}
-
-.view-all-button {
-    background-color: #023e8a;
-    color: white;
+.custom-slider-arrow {
+    background: transparent;
     border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 3px;
+    font-size: 1.5rem;
+    color: var(--primary-custom);
+    cursor: pointer;
+    padding: 0 0.5rem;
+}
+
+.custom-swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #ccc;
+    opacity: 0.5;
+    margin: 0 4px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: var(--primary-custom);
+    transform: scale(1.2);
+}
+
+.custom-button-projects-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.custom-view-all-button {
+    background-color: var(--primary-custom);
+    color: var(--white-custom);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.view-all-button:hover {
-    color: #023e8a;
-    background-color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+.custom-view-all-button:hover {
+    background-color: #004080;
 }
 
-.view-all-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Tablet styles */
+@media (min-width: 768px) {
+    #CustomProjects {
+        padding: 3rem 2rem;
+    }
+
+    .custom-section-heading {
+        font-size: 2.5rem;
+    }
+
+    .custom-projects-container {
+        padding: 0 2rem;
+    }
+
+    .custom-projects-slide {
+        width: 80%;
+    }
+
+    .custom-projects-slide-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .custom-projects-slide-content p {
+        font-size: 1rem;
+    }
+
+    .custom-view-all-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    #CustomProjects {
+        padding: 4rem 0;
+        max-width: 1200px;
+    }
+
+    .custom-section-heading {
+        font-size: 3rem;
+    }
+
+    .custom-projects-container {
+        padding: 0 4rem;
+    }
+
+    .custom-projects-slide {
+        width: 60%;
+    }
+
+    .custom-projects-slider {
+        height: 400px;
+    }
+
+    .custom-slider-arrow {
+        font-size: 2rem;
+    }
+
+    .custom-swiper-pagination .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
 }
