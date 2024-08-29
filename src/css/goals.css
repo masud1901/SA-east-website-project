@@ -9,23 +9,49 @@
   padding: 40px 0;
   color: white;
 }
+
 .goals-title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 40px;
   font-weight: bold;
+  color: #ffffff;
 }
 
 .goal-card {
   background-color: #1e3c72;
   background-image: linear-gradient(147deg, #1e3c72 0%, #2a5298 74%);
   border-radius: 10px;
-  padding: 40px 20px; /* Increased padding to make cards longer */
+  padding: 40px 20px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   color: white;
-  min-height: 300px; /* Ensures the cards are taller */
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goal-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.goal-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.goal-card:hover::before {
+  opacity: 1;
 }
 
 .goal-card-title {

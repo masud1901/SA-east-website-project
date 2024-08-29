@@ -8,7 +8,10 @@ const Notice = () => {
           <div className="row">
             {/* Introduction Title */}
             <div className="col-12">
-              <h2 className="section-title">Introduction to Management</h2>
+              <h2 className="section-title">
+                Introduction to Management
+                <hr />
+              </h2>
             </div>
 
             {/* Management Cards */}
