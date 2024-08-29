@@ -8,22 +8,28 @@ const WhyUsSection = () => {
       }}
     >
       <div className="container">
-        {/* Increased header size and added margin for better spacing */}
-        <h2 className="text-white text-center fs-1 mb-4">WHY US?</h2>
+        <h2
+          className="text-white text-center mb-5"
+          style={{ fontSize: "48px" }}
+        >
+          WHY US?
+        </h2>
         <div className="row justify-content-center fs-2">
-          <p className="text-white text-center text-md-left fs-6">
-            We’ve earned our customers&apos; loyalty through years of dedicated
-            service and consistent growth. Our skilled team of engineers and
-            technicians ensures that we deliver on our promises, making us a
-            trusted name in the industry. We strive for excellence in every
-            project, fostering strong, lasting relationships with our clients.
+          <p className="text-danger text-center text-md-left fs-6 ps-5 pe-5">
+            Our services have earned us customer loyalty over the years. The
+            risks we took and the strength we showed have helped us grow into a
+            trusted name. Our team of engineers, technicians, and laborers has
+            consistently met the goals of both Al-Shams Al-Amna Company and our
+            clients, fostering mutual understanding. We aim to provide excellent
+            services at minimal prices without compromising on safety, which is
+            a key priority for us.
           </p>
-          <p className="text-white text-center text-md-left fs-6">
-            At Al-Shams Al-Amna, customer satisfaction is our top priority. We
-            are committed to offering top-quality services at competitive
-            prices, without compromising on safety. Our innovative approach and
-            dedication to excellence keep our clients coming back, time and time
-            again.
+          <p className="text-danger text-center text-md-left fs-6 ps-5 pe-5 mb-4">
+            At Al-Shams Al-Amna Company, we strive for 100% customer
+            satisfaction. Over the years, we{"'"}ve maintained strong
+            connections, even with our earliest customers. We continuously work
+            to offer the best quality services and develop new ideas to meet our
+            targets.
           </p>
         </div>
       </div>

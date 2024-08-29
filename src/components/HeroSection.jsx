@@ -13,7 +13,7 @@ const HeroSection = () => {
         </div>
       </section>
       <div className="marquee">
-        <div className="marquee-content">
+        <div className="marquee-content mt-3">
           <span>✵</span>
           <span>AL SHAMS AL AMNA ESTABLISHMENT</span>
           <span>✵</span>

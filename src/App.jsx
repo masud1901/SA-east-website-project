@@ -7,8 +7,9 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import ContactUs from "./components/ContactUs";
 import ProjectsSlider from "./components/ProjectsSlider";
-import ServicesSection from "./components/ServicesSection";
+import ProjectsSection from "./components/ProjectsSection";
 import WhyUsSection from "./components/WhyUsSection";
+import ServicesSection from "./components/ServicesSection";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <HeroSection />
       <NoticeBoard />
       <ProjectsSlider />
+      <ProjectsSection />
       <AboutSection />
       <WhyUsSection />
       <ServicesSection />

@@ -3,7 +3,7 @@ import "../css/about.css";
 const About = () => {
   return (
     <>
-      <div className="about">
+      <div className="about" id="about">
         <div className="split">
           <div className="images">
             <div className="image1 pt-3">
@@ -41,8 +41,13 @@ const About = () => {
               professionals has led us to come up with competitive products to
               satisfy our clients.
             </p>
+<<<<<<< HEAD
             <a href="#">
               <button>READ MORE {`->`}</button>
+=======
+            <a href="">
+              <button>READ MORE »</button>
+>>>>>>> new-branch
             </a>
           </div>
         </div>

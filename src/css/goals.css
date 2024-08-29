@@ -1,0 +1,60 @@
+.goals-section {
+  background-image: linear-gradient(
+    to bottom,
+    #ce2216 0%,
+    #ffffff 80%,
+    #ffffff 80%,
+    #ffffff 100%
+  );
+  padding: 40px 0;
+  color: white;
+}
+.goals-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.goal-card {
+  background-color: #1e3c72;
+  background-image: linear-gradient(147deg, #1e3c72 0%, #2a5298 74%);
+  border-radius: 10px;
+  padding: 40px 20px; /* Increased padding to make cards longer */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  color: white;
+  min-height: 300px; /* Ensures the cards are taller */
+}
+
+.goal-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+.goal-card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .goal-card {
+    margin-bottom: 20px;
+  }
+
+  .goals-title {
+    font-size: 2rem;
+  }
+
+  .goal-card-title {
+    font-size: 1.25rem;
+  }
+
+  .goal-card-text {
+    font-size: 0.9rem;
+  }
+}
