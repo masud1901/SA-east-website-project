@@ -56,10 +56,10 @@ h3 {
     background-image: url("/src/assets/heroSection3.jpeg");
   }
   60% {
-    background-image: url("/src/assets/heroSection1.jpeg");
+    background-image: url("/src/assets/heroSection4.PNG");
   }
   80% {
-    background-image: url("/src/assets/heroSection2.jpeg");
+    background-image: url("/src/assets/heroSection5.jpg");
   }
   100% {
     background-image: url("/src/assets/heroSection1.jpeg");

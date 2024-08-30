@@ -12,26 +12,32 @@ const Goals = () => {
             <div className="goal-card">
               <h3 className="goal-card-title">Provide The Best Products</h3>
               <p className="goal-card-text">
-                Our goal is to provide the best products, and do some more work
-                in this field, and do some more work in this field.
+                Our goals are to provide the best products, services and
+                technology in the Kingdom of Saudi Arabia and the other markets
+                in which we operate.
               </p>
             </div>
           </div>
           <div className="col-12 col-md-4">
             <div className="goal-card">
-              <h3 className="goal-card-title">Provide The Best Products</h3>
+              <h3 className="goal-card-title">
+                Maintaining distinguished partnerships
+              </h3>
               <p className="goal-card-text">
-                Our goal is to provide the best products, and do some more work
-                in this field, and do some more work in this field.
+                Maintaining distinguished partnerships with our customers,
+                employees and partners in the Kingdom of Saudi Arabia and other
+                markets.
               </p>
             </div>
           </div>
           <div className="col-12 col-md-4">
             <div className="goal-card">
-              <h3 className="goal-card-title">Provide The Best Products</h3>
+              <h3 className="goal-card-title">
+                Provide customers with the best products
+              </h3>
               <p className="goal-card-text">
-                Our goal is to provide the best products, and do some more work
-                in this field, and do some more work in this field.
+                Our vision includes providing customers with the premium
+                products and specialized services they need in today{"'"}s world
               </p>
             </div>
           </div>

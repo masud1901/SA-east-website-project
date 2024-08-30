@@ -51,7 +51,7 @@ const Notice = () => {
                       <h4 className="name">
                         Mohammad Anowarr <br /> Hossain
                       </h4>
-                      <h4 className="title">Manpower Management</h4>
+                      <h4 className="title">Employment Management Manager</h4>
                     </div>
                   </div>
                 </div>
@@ -99,14 +99,14 @@ const Notice = () => {
                     <a href="">
                       <li>
                         <span className="important-notice">*</span>
-                        জেলা পরিষদ শিক্ষা বৃত্তি বিজ্ঞপ্তি{" "}
+                        সৌদি আরবের ভিতরে জরুরী ক্লিনারের কাজের জন্য লোক প্রয়োজন।
                         <span className="notice-date">Aug 07, 2024</span>
                       </li>
                     </a>
                     <a href="">
                       <li>
                         <span className="important-notice">*</span>
-                        অদ্য ৭ আগস্ট, ২০২৪ তারিখের সরকারি সিদ্ধান্ত{" "}
+                        সৌদি আরবের ভিতরে জরুরী ক্লিনারের কাজের জন্য লোক প্রয়োজন।
                         <span className="notice-date">Aug 07, 2024</span>
                       </li>
                     </a>
@@ -114,21 +114,21 @@ const Notice = () => {
                       {" "}
                       <li>
                         <span className="important-notice">*</span>
-                        সুপার নিউমারির অধ্যাপক নীতিমালা ২০২৪{" "}
+                        সৌদি আরবের ভিতরে জরুরী ক্লিনারের কাজের জন্য লোক প্রয়োজন।
                         <span className="notice-date">Jul 25, 2024</span>
                       </li>
                     </a>
                     <a href="">
                       <li>
                         <span className="important-notice">*</span>
-                        শিক্ষার্থীদের নিরাপত্তার বিবেচনায়{" "}
+                        সৌদি আরবের ভিতরে জরুরী ক্লিনারের কাজের জন্য লোক প্রয়োজন।
                         <span className="notice-date">Jul 17, 2024</span>
                       </li>
                     </a>
                     <a href="">
                       <li>
                         <span className="important-notice">*</span>
-                        ২০২৪-২০২৫ শিক্ষাবর্ষে ইনস্টিটিউট অব রিমোট{" "}
+                        সৌদি আরবের ভিতরে জরুরী ক্লিনারের কাজের জন্য লোক প্রয়োজন।
                         <span className="notice-date">Jun 23, 2024</span>
                       </li>
                     </a>

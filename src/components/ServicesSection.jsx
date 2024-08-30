@@ -12,7 +12,7 @@ const Services = () => {
       <div className="card__container">
         <article className="card__article">
           <img
-            src="/src/assets/s.PNG"
+            src="/src/assets/service1.PNG"
             alt="Maintenance"
             className="card__img"
           />
@@ -20,10 +20,20 @@ const Services = () => {
             <h2 className="card__title">Maintenance</h2>
           </div>
         </article>
+        <article className="card__article">
+          <img
+            src="/src/assets/service2.jpg"
+            alt="Pest Control"
+            className="card__img"
+          />
+          <div className="card__data">
+            <h2 className="card__title">Food Catering</h2>
+          </div>
+        </article>
 
         <article className="card__article">
           <img
-            src="/src/assets/ss.PNG"
+            src="/src/assets/service3.PNG"
             alt="Pest Control"
             className="card__img"
           />
@@ -34,7 +44,7 @@ const Services = () => {
 
         <article className="card__article">
           <img
-            src="/src/assets/sss.PNG"
+            src="/src/assets/service4.PNG"
             alt="Contracting Service"
             className="card__img"
           />
@@ -45,7 +55,7 @@ const Services = () => {
 
         <article className="card__article">
           <img
-            src="/src/assets/ssss.PNG"
+            src="/src/assets/service5.PNG"
             alt="Pool Service"
             className="card__img"
           />
@@ -56,23 +66,12 @@ const Services = () => {
 
         <article className="card__article">
           <img
-            src="/src/assets/sssss.PNG"
+            src="/src/assets/service6.PNG"
             alt="Renovation"
             className="card__img"
           />
           <div className="card__data">
             <h2 className="card__title">Renovation</h2>
-          </div>
-        </article>
-
-        <article className="card__article">
-          <img
-            src="/src/assets/sss.PNG"
-            alt="Landscaping"
-            className="card__img"
-          />
-          <div className="card__data">
-            <h2 className="card__title">Landscaping</h2>
           </div>
         </article>
       </div>

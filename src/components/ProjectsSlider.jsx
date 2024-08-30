@@ -13,34 +13,25 @@ const TrendingSlider = () => {
 
   const slides = [
     {
-      img: "src/assets/project_images/1.png",
-      header: "Project 1",
-      description: "This is a brief description of Project 1.",
+      img: "src/assets/project_images/project1.PNG",
+      header: "PROJECT: KCH, SHAPOORJI PALLONJI",
+      description: "JEDDAH, KSA",
     },
     {
-      img: "src/assets/project_images/2.png",
-      header: "Project 2",
-      description: "This is a brief description of Project 2.",
+      img: "src/assets/project_images/project2.PNG",
+      header: "PROJECT: SWCC, LIMAK",
+      description: "JUBAIL,KSA",
     },
     {
-      img: "src/assets/project_images/3.png",
-      header: "Project 3",
-      description: "This is a brief description of Project 3.",
+      img: "src/assets/project_images/project3.PNG",
+      header: "ROJECT :RITE AND OUR WORK WITH THE CRCC",
+      description: "MAKKAH METRO",
     },
     {
-      img: "src/assets/project_images/4.png",
-      header: "Project 4",
-      description: "This is a brief description of Project 4.",
-    },
-    {
-      img: "src/assets/project_images/5.png",
-      header: "Project 5",
-      description: "This is a brief description of Project 5.",
-    },
-    {
-      img: "src/assets/project_images/6.png",
-      header: "Project 6",
-      description: "This is a brief description of Project 6.",
+      img: "src/assets/project_images/project4.PNG",
+      header: "PROJECT: RITE GROUP,KSA  ",
+      description:
+        " Our Experienced Cleaners are working Various kind of Showroom such as Sephora, Dior, Nice Store, Extra, Guess etc",
     },
   ];
 
