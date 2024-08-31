@@ -1,0 +1,100 @@
+.smallHeader {
+  margin-left: 7rem;
+  padding-bottom: 2rem;
+}
+
+.about-us-page {
+  background-color: #f4f4f4;
+  padding: 2rem 0;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #07e30f;
+  margin-bottom: 1.5rem;
+}
+.operations {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #023e8a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.manager-card {
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.manager-image {
+  border-radius: 10px;
+  object-fit: cover;
+  height: 100%;
+  margin-left: 3rem;
+}
+
+.manager-image-col {
+  padding-right: 0;
+}
+
+.photo-card {
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.photo-card img {
+  border-radius: 10px;
+}
+
+.in-figures .figure-value {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #023e8a;
+}
+
+.in-figures .figure-label {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.accommodation-gallery .photo-card img {
+  border-radius: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 1030px) {
+  .smallHeader {
+    margin-left: 1rem;
+    padding-bottom: 2rem;
+  }
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .operations {
+    font-size: 1rem;
+  }
+
+  .manager-image {
+    height: 200px;
+  }
+
+  .photo-card img {
+    height: auto;
+  }
+  .manager-image-col {
+    display: flex;
+    justify-content: center;
+  }
+}

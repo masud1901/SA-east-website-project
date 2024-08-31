@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NoticeBoard from "./components/noticeBoard";
 import AboutSection from "./components/AboutSection";
 import ClientsSection from "./components/ClientsSection";
@@ -9,6 +10,8 @@ import ContactUs from "./components/ContactUs";
 import ProjectsSlider from "./components/ProjectsSlider";
 import WhyUsSection from "./components/WhyUsSection";
 import ServicesSection from "./components/ServicesSection";
+import AboutUs from "./components/AboutUspage"; // Import your AboutUs page component
+import Project from "./components/projectSectionpage";
 
 const App = () => {
   // Function to reveal elements on scroll
@@ -33,19 +36,30 @@ const App = () => {
   document.addEventListener("DOMContentLoaded", revealOnScroll);
 
   return (
-    <>
+    <Router>
       <Header />
-      <HeroSection />
-      <NoticeBoard />
-      <ProjectsSlider />
-      <AboutSection />
-      <WhyUsSection />
-      <ServicesSection />
-      <GoalsSection />
-      <ClientsSection />
-      <ContactUs />
+      <Routes>
+        <Route
+          path="/home"
+          element={
+            <>
+              <HeroSection />
+              <NoticeBoard />
+              <ProjectsSlider />
+              <AboutSection />
+              <WhyUsSection />
+              <ServicesSection />
+              <GoalsSection />
+              <ClientsSection />
+              <ContactUs />
+            </>
+          }
+        />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/project" element={<Project />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 };
 

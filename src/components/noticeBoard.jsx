@@ -3,7 +3,7 @@ import "../css/notice.css";
 const Notice = () => {
   return (
     <>
-      <div className="notice-body reveal">
+      <div className="notice-body">
         <div className="container">
           <div className="row">
             {/* Introduction Title */}

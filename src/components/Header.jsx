@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../css/header.css";
 import { FaBars } from "react-icons/fa";
 
@@ -61,18 +62,19 @@ const Header = () => {
       >
         <div className="d-flex justify-content-between align-items-center fw-bold">
           <div className="logo-item">
-            <a className="navbar-brand " href="">
+            <Link to="/home" lassName="navbar-brand">
+              {" "}
               <img src="/src/assets/logo.PNG" alt="" className="logo" />
-            </a>
+            </Link>
           </div>
           <div>
             <nav className="navbar mt-2 pe-5 me-5 d-none d-md-flex">
+              <Link to="/home">HOME</Link>
               <a href="#notices">JOB NOTICE</a>
-              <a href="#">PROJECTS</a>
-              <a href="#">ABOUT</a>
-              <a href="#">SERVICES</a>
-              <a href="#">GOALS</a>
-              <a href="#">CONTACT</a>
+              <Link to="/project">PROJECT</Link>
+              <Link to="/about">ABOUT</Link>
+              <a href="#services">SERVICES</a>
+              <a href="#contact">CONTACT</a>
               <a href="#">
                 <img
                   src="/src/assets/arabic.png"
@@ -97,20 +99,20 @@ const Header = () => {
         <button className="close-btn" onClick={toggleSidebar}>
           ×
         </button>
+        <Link to="/home" onClick={toggleSidebar}>
+          HOME
+        </Link>
         <a href="#notices" onClick={toggleSidebar}>
           JOB NOTICE
         </a>
         <a href="#projects" onClick={toggleSidebar}>
           PROJECTS
         </a>
-        <a href="#about" onClick={toggleSidebar}>
+        <Link to="/about" onClick={toggleSidebar}>
           ABOUT
-        </a>
+        </Link>
         <a href="#services" onClick={toggleSidebar}>
           SERVICES
-        </a>
-        <a href="#goals" onClick={toggleSidebar}>
-          GOALS
         </a>
         <a href="#contact" onClick={toggleSidebar}>
           CONTACT
