@@ -12,6 +12,7 @@ import WhyUsSection from "./components/WhyUsSection";
 import ServicesSection from "./components/ServicesSection";
 import AboutUs from "./components/AboutUspage"; // Import your AboutUs page component
 import Project from "./components/projectSectionpage";
+import ServicePage from "./components/servicepage";
 
 const App = () => {
   // Function to reveal elements on scroll
@@ -57,6 +58,7 @@ const App = () => {
         />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/project" element={<Project />} />
+        <Route path="/service" element={<ServicePage />} />
       </Routes>
       <Footer />
     </Router>

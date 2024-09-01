@@ -1,5 +1,5 @@
 import "../css/notice.css";
-
+import { Link } from "react-router-dom";
 const Notice = () => {
   return (
     <>
@@ -77,12 +77,12 @@ const Notice = () => {
               </div>
 
               {/* View All Button */}
-              <div className="row">
-                <div className="col-12 text-center">
-                  <a href="#" className="view-all-cards">
-                    » View All
-                  </a>
-                </div>
+              <div className="custom-button-projects-container">
+                <Link to="/about">
+                  <button className="custom-view-all-button">
+                    View All Details
+                  </button>
+                </Link>
               </div>
             </div>
 

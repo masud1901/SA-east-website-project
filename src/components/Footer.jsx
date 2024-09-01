@@ -28,6 +28,11 @@ const Footer = () => {
           <ul className="footer__link-list">
             <li>
               <a href="#projects" className="footer__link">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#projects" className="footer__link">
                 Projects
               </a>
             </li>

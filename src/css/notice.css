@@ -38,6 +38,7 @@
   padding: 15px;
   background-color: #ced0e0;
   height: 100%;
+  margin-top: 1.5rem;
 }
 
 .notice-header {
@@ -101,20 +102,6 @@
 }
 .view-all:hover {
   color: #000000;
-}
-.view-all-cards {
-  display: block;
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  color: #023e8a;
-  font-weight: bold;
-  background-color: #c4d1de;
-  padding: 0.5rem;
-}
-.view-all-cards:hover {
-  color: #f7f5ec;
-  background-color: #023e8a;
 }
 .our-team .picture {
   display: inline-block;
@@ -193,11 +180,8 @@
     text-align: center;
     font-size: 1.7rem;
   }
-  .view-all-cards {
-    font-size: 1rem;
-    margin: 0 auto;
-    width: 100%;
-    margin-bottom: 2rem;
+  .notice-board {
+    margin-top: 2rem;
   }
   .reveal {
     opacity: 1;

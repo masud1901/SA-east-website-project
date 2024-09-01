@@ -34,7 +34,8 @@
   color: #023e8a;
   border: none;
   padding: 15px 30px;
-  background-color: white;
+  background-color: rgba(169, 166, 166, 0.304);
+  border-radius: 0.3rem;
   font-weight: bold;
 }
 .write button:hover {

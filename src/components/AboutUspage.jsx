@@ -72,10 +72,10 @@ const AboutUs = () => {
                       </Col>
                       <Col md={8}>
                         <Card.Body className="d-flex flex-column justify-content-center">
-                          <Card.Title className="mt-5">
+                          <Card.Title className="mt-5 fw-bold">
                             {manager.name}
                           </Card.Title>
-                          <Card.Subtitle className="mb-2 mt-3 text-muted">
+                          <Card.Subtitle className="mb-2 mt-3 text-muted fw-bolder">
                             {manager.title}
                           </Card.Subtitle>
                           <Card.Text className="mt-3">
@@ -97,7 +97,7 @@ const AboutUs = () => {
             <div className="card__container">
               <article className="card__article">
                 <img
-                  src="/src/assets/staff1.PNG"
+                  src="/src/assets/staff/staff1.PNG"
                   alt="Maintenance"
                   className="card__img"
                 />
@@ -108,7 +108,7 @@ const AboutUs = () => {
               </article>
               <article className="card__article">
                 <img
-                  src="/src/assets/staff2.PNG"
+                  src="/src/assets/staff/staff2.PNG"
                   alt="Pest Control"
                   className="card__img"
                 />
@@ -120,7 +120,7 @@ const AboutUs = () => {
 
               <article className="card__article">
                 <img
-                  src="/src/assets/staff4.PNG"
+                  src="/src/assets/staff/staff4.PNG"
                   alt="Pest Control"
                   className="card__img"
                 />
@@ -131,7 +131,7 @@ const AboutUs = () => {
               </article>
               <article className="card__article">
                 <img
-                  src="/src/assets/staff3.PNG"
+                  src="/src/assets/staff/staff3.PNG"
                   alt="Maintenance"
                   className="card__img"
                 />
@@ -142,7 +142,7 @@ const AboutUs = () => {
               </article>
               <article className="card__article">
                 <img
-                  src="/src/assets/staff5.PNG"
+                  src="/src/assets/staff/staff5.PNG"
                   alt="Pest Control"
                   className="card__img"
                 />
@@ -154,7 +154,7 @@ const AboutUs = () => {
 
               <article className="card__article">
                 <img
-                  src="/src/assets/staff6.PNG"
+                  src="/src/assets/staff/staff6.PNG"
                   alt="Pest Control"
                   className="card__img"
                 />
@@ -165,7 +165,7 @@ const AboutUs = () => {
               </article>
               <article className="card__article">
                 <img
-                  src="/src/assets/staff7.PNG"
+                  src="/src/assets/staff/staff7.PNG"
                   alt="Maintenance"
                   className="card__img"
                 />
@@ -176,7 +176,7 @@ const AboutUs = () => {
               </article>
               <article className="card__article">
                 <img
-                  src="/src/assets/staff8.PNG"
+                  src="/src/assets/staff/staff8.PNG"
                   alt="Pest Control"
                   className="card__img"
                 />
@@ -188,7 +188,7 @@ const AboutUs = () => {
 
               <article className="card__article">
                 <img
-                  src="/src/assets/service3.PNG"
+                  src="/src/assets/service/service3.PNG"
                   alt="Pest Control"
                   className="card__img"
                 />
@@ -207,7 +207,7 @@ const AboutUs = () => {
             <Row>
               {[
                 {
-                  img: "/src/assets/inf1.jfif",
+                  img: "/src/assets/inf1.jpg",
                   label: "AL-SHAMS AL-AMNA COMPANY ESTABLISHED",
                   value: "2023",
                 },
@@ -263,11 +263,11 @@ const AboutUs = () => {
             <h2 className="section-title">SA COMPANY ACCOMMODATION GALLARY</h2>
             <Row>
               {[
-                "/src/assets/acc5.PNG",
-                "/src/assets/acc2.PNG",
-                "/src/assets/acc3.PNG",
-                "/src/assets/acc4.PNG",
-                "/src/assets/acc1.PNG",
+                "/src/assets/about_page/acc5.PNG",
+                "/src/assets/about_page/acc2.PNG",
+                "/src/assets/about_page/acc3.PNG",
+                "/src/assets/about_page/acc4.PNG",
+                "/src/assets/about_page/acc1.PNG",
                 // Add more photos as needed
               ].map((photo, index) => (
                 <Col key={index} md={4} className="mb-4">
@@ -283,14 +283,14 @@ const AboutUs = () => {
             <h2 className="section-title">Photo Gallery</h2>
             <Row>
               {[
-                "/src/assets/gal1.PNG",
-                "/src/assets/gal2.PNG",
-                "/src/assets/gal3.PNG",
-                "/src/assets/gal4.PNG",
-                "/src/assets/gal5.PNG",
-                "/src/assets/gal6.PNG",
-                "/src/assets/gal7.PNG",
-                "/src/assets/gal1.PNG",
+                "/src/assets/about_page/gal1.PNG",
+                "/src/assets/about_page/gal2.PNG",
+                "/src/assets/about_page/gal3.PNG",
+                "/src/assets/about_page/gal4.PNG",
+                "/src/assets/about_page/gal5.PNG",
+                "/src/assets/about_page/gal6.PNG",
+                "/src/assets/about_page/gal7.PNG",
+                "/src/assets/about_page/gal1.PNG",
                 // Add more photos as needed
               ].map((photo, index) => (
                 <Col key={index} md={3} className="mb-4">

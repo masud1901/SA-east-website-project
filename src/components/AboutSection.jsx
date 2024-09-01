@@ -8,13 +8,13 @@ const About = () => {
           <div className="images">
             <div className="image1 pt-3">
               <img
-                src="/src/assets/heroSection2.jpeg"
+                src="/src/assets/hero_section/heroSection2.jpeg"
                 alt=""
                 style={{ width: "250px", height: "250px" }}
                 className="rounded pb-3"
               />
               <img
-                src="/src/assets/heroSection3.jpeg"
+                src="/src/assets/hero_section/heroSection3.jpeg"
                 alt=""
                 style={{ width: "250px", height: "180px" }}
                 className="rounded"
@@ -22,7 +22,7 @@ const About = () => {
             </div>
             <div className="image2">
               <img
-                src="/src/assets/heroSection1.jpeg"
+                src="/src/assets/hero_section/heroSection1.jpeg"
                 alt=""
                 style={{ width: "250px", height: "300px" }}
                 className="rounded"

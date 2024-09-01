@@ -43,7 +43,7 @@ const TrendingSlider = () => {
           <hr />
         </h1>
       </div>
-      <div className="custom-swiper-container reveal">
+      <div className="custom-swiper-container">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
