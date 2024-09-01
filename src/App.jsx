@@ -1,4 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import NoticeBoard from "./components/noticeBoard";
 import AboutSection from "./components/AboutSection";
 import ClientsSection from "./components/ClientsSection";
@@ -10,36 +16,43 @@ import ContactUs from "./components/ContactUs";
 import ProjectsSlider from "./components/ProjectsSlider";
 import WhyUsSection from "./components/WhyUsSection";
 import ServicesSection from "./components/ServicesSection";
-import AboutUs from "./components/AboutUspage"; // Import your AboutUs page component
+import AboutUs from "./components/AboutUspage";
 import Project from "./components/projectSectionpage";
 import ServicePage from "./components/servicepage";
 
 const App = () => {
-  // Function to reveal elements on scroll
-  function revealOnScroll() {
-    const reveals = document.querySelectorAll(".reveal");
-    reveals.forEach((element) => {
-      const elementTop = element.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
+  useEffect(() => {
+    const revealOnScroll = () => {
+      const reveals = document.querySelectorAll(".reveal");
+      reveals.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
 
-      if (elementTop < windowHeight - 50) {
-        element.classList.add("active");
-      } else {
-        element.classList.remove("active");
-      }
-    });
-  }
+        if (elementTop < windowHeight - 50) {
+          element.classList.add("active");
+        } else {
+          element.classList.remove("active");
+        }
+      });
+    };
 
-  // Event listener for scroll
-  window.addEventListener("scroll", revealOnScroll);
+    // Add event listener for scroll
+    window.addEventListener("scroll", revealOnScroll);
 
-  // Trigger the reveal on page load
-  document.addEventListener("DOMContentLoaded", revealOnScroll);
+    // Trigger the reveal on page load
+    revealOnScroll();
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", revealOnScroll);
+    };
+  }, []);
 
   return (
     <Router>
       <Header />
       <Routes>
+        <Route path="/" element={<Navigate to="/home" replace />} />
         <Route
           path="/home"
           element={
