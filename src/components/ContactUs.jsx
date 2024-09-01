@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/contactUs.css";
 
@@ -162,7 +162,7 @@ const ContactForm = () => {
                 Makkah 24377, Saudi Arabia
               </p>
               <p className="contact-info-text mb-1">
-                <strong>Phone:</strong> +8800243253455465
+                <strong>Phone:</strong> +966564997029
               </p>
               <p className="contact-info-text mb-0">
                 <strong>Email:</strong> sacompany@web.mail

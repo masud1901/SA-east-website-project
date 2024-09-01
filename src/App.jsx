@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,7 +17,7 @@ import ProjectsSlider from "./components/ProjectsSlider";
 import WhyUsSection from "./components/WhyUsSection";
 import ServicesSection from "./components/ServicesSection";
 import AboutUs from "./components/AboutUspage";
-import Project from "./components/projectSectionpage";
+import ProjectPage from "./components/projectSectionpage";
 import ServicePage from "./components/servicepage";
 
 const App = () => {
@@ -70,8 +70,9 @@ const App = () => {
           }
         />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/project" element={<Project />} />
+        <Route path="/project" element={<ProjectPage />} />
         <Route path="/service" element={<ServicePage />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
       <Footer />
     </Router>

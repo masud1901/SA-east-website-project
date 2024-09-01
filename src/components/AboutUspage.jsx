@@ -1,15 +1,10 @@
 import { Container, Row, Col, Card, Image } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import "../css/aboutuspage.css";
 
 const AboutUs = () => {
   return (
     <>
-      <small className="smallHeader">
-        {" "}
-        <Link to="/home">Home</Link> » <Link to="/about">About</Link>
-      </small>
-      <section id="aboutUS" className="mt-3">
+      <section id="aboutUS">
         <div className="about-us-page">
           <Container>
             <Row>
@@ -49,14 +44,14 @@ const AboutUs = () => {
                   title: "Employment Management Manager",
                   description:
                     "At Al-Shams Al-Anma Est. the only thing that matters is this word [value] the value of Human Being, the value of Assets, and the value of Services, at Al-Shams Al-Anma company we built our company at the core this word. We value our man power, our clients and their assets and the services we provide. ",
-                  image: "/src/assets/ali.PNG",
+                  image: "/src/assets/ali1.jpeg",
                 },
                 {
                   name: "Humayun Kabir",
                   title: "Marketing Manager",
                   description:
                     "At Al-Shams Al-Anma Est. the only thing that matters is this word [value] the value of Human Being, the value of Assets, and the value of Services, at Al-Shams Al-Anma company we built our company at the core this word. We value our man power, our clients and their assets and the services we provide. ",
-                  image: "/src/assets/kabir.PNG",
+                  image: "/src/assets/kabir1.jpeg",
                 },
               ].map((manager, index) => (
                 <Col key={index} md={12} className="mb-4">

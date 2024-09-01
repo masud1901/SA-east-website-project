@@ -1,98 +1,107 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "../css/ProjectsSlider.css"; // Updated CSS file name for uniqueness
+import { useEffect } from "react";
+import "../css/projectpage.css";
 
-const TrendingSlider = () => {
-  const handleButtonClick = () => {
-    console.log("Button clicked!");
-  };
-
-  const slides = [
+const ProjectPage = () => {
+  const projects = [
     {
-      img: "src/assets/project_images/project1.PNG",
-      header: "PROJECT: KCH, SHAPOORJI PALLONJI",
-      description: "JEDDAH, KSA",
+      title: "PROJECT: KCH, SHAPOORJI PALLONJI, JEDDAH, KSA",
+      details:
+        "We live in a world where Facility Management is booming out into a big opportunity for business. We at Al-Shams Al-Amana Company provide services in cleaning, maintenance, event management, renovation and development, warehousing. With the continuous experimentation of new products under the supervision of qualified professionals has led us to come up with competitive products to satisfy our clients.",
+      imageSrc: "src/assets/project_images/project1.PNG",
+      imageAlt: "Project One Image",
     },
     {
-      img: "src/assets/project_images/project2.PNG",
-      header: "PROJECT: SWCC, LIMAK",
-      description: "JUBAIL,KSA",
+      title: "PROJECT: SWCC, LIMAK, JUBAIL,KSA",
+      details:
+        "We live in a world where Facility Management is booming out into a big opportunity for business. We at Al-Shams Al-Amana Company provide services in cleaning, maintenance, event management, renovation and development, warehousing. With the continuous experimentation of new products under the supervision of qualified professionals has led us to come up with competitive products to satisfy our clients.",
+      imageSrc: "src/assets/project_images/project2.PNG",
+      imageAlt: "Project Two Image",
     },
     {
-      img: "src/assets/project_images/project3.PNG",
-      header: "ROJECT :RITE AND OUR WORK WITH THE CRCC",
-      description: "MAKKAH METRO",
+      title: "PROJECT :RITE AND OUR WORK WITH THE CRCC, MAKKAH METRO ",
+      details:
+        "We live in a world where Facility Management is booming out into a big opportunity for business. We at Al-Shams Al-Amana Company provide services in cleaning, maintenance, event management, renovation and development, warehousing. With the continuous experimentation of new products under the supervision of qualified professionals has led us to come up with competitive products to satisfy our clients.",
+      imageSrc: "src/assets/project_images/project3.PNG",
+      imageAlt: "Project Three Image",
     },
     {
-      img: "src/assets/project_images/project4.PNG",
-      header: "PROJECT: RITE GROUP,KSA  ",
-      description:
-        " Our Experienced Cleaners are working Various kind of Showroom such as Sephora, Dior, Nice Store, Extra, Guess etc",
+      title:
+        "PROJECT: Our Experienced Cleaners are working Various kind of Showroom such as Sephora, Dior, Nice Store, Extra, Guess etc. With RITE GROUP,KSA ",
+      details:
+        "We live in a world where Facility Management is booming out into a big opportunity for business. We at Al-Shams Al-Amana Company provide services in cleaning, maintenance, event management, renovation and development, warehousing. With the continuous experimentation of new products under the supervision of qualified professionals has led us to come up with competitive products to satisfy our clients.",
+      imageSrc: "src/assets/project_images/project4.PNG",
+      imageAlt: "Project Three Image",
     },
   ];
 
+  const createProjectCard = (project, index) => {
+    const isEven = index % 2 === 0;
+
+    return (
+      <div className="project-card row mb-5" key={index}>
+        {isEven ? (
+          <>
+            <div className="col-md-6 mb-3 mb-md-0">
+              <img
+                src={project.imageSrc}
+                alt={project.imageAlt}
+                className="img-fluid project-image"
+              />
+            </div>
+            <div className="col-md-6 d-flex flex-column justify-content-center">
+              <h2 className="mb-3 project-title">{project.title}</h2>
+              <p className="text-justify">{project.details}</p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="col-md-6 mb-3 mb-md-0 order-md-2">
+              <img
+                src={project.imageSrc}
+                alt={project.imageAlt}
+                className="img-fluid project-image"
+              />
+            </div>
+            <div className="col-md-6 d-flex flex-column justify-content-center order-md-1 mb-3 mb-md-0">
+              <h2 className="mb-3 project-title">{project.title}</h2>
+              <p className="text-justify">{project.details}</p>
+            </div>
+          </>
+        )}
+      </div>
+    );
+  };
+
+  const checkVisibility = () => {
+    const cards = document.querySelectorAll(".project-card");
+    cards.forEach((card) => {
+      const rect = card.getBoundingClientRect();
+      const isVisible =
+        rect.top <= window.innerHeight * 0.75 && rect.bottom >= 0;
+      if (isVisible) {
+        card.classList.add("visible");
+      }
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility();
+
+    return () => {
+      window.removeEventListener("scroll", checkVisibility);
+    };
+  }, []);
+
   return (
-    <section id="CustomProjects">
-      <div className="custom-projects-container">
-        <h1 className="custom-section-heading">
-          Projects
-          <hr />
-        </h1>
+    <div className="projectContainer">
+      <div className="container my-5">
+        <div id="projectContainer">
+          {projects.map((project, index) => createProjectCard(project, index))}
+        </div>
       </div>
-      <div className="custom-swiper-container">
-        <Swiper
-          effect={"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
-          loop={true}
-          slidesPerView={"auto"}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2.5,
-          }}
-          pagination={{ el: ".custom-swiper-pagination", clickable: true }}
-          navigation={{
-            nextEl: ".custom-swiper-button-next",
-            prevEl: ".custom-swiper-button-prev",
-          }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
-          className="custom-projects-slider"
-        >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={index} className="custom-projects-slide">
-              <div className="custom-projects-slide-img">
-                <img src={slide.img} alt={slide.header} />
-              </div>
-              <div className="custom-projects-slide-content">
-                <h2>{slide.header}</h2>
-                <p>{slide.description}</p>
-              </div>
-            </SwiperSlide>
-          ))}
-          <div className="custom-projects-slider-control">
-            <div className="custom-swiper-button-prev custom-slider-arrow">
-              <ion-icon name="arrow-back-outline"></ion-icon>
-            </div>
-            <div className="custom-swiper-pagination"></div>
-            <div className="custom-swiper-button-next custom-slider-arrow">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </div>
-          </div>
-        </Swiper>
-      </div>
-      <div className="custom-button-projects-container">
-        <button className="custom-view-all-button" onClick={handleButtonClick}>
-          View All Projects
-        </button>
-      </div>
-    </section>
+    </div>
   );
 };
 
-export default TrendingSlider;
+export default ProjectPage;

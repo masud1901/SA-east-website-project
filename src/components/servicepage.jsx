@@ -1,14 +1,9 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "../css/servicepage.css";
-import { Link } from "react-router-dom";
 
 const ServicesPage = () => {
   return (
     <>
-      <small className="smallHeader">
-        {" "}
-        <Link to="/home">Home</Link> » <Link to="/about">Service</Link>
-      </small>
       <section id="services" className="services-section">
         <Container>
           <Row className="support-services-row">

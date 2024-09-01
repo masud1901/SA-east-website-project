@@ -1,0 +1,81 @@
+.project-card {
+  opacity: 0;
+  /* Initial position to start animation */
+  transform: translateX(-50px); /* Adjust based on image side */
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 6px rgba(227, 9, 9, 0.3);
+}
+
+.project-card.visible {
+  opacity: 1;
+  transform: translateX(0); /* Final position */
+}
+
+.project-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.project-image {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-title {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-title {
+  color: #053971;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* Animation for even cards */
+.project-card[data-is-even="true"] {
+  transform: translateX(-50px); /* Start from the left */
+  background-color: #60a5fa; /* Light blue background */
+}
+
+/* Animation for odd cards */
+.project-card[data-is-even="false"] {
+  transform: translateX(50px); /* Start from the right */
+  background-color: #d71c0e; /* Light red background */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* For screens smaller than 768px */
+  .project-card {
+    flex-direction: column;
+    /* Stack image and details vertically */
+  }
+
+  .project-card[data-is-even="true"],
+  .project-card[data-is-even="false"] {
+    transform: translateY(-50px); /* Slide in from top */
+  }
+
+  .col-md-6 {
+    width: 100%;
+    /* Full width on smaller screens */
+  }
+
+  .order-md-1,
+  .order-md-2 {
+    order: unset;
+    /* Reset order on smaller screens */
+  }
+}
