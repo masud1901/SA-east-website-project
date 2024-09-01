@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -7,6 +8,9 @@ import "swiper/css/navigation";
 import "../css/ProjectsSlider.css"; // Updated CSS file name for uniqueness
 
 const TrendingSlider = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const handleButtonClick = () => {
     console.log("Button clicked!");
   };
@@ -87,9 +91,15 @@ const TrendingSlider = () => {
         </Swiper>
       </div>
       <div className="custom-button-projects-container">
-        <button className="custom-view-all-button" onClick={handleButtonClick}>
-          View All Projects
-        </button>
+        <Link
+          to="/project"
+          onClick={() => {
+            scrollToTop();
+            handleButtonClick();
+          }}
+        >
+          <button className="custom-view-all-button">View All Projects</button>
+        </Link>
       </div>
     </section>
   );

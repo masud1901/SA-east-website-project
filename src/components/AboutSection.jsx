@@ -1,6 +1,9 @@
 import "../css/about.css";
-
+import { Link } from "react-router-dom";
 const About = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <>
       <div className="about reveal" id="about">
@@ -42,7 +45,9 @@ const About = () => {
               satisfy our clients.
             </p>
             <a href="">
-              <button>READ MORE »</button>
+              <Link to="/about" onClick={scrollToTop}>
+                <button>READ MORE »</button>
+              </Link>
             </a>
           </div>
         </div>

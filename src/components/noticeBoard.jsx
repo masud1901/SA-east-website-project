@@ -1,6 +1,9 @@
 import "../css/notice.css";
 import { Link } from "react-router-dom";
 const Notice = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <>
       <div className="notice-body">
@@ -79,7 +82,10 @@ const Notice = () => {
               {/* View All Button */}
               <div className="custom-button-projects-container">
                 <Link to="/about">
-                  <button className="custom-view-all-button">
+                  <button
+                    className="custom-view-all-button"
+                    onClick={scrollToTop}
+                  >
                     View All Details
                   </button>
                 </Link>

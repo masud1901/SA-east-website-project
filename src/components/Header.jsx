@@ -86,13 +86,13 @@ const Header = () => {
               <Link to="/about" onClick={scrollToTop}>
                 ABOUT
               </Link>
-              <a href="#services" onClick={scrollToTop}>
+              <a href="/service" onClick={scrollToTop}>
                 SERVICES
               </a>
-              <a href="#contact" onClick={scrollToTop}>
+              <a href="/contact" onClick={scrollToTop}>
                 CONTACT
               </a>
-              <a href="#home" onClick={scrollToTop}>
+              <a href="/home" onClick={scrollToTop}>
                 <img
                   src="/src/assets/arabic.png"
                   alt=""
@@ -125,24 +125,24 @@ const Header = () => {
         >
           HOME
         </Link>
-        <a
-          href="#notices"
+        <Link
+          to=""
           onClick={() => {
             scrollToTop();
             toggleSidebar();
           }}
         >
           JOB NOTICE
-        </a>
-        <a
-          href="#projects"
+        </Link>
+        <Link
+          to="/project"
           onClick={() => {
             scrollToTop();
             toggleSidebar();
           }}
         >
           PROJECTS
-        </a>
+        </Link>
         <Link
           to="/about"
           onClick={() => {
@@ -152,24 +152,24 @@ const Header = () => {
         >
           ABOUT
         </Link>
-        <a
-          href="#services"
+        <Link
+          to="/service"
           onClick={() => {
             scrollToTop();
             toggleSidebar();
           }}
         >
           SERVICES
-        </a>
-        <a
-          href="#contact"
+        </Link>
+        <Link
+          to="/contact"
           onClick={() => {
             scrollToTop();
             toggleSidebar();
           }}
         >
           CONTACT
-        </a>
+        </Link>
         <a
           href=""
           onClick={() => {

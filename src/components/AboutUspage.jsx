@@ -37,7 +37,7 @@ const AboutUs = () => {
                   title: "General Manager",
                   description:
                     "At Al-Shams Al-Anma Est. the only thing that matters is this word [value] the value of Human Being, the value of Assets, and the value of Services, at Al-Shams Al-Anma company we built our company at the core this word. We value our man power, our clients and their assets and the services we provide. ",
-                  image: "/src/assets/abu.PNG",
+                  image: "/src/assets/abu1.png",
                 },
                 {
                   name: "Mohammad Anowarr Hossain",
@@ -202,29 +202,29 @@ const AboutUs = () => {
             <Row>
               {[
                 {
-                  img: "/src/assets/inf1.jpg",
+                  img: "/src/assets/inf1.png",
                   label: "AL-SHAMS AL-AMNA COMPANY ESTABLISHED",
                   value: "2023",
                 },
                 {
                   img: "/src/assets/inf2.png",
                   label: "WAREHOUSE AREA",
-                  value: "1500",
+                  value: "1500 m²",
                 },
                 {
-                  img: "/src/assets/inf3.webp",
+                  img: "/src/assets/inf3.png",
                   label: "ACCOMMODATION AREA",
-                  value: "5000",
+                  value: "5000 m²",
                 },
                 {
                   img: "/src/assets/inf4.png",
                   label: "MANPOWER",
-                  value: "300",
+                  value: "300+",
                 },
                 {
-                  img: "/src/assets/inf5.jpg",
+                  img: "/src/assets/inf5.png",
                   label: "NO. OF CLIENT",
-                  value: "100",
+                  value: "100+",
                 },
                 {
                   img: "/src/assets/inf6.png",
@@ -279,13 +279,16 @@ const AboutUs = () => {
             <Row>
               {[
                 "/src/assets/about_page/gal1.PNG",
+                "/src/assets/about_page/imp1.jpeg",
+                "/src/assets/about_page/imp3.jpeg",
                 "/src/assets/about_page/gal2.PNG",
                 "/src/assets/about_page/gal3.PNG",
                 "/src/assets/about_page/gal4.PNG",
+                "/src/assets/about_page/imp2.jpeg",
+                "/src/assets/about_page/imp4.jpeg",
                 "/src/assets/about_page/gal5.PNG",
                 "/src/assets/about_page/gal6.PNG",
                 "/src/assets/about_page/gal7.PNG",
-                "/src/assets/about_page/gal1.PNG",
                 // Add more photos as needed
               ].map((photo, index) => (
                 <Col key={index} md={3} className="mb-4">
