@@ -67,7 +67,7 @@ const Header = () => {
       >
         <div className="d-flex justify-content-between align-items-center fw-bold">
           <div className="logo-item">
-            <Link to="/home" lassName="navbar-brand" onClick={scrollToTop}>
+            <Link to="/home" className="navbar-brand" onClick={scrollToTop}>
               {" "}
               <img src="/src/assets/logo.PNG" alt="" className="logo" />
             </Link>

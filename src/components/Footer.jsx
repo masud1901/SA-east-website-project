@@ -1,7 +1,11 @@
 import { Facebook, Twitter, Instagram } from "lucide-react";
 import "../css/footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <footer
       className="footer"
@@ -27,29 +31,41 @@ const Footer = () => {
           <h3 className="footer__section-title">Quick Links</h3>
           <ul className="footer__link-list">
             <li>
-              <a href="#projects" className="footer__link">
+              <Link to="/home" className="footer__link" onClick={scrollToTop}>
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#projects" className="footer__link">
-                Projects
-              </a>
+              <Link
+                to="/project"
+                className="footer__link"
+                onClick={scrollToTop}
+              >
+                Project
+              </Link>
             </li>
             <li>
-              <a href="#about" className="footer__link">
-                About us
-              </a>
+              <Link to="/about" className="footer__link" onClick={scrollToTop}>
+                About Us
+              </Link>
             </li>
             <li>
-              <a href="#notice" className="footer__link">
-                Notice board
-              </a>
+              <Link
+                to="/service"
+                className="footer__link"
+                onClick={scrollToTop}
+              >
+                Service
+              </Link>
             </li>
             <li>
-              <a href="#contact" className="footer__link">
-                Contact us
-              </a>
+              <Link
+                to="/contact"
+                className="footer__link"
+                onClick={scrollToTop}
+              >
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
