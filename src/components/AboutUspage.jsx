@@ -37,21 +37,21 @@ const AboutUs = () => {
                   title: "General Manager",
                   description:
                     "At Al-Shams Al-Anma Est. the only thing that matters is this word [value] the value of Human Being, the value of Assets, and the value of Services, at Al-Shams Al-Anma company we built our company at the core this word. We value our man power, our clients and their assets and the services we provide. ",
-                  image: "/src/assets/abu1.png",
+                  image: "/public/assets/abu1.png",
                 },
                 {
                   name: "Mohammad Anowarr Hossain",
                   title: "Employment Management Manager",
                   description:
                     "At Al-Shams Al-Anma Est. the only thing that matters is this word [value] the value of Human Being, the value of Assets, and the value of Services, at Al-Shams Al-Anma company we built our company at the core this word. We value our man power, our clients and their assets and the services we provide. ",
-                  image: "/src/assets/ali1.jpeg",
+                  image: "/public/assets/ali1.jpeg",
                 },
                 {
                   name: "Humayun Kabir",
                   title: "Marketing Manager",
                   description:
                     "At Al-Shams Al-Anma Est. the only thing that matters is this word [value] the value of Human Being, the value of Assets, and the value of Services, at Al-Shams Al-Anma company we built our company at the core this word. We value our man power, our clients and their assets and the services we provide. ",
-                  image: "/src/assets/kabir1.jpeg",
+                  image: "/public/assets/kabir1.jpeg",
                 },
               ].map((manager, index) => (
                 <Col key={index} md={12} className="mb-4">
@@ -92,7 +92,7 @@ const AboutUs = () => {
             <div className="card__container">
               <article className="card__article">
                 <img
-                  src="/src/assets/staff/staff1.PNG"
+                  src="/public/assets/staff/staff1.PNG"
                   alt="Maintenance"
                   className="card__img"
                 />
@@ -103,7 +103,7 @@ const AboutUs = () => {
               </article>
               <article className="card__article">
                 <img
-                  src="/src/assets/staff/staff2.PNG"
+                  src="/public/assets/staff/staff2.PNG"
                   alt="Pest Control"
                   className="card__img"
                 />
@@ -115,7 +115,7 @@ const AboutUs = () => {
 
               <article className="card__article">
                 <img
-                  src="/src/assets/staff/staff4.PNG"
+                  src="/public/assets/staff/staff4.PNG"
                   alt="Pest Control"
                   className="card__img"
                 />
@@ -126,7 +126,7 @@ const AboutUs = () => {
               </article>
               <article className="card__article">
                 <img
-                  src="/src/assets/staff/staff3.PNG"
+                  src="/public/assets/staff/staff3.PNG"
                   alt="Maintenance"
                   className="card__img"
                 />
@@ -137,7 +137,7 @@ const AboutUs = () => {
               </article>
               <article className="card__article">
                 <img
-                  src="/src/assets/staff/staff5.PNG"
+                  src="/public/assets/staff/staff5.PNG"
                   alt="Pest Control"
                   className="card__img"
                 />
@@ -149,7 +149,7 @@ const AboutUs = () => {
 
               <article className="card__article">
                 <img
-                  src="/src/assets/staff/staff6.PNG"
+                  src="/public/assets/staff/staff6.PNG"
                   alt="Pest Control"
                   className="card__img"
                 />
@@ -160,7 +160,7 @@ const AboutUs = () => {
               </article>
               <article className="card__article">
                 <img
-                  src="/src/assets/staff/staff7.PNG"
+                  src="/public/assets/staff/staff7.PNG"
                   alt="Maintenance"
                   className="card__img"
                 />
@@ -171,7 +171,7 @@ const AboutUs = () => {
               </article>
               <article className="card__article">
                 <img
-                  src="/src/assets/staff/staff8.PNG"
+                  src="/public/assets/staff/staff8.PNG"
                   alt="Pest Control"
                   className="card__img"
                 />
@@ -183,7 +183,7 @@ const AboutUs = () => {
 
               <article className="card__article">
                 <img
-                  src="/src/assets/service/service3.PNG"
+                  src="/public/assets/service/service3.PNG"
                   alt="Pest Control"
                   className="card__img"
                 />
@@ -202,42 +202,42 @@ const AboutUs = () => {
             <Row>
               {[
                 {
-                  img: "/src/assets/inf1.png",
+                  img: "/public/assets/inf1.png",
                   label: "AL-SHAMS AL-AMNA COMPANY ESTABLISHED",
                   value: "2023",
                 },
                 {
-                  img: "/src/assets/inf2.png",
+                  img: "/public/assets/inf2.png",
                   label: "WAREHOUSE AREA",
                   value: "1500 m²",
                 },
                 {
-                  img: "/src/assets/inf3.png",
+                  img: "/public/assets/inf3.png",
                   label: "ACCOMMODATION AREA",
                   value: "5000 m²",
                 },
                 {
-                  img: "/src/assets/inf4.png",
+                  img: "/public/assets/inf4.png",
                   label: "MANPOWER",
                   value: "300+",
                 },
                 {
-                  img: "/src/assets/inf5.png",
+                  img: "/public/assets/inf5.png",
                   label: "NO. OF CLIENT",
                   value: "100+",
                 },
                 {
-                  img: "/src/assets/inf6.png",
+                  img: "/public/assets/inf6.png",
                   label: "BUSES FOR TRANSPORTATION",
                   value: 3,
                 },
                 {
-                  img: "/src/assets/inf7.png",
+                  img: "/public/assets/inf7.png",
                   label: "TRANSFERRING VEHICLES",
                   value: 5,
                 },
                 {
-                  img: "/src/assets/inf8.png",
+                  img: "/public/assets/inf8.png",
                   label: "PRIVATE CAR FOR OFFICIAL STAFF TRANSPORTATION",
                   value: 3,
                 },
@@ -258,11 +258,11 @@ const AboutUs = () => {
             <h2 className="section-title">SA COMPANY ACCOMMODATION GALLARY</h2>
             <Row>
               {[
-                "/src/assets/about_page/acc5.PNG",
-                "/src/assets/about_page/acc2.PNG",
-                "/src/assets/about_page/acc3.PNG",
-                "/src/assets/about_page/acc4.PNG",
-                "/src/assets/about_page/acc1.PNG",
+                "/public/assets/about_page/acc5.PNG",
+                "/public/assets/about_page/acc2.PNG",
+                "/public/assets/about_page/acc3.PNG",
+                "/public/assets/about_page/acc4.PNG",
+                "/public/assets/about_page/acc1.PNG",
                 // Add more photos as needed
               ].map((photo, index) => (
                 <Col key={index} md={4} className="mb-4">
@@ -278,17 +278,17 @@ const AboutUs = () => {
             <h2 className="section-title">Photo Gallery</h2>
             <Row>
               {[
-                "/src/assets/about_page/gal1.PNG",
-                "/src/assets/about_page/imp1.jpeg",
-                "/src/assets/about_page/imp3.jpeg",
-                "/src/assets/about_page/gal2.PNG",
-                "/src/assets/about_page/gal3.PNG",
-                "/src/assets/about_page/gal4.PNG",
-                "/src/assets/about_page/imp2.jpeg",
-                "/src/assets/about_page/imp4.jpeg",
-                "/src/assets/about_page/gal5.PNG",
-                "/src/assets/about_page/gal6.PNG",
-                "/src/assets/about_page/gal7.PNG",
+                "/public/assets/about_page/gal1.PNG",
+                "/public/assets/about_page/imp1.jpeg",
+                "/public/assets/about_page/imp3.jpeg",
+                "/public/assets/about_page/gal2.PNG",
+                "/public/assets/about_page/gal3.PNG",
+                "/public/assets/about_page/gal4.PNG",
+                "/public/assets/about_page/imp2.jpeg",
+                "/public/assets/about_page/imp4.jpeg",
+                "/public/assets/about_page/gal5.PNG",
+                "/public/assets/about_page/gal6.PNG",
+                "/public/assets/about_page/gal7.PNG",
                 // Add more photos as needed
               ].map((photo, index) => (
                 <Col key={index} md={3} className="mb-4">

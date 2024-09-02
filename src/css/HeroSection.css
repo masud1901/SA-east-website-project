@@ -3,7 +3,7 @@
   width: 100%;
   overflow: hidden;
   position: relative;
-  background-image: url("/src/assets/heroSection1.jpeg");
+  background-image: url("/public/assets/heroSection1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   animation: image-change 20s infinite ease-in-out;
@@ -47,22 +47,22 @@ h3 {
 
 @keyframes image-change {
   0% {
-    background-image: url("/src/assets/hero_section/heroSection1.jpeg");
+    background-image: url("/public/assets/hero_section/heroSection1.jpeg");
   }
   20% {
-    background-image: url("/src/assets/hero_section/heroSection2.jpeg");
+    background-image: url("/public/assets/hero_section/heroSection2.jpeg");
   }
   40% {
-    background-image: url("/src/assets/hero_section/heroSection3.jpeg");
+    background-image: url("/public/assets/hero_section/heroSection3.jpeg");
   }
   60% {
-    background-image: url("/src/assets/hero_section/hero7.jpg");
+    background-image: url("/public/assets/hero_section/hero7.jpg");
   }
   80% {
-    background-image: url("/src/assets/hero_section/hero8.jpg");
+    background-image: url("/public/assets/hero_section/hero8.jpg");
   }
   100% {
-    background-image: url("/src/assets/hero_section/heroSection1.jpeg");
+    background-image: url("/public/assets/hero_section/heroSection1.jpeg");
   }
 }
 .marquee {
@@ -101,7 +101,7 @@ h3 {
     width: 100%;
     overflow: hidden;
     position: relative;
-    background-image: url("/src/assets/heroSection1.jpeg");
+    background-image: url("/public/assets/heroSection1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

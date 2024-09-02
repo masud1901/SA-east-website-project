@@ -9,7 +9,7 @@ const ServicesPage = () => {
           <Row className="support-services-row">
             <Col md={6}>
               <Card className="support-card">
-                <Card.Img src="/src/assets/servicepage2.jpg" />
+                <Card.Img src="/public/assets/servicepage2.jpg" />
                 <Card.Body className="support-card-body">
                   <Card.Text className="support-text">
                     We provide teams, employees, sales, and loading workers for
@@ -49,7 +49,7 @@ const ServicesPage = () => {
         <div className="card__container">
           <article className="card__article">
             <img
-              src="/src/assets/service/service1.PNG"
+              src="/public/assets/service/service1.PNG"
               alt="Maintenance"
               className="card__img"
             />
@@ -59,7 +59,7 @@ const ServicesPage = () => {
           </article>
           <article className="card__article">
             <img
-              src="/src/assets/service/service2.jpg"
+              src="/public/assets/service/service2.jpg"
               alt="Pest Control"
               className="card__img"
             />
@@ -70,7 +70,7 @@ const ServicesPage = () => {
 
           <article className="card__article">
             <img
-              src="/src/assets/service/service3.PNG"
+              src="/public/assets/service/service3.PNG"
               alt="Pest Control"
               className="card__img"
             />
@@ -81,7 +81,7 @@ const ServicesPage = () => {
 
           <article className="card__article">
             <img
-              src="/src/assets/service/service4.PNG"
+              src="/public/assets/service/service4.PNG"
               alt="Contracting Service"
               className="card__img"
             />
@@ -92,7 +92,7 @@ const ServicesPage = () => {
 
           <article className="card__article">
             <img
-              src="/src/assets/service/service5.PNG"
+              src="/public/assets/service/service5.PNG"
               alt="Pool Service"
               className="card__img"
             />
@@ -103,7 +103,7 @@ const ServicesPage = () => {
 
           <article className="card__article">
             <img
-              src="/src/assets/service/service6.PNG"
+              src="/public/assets/service/service6.PNG"
               alt="Renovation"
               className="card__img"
             />

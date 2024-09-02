@@ -69,7 +69,7 @@ const Header = () => {
           <div className="logo-item">
             <Link to="/home" className="navbar-brand" onClick={scrollToTop}>
               {" "}
-              <img src="/src/assets/logo.PNG" alt="" className="logo" />
+              <img src="/public/assets/logo.PNG" alt="" className="logo" />
             </Link>
           </div>
           <div>
@@ -94,7 +94,7 @@ const Header = () => {
               </a>
               <a href="/home" onClick={scrollToTop}>
                 <img
-                  src="/src/assets/arabic.png"
+                  src="/public/assets/arabic.png"
                   alt=""
                   style={{ width: "35px", height: "auto" }}
                 />
@@ -178,7 +178,7 @@ const Header = () => {
           }}
         >
           <img
-            src="/src/assets/arabic.png"
+            src="/public/assets/arabic.png"
             alt=""
             style={{ width: "35px", height: "auto" }}
           />

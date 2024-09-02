@@ -7,21 +7,21 @@ const ProjectPage = () => {
       title: "PROJECT: KCH, SHAPOORJI PALLONJI, JEDDAH, KSA",
       details:
         "We live in a world where Facility Management is booming out into a big opportunity for business. We at Al-Shams Al-Amana Company provide services in cleaning, maintenance, event management, renovation and development, warehousing. With the continuous experimentation of new products under the supervision of qualified professionals has led us to come up with competitive products to satisfy our clients.",
-      imageSrc: "src/assets/project_images/project1.PNG",
+      imageSrc: "/public/assets/project_images/project1.PNG",
       imageAlt: "Project One Image",
     },
     {
       title: "PROJECT: SWCC, LIMAK, JUBAIL,KSA",
       details:
         "We live in a world where Facility Management is booming out into a big opportunity for business. We at Al-Shams Al-Amana Company provide services in cleaning, maintenance, event management, renovation and development, warehousing. With the continuous experimentation of new products under the supervision of qualified professionals has led us to come up with competitive products to satisfy our clients.",
-      imageSrc: "src/assets/project_images/project2.PNG",
+      imageSrc: "/public/assets/project_images/project2.PNG",
       imageAlt: "Project Two Image",
     },
     {
       title: "PROJECT :RITE AND OUR WORK WITH THE CRCC, MAKKAH METRO ",
       details:
         "We live in a world where Facility Management is booming out into a big opportunity for business. We at Al-Shams Al-Amana Company provide services in cleaning, maintenance, event management, renovation and development, warehousing. With the continuous experimentation of new products under the supervision of qualified professionals has led us to come up with competitive products to satisfy our clients.",
-      imageSrc: "src/assets/project_images/project3.PNG",
+      imageSrc: "/public/assets/project_images/project3.PNG",
       imageAlt: "Project Three Image",
     },
     {
@@ -29,7 +29,7 @@ const ProjectPage = () => {
         "PROJECT: Our Experienced Cleaners are working Various kind of Showroom such as Sephora, Dior, Nice Store, Extra, Guess etc. With RITE GROUP,KSA ",
       details:
         "We live in a world where Facility Management is booming out into a big opportunity for business. We at Al-Shams Al-Amana Company provide services in cleaning, maintenance, event management, renovation and development, warehousing. With the continuous experimentation of new products under the supervision of qualified professionals has led us to come up with competitive products to satisfy our clients.",
-      imageSrc: "src/assets/project_images/project4.PNG",
+      imageSrc: "/public/assets/project_images/project4.PNG",
       imageAlt: "Project Three Image",
     },
   ];

@@ -26,7 +26,7 @@ const Notice = () => {
                     <div className="picture">
                       <img
                         className="img-fluid"
-                        src="/src/assets/abu.PNG"
+                        src="/public/assets/abu.PNG"
                         alt="Ali Bin Abu Talib Al-Ghubaishi"
                       />
                     </div>
@@ -46,7 +46,7 @@ const Notice = () => {
                     <div className="picture">
                       <img
                         className="img-fluid"
-                        src="/src/assets/ali.PNG"
+                        src="/public/assets/ali.PNG"
                         alt="Mohammad Anowarr Hossain"
                       />
                     </div>
@@ -65,7 +65,7 @@ const Notice = () => {
                     <div className="picture">
                       <img
                         className="img-fluid"
-                        src="/src/assets/kabir.PNG"
+                        src="/public/assets/kabir.PNG"
                         alt="Humayun Kabir"
                       />
                     </div>

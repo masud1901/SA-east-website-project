@@ -19,7 +19,7 @@ const Component = () => {
         >
           <Slider.Slide>
             <img
-              src="/src/assets/client/client1-Photoroom.png"
+              src="/public/assets/client/client1-Photoroom.png"
               alt="any"
               style={{ width: "300px", height: "70px" }}
             />
@@ -27,56 +27,56 @@ const Component = () => {
           <Slider.Slide></Slider.Slide>
           <Slider.Slide>
             <img
-              src="/src/assets/client/client2-Photoroom.png"
+              src="/public/assets/client/client2-Photoroom.png"
               alt="any"
               style={{ width: "100px", height: "100px" }}
             />
           </Slider.Slide>
           <Slider.Slide>
             <img
-              src="/src/assets/client/client3-Photoroom.png"
+              src="/public/assets/client/client3-Photoroom.png"
               alt="any"
               style={{ width: "100px", height: "100px" }}
             />
           </Slider.Slide>
           <Slider.Slide>
             <img
-              src="/src/assets/client/client4-Photoroom.png"
+              src="/public/assets/client/client4-Photoroom.png"
               alt="any"
               style={{ width: "100px", height: "100px" }}
             />
           </Slider.Slide>
           <Slider.Slide>
             <img
-              src="/src/assets/client/client5-Photoroom.png"
+              src="/public/assets/client/client5-Photoroom.png"
               alt="any"
               style={{ width: "100px", height: "100px" }}
             />
           </Slider.Slide>
           <Slider.Slide>
             <img
-              src="/src/assets/client/client6-Photoroom.png"
+              src="/public/assets/client/client6-Photoroom.png"
               alt="any"
               style={{ width: "100px", height: "100px" }}
             />
           </Slider.Slide>
           <Slider.Slide>
             <img
-              src="/src/assets/client/client7-Photoroom.png"
+              src="/public/assets/client/client7-Photoroom.png"
               alt="any"
               style={{ width: "100px", height: "100px" }}
             />
           </Slider.Slide>
           <Slider.Slide>
             <img
-              src="/src/assets/client/client8-Photoroom.png"
+              src="/public/assets/client/client8-Photoroom.png"
               alt="any"
               style={{ width: "100px", height: "100px" }}
             />
           </Slider.Slide>
           <Slider.Slide>
             <img
-              src="/src/assets/client/client9-Photoroom.png"
+              src="/public/assets/client/client9-Photoroom.png"
               alt="any"
               style={{ width: "100px", height: "100px" }}
             />
