@@ -1,5 +1,6 @@
 {
   "name": "website",
+  "homepage": "http://saestgroup.com/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
