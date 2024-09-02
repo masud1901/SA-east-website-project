@@ -93,14 +93,14 @@ const Header = () => {
               <Link to="/contact" onClick={scrollToTop}>
                 CONTACT
               </Link>
-              <a href="/home" onClick={scrollToTop}>
+              {/* <a href="/home" onClick={scrollToTop}>
                 <img
                   src={arabicImage}
                   alt=""
                   style={{ width: "35px", height: "auto" }}
                 />
                 ENGLISH
-              </a>
+              </a> */}
             </nav>
             <button
               className="navbar-toggler d-md-none me-2"
@@ -171,7 +171,7 @@ const Header = () => {
         >
           CONTACT
         </Link>
-        <a
+        {/* <a
           href=""
           onClick={() => {
             scrollToTop();
@@ -184,7 +184,7 @@ const Header = () => {
             style={{ width: "35px", height: "auto" }}
           />
           ENGLISH
-        </a>
+        </a> */}
       </div>
     </>
   );

@@ -73,21 +73,21 @@ const AboutUs = () => {
                   name: "Ali Bin Abu Talib Al-Ghubaishi",
                   title: "General Manager",
                   description:
-                    "At Al-Shams Al-Anma Est. the only thing that matters is this word [value] the value of Human Being, the value of Assets, and the value of Services, at Al-Shams Al-Anma company we built our company at the core this word. We value our man power, our clients and their assets and the services we provide. ",
+                    "At Al-Shams Al-Anma Est. the only thing that matters is this word [value] the value of Human Being, the value of Assets, and the value of Services, at Al-Shams Al-Anma Est. we built our Est. at the core this word. We value our man power, our clients and their assets and the services we provide. ",
                   image: AbuImage,
                 },
                 {
                   name: "Mohammad Anowarr Hossain",
                   title: "Employment Management Manager",
                   description:
-                    "At Al-Shams Al-Anma Est. the only thing that matters is this word [value] the value of Human Being, the value of Assets, and the value of Services, at Al-Shams Al-Anma company we built our company at the core this word. We value our man power, our clients and their assets and the services we provide. ",
+                    "At Al-Shams Al-Anma Est. the only thing that matters is this word [value] the value of Human Being, the value of Assets, and the value of Services, at Al-Shams Al-Anma Est. we built our Est. at the core this word. We value our man power, our clients and their assets and the services we provide. ",
                   image: AliImage,
                 },
                 {
                   name: "Humayun Kabir",
                   title: "Marketing Manager",
                   description:
-                    "At Al-Shams Al-Anma Est. the only thing that matters is this word [value] the value of Human Being, the value of Assets, and the value of Services, at Al-Shams Al-Anma company we built our company at the core this word. We value our man power, our clients and their assets and the services we provide. ",
+                    "At Al-Shams Al-Anma Est. the only thing that matters is this word [value] the value of Human Being, the value of Assets, and the value of Services, at Al-Shams Al-Anma Est. we built our Est. at the core this word. We value our man power, our clients and their assets and the services we provide. ",
                   image: KabirImage,
                 },
               ].map((manager, index) => (
@@ -196,12 +196,12 @@ const AboutUs = () => {
           </div>
         </div>
         <Container className="in-figures my-5">
-          <h2 className="section-title">AL-SHAMS AL-AMNA COMPANY IN FIGURES</h2>
+          <h2 className="section-title">AL-SHAMS AL-AMNA Est. IN FIGURES</h2>
           <Row>
             {[
               {
                 img: Inf1,
-                label: "AL-SHAMS AL-AMNA COMPANY ESTABLISHED",
+                label: "AL-SHAMS AL-AMNA Est. ESTABLISHED",
                 value: "2023",
               },
               {
@@ -254,7 +254,7 @@ const AboutUs = () => {
         </Container>
 
         <Container className="accommodation-gallery my-5">
-          <h2 className="section-title">SA COMPANY ACCOMMODATION GALLERY</h2>
+          <h2 className="section-title">SA Est. ACCOMMODATION GALLERY</h2>
           <Row>
             {[
               Acc1,

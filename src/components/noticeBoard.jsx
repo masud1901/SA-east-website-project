@@ -41,6 +41,11 @@ const Notice = () => {
                         Talib Al-Ghubaishi
                       </h4>
                       <h4 className="title">General Manager</h4>
+                      <h4 className="title">
+                        <a href="tel:+966502711132" className="hotline-text">
+                          Phone: +966502711132
+                        </a>
+                      </h4>
                     </div>
                   </div>
                 </div>
@@ -60,6 +65,11 @@ const Notice = () => {
                         Mohammad Anowarr <br /> Hossain
                       </h4>
                       <h4 className="title">Employment Management Manager</h4>
+                      <h4 className="title">
+                        <a href="tel:+966568315773" className="hotline-text">
+                          Phone: +966568315773
+                        </a>
+                      </h4>
                     </div>
                   </div>
                 </div>
@@ -79,6 +89,15 @@ const Notice = () => {
                         Humayun <br /> Kabir
                       </h4>
                       <h4 className="title">Marketing Manager</h4>
+                      <h4 className="title">
+                        <a
+                          href="tel:+966553930027
+"
+                          className="hotline-text"
+                        >
+                          Phone: +966553930027
+                        </a>
+                      </h4>
                     </div>
                   </div>
                 </div>
@@ -110,14 +129,14 @@ const Notice = () => {
                     <a href="">
                       <li>
                         <span className="important-notice">*</span>
-                        সৌদি আরবের ভিতরে জরুরী ক্লিনারের কাজের জন্য লোক প্রয়োজন।
+                        Urgent cleaner jobs required inside Saudi Arabia.
                         <span className="notice-date">Aug 07, 2024</span>
                       </li>
                     </a>
                     <a href="">
                       <li>
                         <span className="important-notice">*</span>
-                        সৌদি আরবের ভিতরে জরুরী ক্লিনারের কাজের জন্য লোক প্রয়োজন।
+                        Urgent cleaner jobs required inside Saudi Arabia.
                         <span className="notice-date">Aug 07, 2024</span>
                       </li>
                     </a>
@@ -125,21 +144,21 @@ const Notice = () => {
                       {" "}
                       <li>
                         <span className="important-notice">*</span>
-                        সৌদি আরবের ভিতরে জরুরী ক্লিনারের কাজের জন্য লোক প্রয়োজন।
+                        Urgent cleaner jobs required inside Saudi Arabia.
                         <span className="notice-date">Jul 25, 2024</span>
                       </li>
                     </a>
                     <a href="">
                       <li>
                         <span className="important-notice">*</span>
-                        সৌদি আরবের ভিতরে জরুরী ক্লিনারের কাজের জন্য লোক প্রয়োজন।
+                        Urgent cleaner jobs required inside Saudi Arabia.
                         <span className="notice-date">Jul 17, 2024</span>
                       </li>
                     </a>
                     <a href="">
                       <li>
                         <span className="important-notice">*</span>
-                        সৌদি আরবের ভিতরে জরুরী ক্লিনারের কাজের জন্য লোক প্রয়োজন।
+                        Urgent cleaner jobs required inside Saudi Arabia.
                         <span className="notice-date">Jun 23, 2024</span>
                       </li>
                     </a>
