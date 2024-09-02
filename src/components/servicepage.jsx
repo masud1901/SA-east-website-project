@@ -1,6 +1,14 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "../css/servicepage.css";
 
+import servicePageImage from "../../public/assets/servicepage2.jpg";
+import service1Image from "../../public/assets/service/service1.PNG";
+import service2Image from "../../public/assets/service/service2.jpg";
+import service3Image from "../../public/assets/service/service3.PNG";
+import service4Image from "../../public/assets/service/service4.PNG";
+import service5Image from "../../public/assets/service/service5.PNG";
+import service6Image from "../../public/assets/service/service6.PNG";
+
 const ServicesPage = () => {
   return (
     <>
@@ -9,7 +17,7 @@ const ServicesPage = () => {
           <Row className="support-services-row">
             <Col md={6}>
               <Card className="support-card">
-                <Card.Img src="/public/assets/servicepage2.jpg" />
+                <Card.Img src={servicePageImage} />
                 <Card.Body className="support-card-body">
                   <Card.Text className="support-text">
                     We provide teams, employees, sales, and loading workers for
@@ -48,40 +56,30 @@ const ServicesPage = () => {
         </div>
         <div className="card__container">
           <article className="card__article">
-            <img
-              src="/public/assets/service/service1.PNG"
-              alt="Maintenance"
-              className="card__img"
-            />
+            <img src={service1Image} alt="Maintenance" className="card__img" />
             <div className="card__data">
               <h2 className="card__title">Maintenance</h2>
             </div>
           </article>
           <article className="card__article">
             <img
-              src="/public/assets/service/service2.jpg"
-              alt="Pest Control"
+              src={service2Image}
+              alt="Food Catering"
               className="card__img"
             />
             <div className="card__data">
               <h2 className="card__title">Food Catering</h2>
             </div>
           </article>
-
           <article className="card__article">
-            <img
-              src="/public/assets/service/service3.PNG"
-              alt="Pest Control"
-              className="card__img"
-            />
+            <img src={service3Image} alt="Pest Control" className="card__img" />
             <div className="card__data">
               <h2 className="card__title">Pest Control</h2>
             </div>
           </article>
-
           <article className="card__article">
             <img
-              src="/public/assets/service/service4.PNG"
+              src={service4Image}
               alt="Contracting Service"
               className="card__img"
             />
@@ -89,24 +87,14 @@ const ServicesPage = () => {
               <h2 className="card__title">Contracting Service</h2>
             </div>
           </article>
-
           <article className="card__article">
-            <img
-              src="/public/assets/service/service5.PNG"
-              alt="Pool Service"
-              className="card__img"
-            />
+            <img src={service5Image} alt="Pool Service" className="card__img" />
             <div className="card__data">
               <h2 className="card__title">Pool Service</h2>
             </div>
           </article>
-
           <article className="card__article">
-            <img
-              src="/public/assets/service/service6.PNG"
-              alt="Renovation"
-              className="card__img"
-            />
+            <img src={service6Image} alt="Renovation" className="card__img" />
             <div className="card__data">
               <h2 className="card__title">Renovation</h2>
             </div>

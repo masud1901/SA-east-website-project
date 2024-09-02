@@ -1,11 +1,13 @@
 import { Facebook, Twitter, Instagram } from "lucide-react";
-import "../css/footer.css";
 import { Link } from "react-router-dom";
+import mainLogo from "../../public/assets/main-logo.png";
+import "../css/footer.css";
 
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
   return (
     <footer
       className="footer"
@@ -15,11 +17,7 @@ const Footer = () => {
     >
       <div className="footer__content">
         <div className="footer__logo-section">
-          <img
-            src="src/assets/main-logo.png"
-            alt="Company Logo"
-            className="footer__logo"
-          />
+          <img src={mainLogo} alt="Company Logo" className="footer__logo" />
           <p className="footer__description">
             We are a Saudi foundation that provides its services to
             international and local companies, ensuring fast performance and the

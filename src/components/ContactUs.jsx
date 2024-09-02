@@ -162,10 +162,14 @@ const ContactForm = () => {
                 Makkah 24377, Saudi Arabia
               </p>
               <p className="contact-info-text mb-1">
-                <strong>Phone:</strong> +966564997029
+                <a href="tel:+966564997029" className="text-white">
+                  <strong>Phone:</strong> +966564997029
+                </a>
               </p>
               <p className="contact-info-text mb-0">
-                <strong>Email:</strong> sacompany@web.mail
+                <a href="mailto:sagroup@web.mail" className="text-white">
+                  <strong>Email:</strong> sagroup@web.mail
+                </a>
               </p>
             </div>
           </div>

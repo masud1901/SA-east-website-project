@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../css/header.css";
 import { FaBars } from "react-icons/fa";
+import logo from "../../public/assets/logo.PNG";
+import arabicImage from "../../public/assets/arabic.png";
+import "../css/header.css";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -68,8 +70,7 @@ const Header = () => {
         <div className="d-flex justify-content-between align-items-center fw-bold">
           <div className="logo-item">
             <Link to="/home" className="navbar-brand" onClick={scrollToTop}>
-              {" "}
-              <img src="/public/assets/logo.PNG" alt="" className="logo" />
+              <img src={logo} alt="" className="logo" />
             </Link>
           </div>
           <div>
@@ -86,15 +87,15 @@ const Header = () => {
               <Link to="/about" onClick={scrollToTop}>
                 ABOUT
               </Link>
-              <a href="/service" onClick={scrollToTop}>
+              <Link to="/service" onClick={scrollToTop}>
                 SERVICES
-              </a>
-              <a href="/contact" onClick={scrollToTop}>
+              </Link>
+              <Link to="/contact" onClick={scrollToTop}>
                 CONTACT
-              </a>
+              </Link>
               <a href="/home" onClick={scrollToTop}>
                 <img
-                  src="/public/assets/arabic.png"
+                  src={arabicImage}
                   alt=""
                   style={{ width: "35px", height: "auto" }}
                 />
@@ -178,7 +179,7 @@ const Header = () => {
           }}
         >
           <img
-            src="/public/assets/arabic.png"
+            src={arabicImage}
             alt=""
             style={{ width: "35px", height: "auto" }}
           />

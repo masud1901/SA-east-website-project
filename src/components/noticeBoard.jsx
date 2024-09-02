@@ -1,9 +1,14 @@
-import "../css/notice.css";
 import { Link } from "react-router-dom";
+import "../css/notice.css";
+import abuImage from "../../public/assets/abu.PNG";
+import aliImage from "../../public/assets/ali.PNG";
+import kabirImage from "../../public/assets/kabir.PNG";
+
 const Notice = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
   return (
     <>
       <div className="notice-body">
@@ -26,7 +31,7 @@ const Notice = () => {
                     <div className="picture">
                       <img
                         className="img-fluid"
-                        src="/public/assets/abu.PNG"
+                        src={abuImage}
                         alt="Ali Bin Abu Talib Al-Ghubaishi"
                       />
                     </div>
@@ -46,7 +51,7 @@ const Notice = () => {
                     <div className="picture">
                       <img
                         className="img-fluid"
-                        src="/public/assets/ali.PNG"
+                        src={aliImage}
                         alt="Mohammad Anowarr Hossain"
                       />
                     </div>
@@ -65,7 +70,7 @@ const Notice = () => {
                     <div className="picture">
                       <img
                         className="img-fluid"
-                        src="/public/assets/kabir.PNG"
+                        src={kabirImage}
                         alt="Humayun Kabir"
                       />
                     </div>

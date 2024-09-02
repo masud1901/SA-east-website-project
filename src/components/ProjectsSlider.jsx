@@ -7,35 +7,41 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "../css/ProjectsSlider.css"; // Updated CSS file name for uniqueness
 
+import project1Image from "../../public/assets/project_images/project1.PNG";
+import project2Image from "../../public/assets/project_images/project2.PNG";
+import project3Image from "../../public/assets/project_images/project3.PNG";
+import project4Image from "../../public/assets/project_images/project4.PNG";
+
 const TrendingSlider = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
   const handleButtonClick = () => {
     console.log("Button clicked!");
   };
 
   const slides = [
     {
-      img: "/public/assets/project_images/project1.PNG",
+      img: project1Image,
       header: "PROJECT: KCH, SHAPOORJI PALLONJI",
       description: "JEDDAH, KSA",
     },
     {
-      img: "/public/assets/project_images/project2.PNG",
+      img: project2Image,
       header: "PROJECT: SWCC, LIMAK",
       description: "JUBAIL,KSA",
     },
     {
-      img: "/public/assets/project_images/project3.PNG",
-      header: "ROJECT :RITE AND OUR WORK WITH THE CRCC",
+      img: project3Image,
+      header: "PROJECT :RITE AND OUR WORK WITH THE CRCC",
       description: "MAKKAH METRO",
     },
     {
-      img: "/public/assets/project_images/project4.PNG",
-      header: "PROJECT: RITE GROUP,KSA  ",
+      img: project4Image,
+      header: "PROJECT: RITE GROUP,KSA",
       description:
-        " Our Experienced Cleaners are working Various kind of Showroom such as Sephora, Dior, Nice Store, Extra, Guess etc",
+        "Our Experienced Cleaners are working Various kind of Showroom such as Sephora, Dior, Nice Store, Extra, Guess etc",
     },
   ];
 
