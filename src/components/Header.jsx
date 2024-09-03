@@ -56,6 +56,13 @@ const Header = () => {
                 <a href="tel:+966564997029" className="hotline-text">
                   Hotline: +966564997029
                 </a>
+                <br />
+                <a
+                  href="mailto:support@saestgroup.com"
+                  className="hotline-text"
+                >
+                  Email: support@saestgroup.com
+                </a>
               </p>
             </div>
           </div>

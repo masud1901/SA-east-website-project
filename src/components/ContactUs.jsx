@@ -167,8 +167,8 @@ const ContactForm = () => {
                 </a>
               </p>
               <p className="contact-info-text mb-0">
-                <a href="mailto:sagroup@web.mail" className="text-white">
-                  <strong>Email:</strong> sagroup@web.mail
+                <a href="mailto:support@saestgroup.com" className="text-white">
+                  <strong>Email:</strong> support@saestgroup.com
                 </a>
               </p>
             </div>
