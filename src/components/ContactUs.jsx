@@ -149,7 +149,7 @@ const ContactForm = () => {
           <div className="col-md-6 d-flex flex-column">
             <div className="contact-map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3713.2508240212584!2d39.86127731495155!3d21.423863085786513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c204b74c28d467%3A0xb2f543a618225767!2sAl%20Awali%2C%20Makkah%2024377%2C%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1630183744961!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.8992193689182!2d39.909966399999995!3d21.314998199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c209d6531bffd7%3A0x1a9b4a627dc91e81!2sAL%20SHAMS%20AL%20AMNA%20COMPANY!5e0!3m2!1sen!2sbd!4v1725309273257!5m2!1sen!2sbd"
                 className="contact-map"
                 allowFullScreen=""
                 loading="lazy"

@@ -36,16 +36,17 @@
 }
 
 .manager-image {
-  border-radius: 10px;
-  object-fit: cover;
-  height: 100%;
-  margin-left: 3rem;
+  margin-top: 1rem;
+  border-radius: 20px;
 }
 
 .manager-image-col {
-  padding-right: 0;
+  padding: 0;
 }
-
+.phone-link {
+  color: rgb(44, 44, 49); /* Link color */
+  text-decoration: none; /* Remove underline */
+}
 .photo-card {
   width: auto;
   height: 20rem;
@@ -91,15 +92,35 @@
   .operations {
     font-size: 1rem;
   }
-
-  .manager-image {
-    height: 200px;
-  }
-
   .photo-card img {
     height: auto;
   }
-  .manager-image-col {
+  .manager-card {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .manager-image {
+    width: auto;
+    height: auto;
+  }
+
+  .manager-image-col,
+  .manager-card .card-body {
+    text-align: center;
+    padding: 0;
+  }
+
+  .manager-card .card-body {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .manager-card .card-title,
+  .manager-card .card-subtitle,
+  .manager-card .card-text {
+    text-align: center;
   }
 }

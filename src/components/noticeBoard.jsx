@@ -46,6 +46,14 @@ const Notice = () => {
                           Phone: +966502711132
                         </a>
                       </h4>
+                      <h4>
+                        <a
+                          href="mailto:Sacompanymakkah@gmail.com"
+                          className="hotline-text"
+                        >
+                          Email: Sacompanymakkah@gmail.com
+                        </a>
+                      </h4>
                     </div>
                   </div>
                 </div>
@@ -62,12 +70,23 @@ const Notice = () => {
                     </div>
                     <div className="team-content">
                       <h4 className="name">
-                        Mohammad Anowarr <br /> Hossain
+                        Mohammad Anowar <br /> Hossain
                       </h4>
                       <h4 className="title">Employment Management Manager</h4>
                       <h4 className="title">
-                        <a href="tel:+966568315773" className="hotline-text">
+                        <a
+                          href="tel:+966568315773"
+                          className="hotline-text text-light"
+                        >
                           Phone: +966568315773
+                        </a>
+                      </h4>
+                      <h4>
+                        <a
+                          href="mailto:Sacompanymakkah@gmail.com"
+                          className="hotline-text"
+                        >
+                          Email: Sacompanymakkah@gmail.com
                         </a>
                       </h4>
                     </div>
@@ -91,11 +110,19 @@ const Notice = () => {
                       <h4 className="title">Marketing Manager</h4>
                       <h4 className="title">
                         <a
-                          href="tel:+966553930027
+                          href="tel:+966545666218
 "
                           className="hotline-text"
                         >
-                          Phone: +966553930027
+                          Phone: +966545666218
+                        </a>
+                      </h4>
+                      <h4>
+                        <a
+                          href="mailto:Sacompanymakkah@gmail.com"
+                          className="hotline-text"
+                        >
+                          Email: Sacompanymakkah@gmail.com
                         </a>
                       </h4>
                     </div>

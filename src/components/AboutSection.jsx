@@ -2,9 +2,9 @@ import "../css/about.css";
 import { Link } from "react-router-dom";
 
 // Importing images
-import heroSection2 from "../../public/assets/hero_section/heroSection2.jpeg";
-import heroSection3 from "../../public/assets/hero_section/heroSection3.jpeg";
-import heroSection1 from "../../public/assets/hero_section/heroSection1.jpeg";
+import heroSection2 from "../../public/assets/hero_section/hero6.jpg";
+import heroSection3 from "../../public/assets/hero_section/hero7.jpg";
+import heroSection1 from "../../public/assets/hero_section/hero8.jpg";
 
 const About = () => {
   const scrollToTop = () => {

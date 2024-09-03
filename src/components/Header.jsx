@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import logo from "../../public/assets/logo.PNG";
-import arabicImage from "../../public/assets/arabic.png";
 import "../css/header.css";
 
 const Header = () => {

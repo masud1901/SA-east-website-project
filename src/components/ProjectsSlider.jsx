@@ -9,7 +9,7 @@ import "../css/ProjectsSlider.css"; // Updated CSS file name for uniqueness
 
 import project1Image from "../../public/assets/project_images/project1.PNG";
 import project2Image from "../../public/assets/project_images/project2.PNG";
-import project3Image from "../../public/assets/project_images/project3.PNG";
+import project3Image from "../../public/assets/hero_section/heroSection5.jpeg";
 import project4Image from "../../public/assets/project_images/project4.PNG";
 
 const TrendingSlider = () => {
