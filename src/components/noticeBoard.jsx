@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { collection, getDocs, query, orderBy, limit } from "firebase/firestore";
 import { db } from "../firebase"; // Ensure this path is correct
@@ -114,7 +114,11 @@ const Notice = () => {
               />
             )}
             {selectedNotice.link && (
-              <a href={selectedNotice.link} target="_blank" rel="noopener noreferrer">
+              <a
+                href={selectedNotice.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Read more
               </a>
             )}
