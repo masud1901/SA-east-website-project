@@ -1,18 +1,37 @@
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
+import { collection, getDocs, query, orderBy, limit } from "firebase/firestore";
+import { db } from "../firebase"; // Update this path
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../css/ProjectsSlider.css"; // Updated CSS file name for uniqueness
-
-import project1Image from "../../public/assets/project_images/project1.PNG";
-import project2Image from "../../public/assets/project_images/project2.PNG";
-import project3Image from "../../public/assets/hero_section/heroSection5.jpeg";
-import project4Image from "../../public/assets/project_images/project4.PNG";
+import "../css/ProjectsSlider.css";
 
 const TrendingSlider = () => {
+  const [slides, setSlides] = useState([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const projectsCollection = collection(db, "projects");
+      const projectsQuery = query(
+        projectsCollection,
+        orderBy("createdAt", "desc"),
+        limit(4)
+      );
+      const querySnapshot = await getDocs(projectsQuery);
+      const projectsList = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setSlides(projectsList);
+    };
+
+    fetchProjects();
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -20,30 +39,6 @@ const TrendingSlider = () => {
   const handleButtonClick = () => {
     console.log("Button clicked!");
   };
-
-  const slides = [
-    {
-      img: project1Image,
-      header: "PROJECT: KCH, SHAPOORJI PALLONJI",
-      description: "JEDDAH, KSA",
-    },
-    {
-      img: project2Image,
-      header: "PROJECT: SWCC, LIMAK",
-      description: "JUBAIL,KSA",
-    },
-    {
-      img: project3Image,
-      header: "PROJECT :RITE AND OUR WORK WITH THE CRCC",
-      description: "MAKKAH METRO",
-    },
-    {
-      img: project4Image,
-      header: "PROJECT: RITE GROUP,KSA",
-      description:
-        "Our Experienced Cleaners are working Various kind of Showroom such as Sephora, Dior, Nice Store, Extra, Guess etc",
-    },
-  ];
 
   return (
     <section id="CustomProjects">
@@ -74,14 +69,14 @@ const TrendingSlider = () => {
           modules={[EffectCoverflow, Pagination, Navigation]}
           className="custom-projects-slider"
         >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={index} className="custom-projects-slide">
+          {slides.map((slide) => (
+            <SwiperSlide key={slide.id} className="custom-projects-slide">
               <div className="custom-projects-slide-img">
-                <img src={slide.img} alt={slide.header} />
+                <img src={slide.imgURL} alt={slide.title} />
               </div>
               <div className="custom-projects-slide-content">
-                <h2>{slide.header}</h2>
-                <p>{slide.description}</p>
+                <h2>{slide.title}</h2>
+                <p>{slide.details || ""}</p>
               </div>
             </SwiperSlide>
           ))}

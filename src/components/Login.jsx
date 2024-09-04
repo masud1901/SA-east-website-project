@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase";
+import "../css/login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -21,25 +22,29 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h2>Admin Login</h2>
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          required
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-          required
-        />
-        <button type="submit">Login</button>
-      </form>
-      {error && <p>{error}</p>}
+      <div className="login-box">
+        <h2 className="login-title">Admin Login</h2>
+        <form className="login-form" onSubmit={handleLogin}>
+          <input
+            className="login-input"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+            required
+          />
+          <input
+            className="login-input"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            required
+          />
+          <button className="login-button" type="submit">Login</button>
+        </form>
+        {error && <p className="login-error">{error}</p>}
+      </div>
     </div>
   );
 };

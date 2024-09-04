@@ -19,6 +19,12 @@
   margin-bottom: 1.5rem;
 }
 
+.custom-section-heading hr {
+  width: 50px;
+  margin: 10px auto;
+  border: 2px solid var(--primary-custom);
+}
+
 .custom-projects-container {
   position: relative;
   padding: 0 1rem;
@@ -30,7 +36,7 @@
 
 .custom-projects-slider {
   height: auto;
-  padding-bottom: 3rem;
+  padding: 2rem 0 3rem;
 }
 
 .custom-projects-slide {

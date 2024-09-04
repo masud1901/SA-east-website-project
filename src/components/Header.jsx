@@ -84,7 +84,7 @@ const Header = () => {
               <Link to="/home" onClick={scrollToTop}>
                 HOME
               </Link>
-              <a href="#notices" onClick={scrollToTop}>
+              <a href="/all-notices" onClick={scrollToTop}>
                 JOB NOTICE
               </a>
               <Link to="/project" onClick={scrollToTop}>

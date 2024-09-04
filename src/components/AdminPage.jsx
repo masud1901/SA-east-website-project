@@ -17,9 +17,10 @@ import {
   deleteObject,
 } from "firebase/storage";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth, db, storage } from "../firebase"; // Ensure this path is correct
+import { auth, db, storage } from "../firebase";
+import "../css/admin-dashboard.css";
 
-const Admin = () => {
+const AdminDashboard = () => {
   const [notices, setNotices] = useState([]);
   const [projects, setProjects] = useState([]);
   const [newItem, setNewItem] = useState({
@@ -89,10 +90,8 @@ const Admin = () => {
         const downloadURL = await getDownloadURL(snapshot.ref);
 
         if (itemId && itemType) {
-          // This is an update operation
           await handleUpdate(itemId, itemType, { imgURL: downloadURL });
         } else {
-          // This is for a new item
           setNewItem({ ...newItem, imgURL: downloadURL });
         }
       } catch (error) {
@@ -135,7 +134,6 @@ const Admin = () => {
       const docRef = doc(db, type === "notice" ? "notices" : "projects", id);
       await updateDoc(docRef, updatedData);
 
-      // If we're updating the image, delete the old one
       if (updatedData.imgURL) {
         const oldDoc =
           type === "notice"
@@ -175,108 +173,150 @@ const Admin = () => {
   }
 
   return (
-    <div>
-      <h1>Admin Dashboard</h1>
+    <div className="admin-dashboard">
+      <h1 className="admin-dashboard__title">Admin Dashboard</h1>
       {user ? (
-        <p>Logged in as: {user.email}</p>
+        <p className="admin-dashboard__user-info">Logged in as: {user.email}</p>
       ) : (
-        <p>
+        <p className="admin-dashboard__user-info">
           You are not logged in. You can view items but cannot make changes.
         </p>
       )}
 
       {user && (
-        <form onSubmit={handleSubmit}>
+        <form className="admin-dashboard__form" onSubmit={handleSubmit}>
           <input
             type="text"
+            className="form-control admin-dashboard__form-input"
             name="title"
             value={newItem.title}
             onChange={handleInputChange}
             placeholder="Title"
             required
           />
-          <input type="file" onChange={handleFileChange} />
-          <select name="type" value={newItem.type} onChange={handleInputChange}>
+          <input
+            type="file"
+            className="form-control-file admin-dashboard__form-file-input"
+            onChange={handleFileChange}
+          />
+          <select
+            className="form-control admin-dashboard__form-select"
+            name="type"
+            value={newItem.type}
+            onChange={handleInputChange}
+          >
             <option value="notice">Notice</option>
             <option value="project">Project</option>
           </select>
-          <button type="submit">Add New Item</button>
+          <button
+            type="submit"
+            className="btn admin-dashboard__form-submit-button"
+          >
+            Add New Item
+          </button>
         </form>
       )}
 
-      <h2>Notices</h2>
-      {notices.map((notice) => (
-        <div key={notice.id}>
-          <h3>{notice.title}</h3>
-          {notice.imgURL && (
-            <img
-              src={notice.imgURL}
-              alt={notice.title}
-              style={{ width: "100px" }}
-            />
-          )}
-          <p>Created at: {notice.createdAt.toDate().toString()}</p>
-          {user && (
-            <>
-              <input
-                type="text"
-                defaultValue={notice.title}
-                onBlur={(e) =>
-                  handleUpdate(notice.id, "notice", { title: e.target.value })
-                }
-              />
-              <input
-                type="file"
-                onChange={(e) => handleFileChange(e, notice.id, "notice")}
-              />
-              <button
-                onClick={() => handleDelete(notice.id, "notice", notice.imgURL)}
-              >
-                Delete
-              </button>
-            </>
-          )}
-        </div>
-      ))}
+      <div className="admin-dashboard__section">
+        <h2 className="admin-dashboard__section-title">Notices</h2>
+        {notices.map((notice) => (
+          <div key={notice.id} className="admin-dashboard__notice-card">
+            <div className="card-body">
+              <h5 className="card-title admin-dashboard__notice-header">
+                {notice.title}
+              </h5>
+              {notice.imgURL && (
+                <img
+                  src={notice.imgURL}
+                  alt={notice.title}
+                  className="admin-dashboard__notice-image"
+                />
+              )}
+              <p className="admin-dashboard__notice-date">
+                Created at: {notice.createdAt.toDate().toString()}
+              </p>
+              {user && (
+                <div className="admin-dashboard__notice-actions">
+                  <input
+                    type="text"
+                    className="form-control admin-dashboard__notice-title-input"
+                    defaultValue={notice.title}
+                    onBlur={(e) =>
+                      handleUpdate(notice.id, "notice", {
+                        title: e.target.value,
+                      })
+                    }
+                  />
+                  <input
+                    type="file"
+                    className="form-control-file admin-dashboard__notice-image-input"
+                    onChange={(e) => handleFileChange(e, notice.id, "notice")}
+                  />
+                  <button
+                    className="btn btn-danger btn-sm admin-dashboard__notice-delete-button"
+                    onClick={() =>
+                      handleDelete(notice.id, "notice", notice.imgURL)
+                    }
+                  >
+                    Delete
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
 
-      <h2>Projects</h2>
-      {projects.map((project) => (
-        <div key={project.id}>
-          <h3>{project.title}</h3>
-          {project.imgURL && (
-            <img
-              src={project.imgURL}
-              alt={project.title}
-              style={{ width: "100px" }}
-            />
-          )}
-          <p>Created at: {project.createdAt.toDate().toString()}</p>
-          {user && (
-            <>
-              <input
-                type="text"
-                defaultValue={project.title}
-                onBlur={(e) =>
-                  handleUpdate(project.id, "project", { title: e.target.value })
-                }
-              />
-              <input
-                type="file"
-                onChange={(e) => handleFileChange(e, project.id, "project")}
-              />
-              <button
-                onClick={() =>
-                  handleDelete(project.id, "project", project.imgURL)
-                }
-              >
-                Delete
-              </button>
-            </>
-          )}
-        </div>
-      ))}
+      <div className="admin-dashboard__section">
+        <h2 className="admin-dashboard__section-title">Projects</h2>
+        {projects.map((project) => (
+          <div key={project.id} className="admin-dashboard__project-card">
+            <div className="card-body">
+              <h5 className="card-title admin-dashboard__project-header">
+                {project.title}
+              </h5>
+              {project.imgURL && (
+                <img
+                  src={project.imgURL}
+                  alt={project.title}
+                  className="admin-dashboard__project-image"
+                />
+              )}
+              <p className="admin-dashboard__project-date">
+                Created at: {project.createdAt.toDate().toString()}
+              </p>
+              {user && (
+                <div className="admin-dashboard__project-actions">
+                  <input
+                    type="text"
+                    className="form-control admin-dashboard__project-title-input"
+                    defaultValue={project.title}
+                    onBlur={(e) =>
+                      handleUpdate(project.id, "project", {
+                        title: e.target.value,
+                      })
+                    }
+                  />
+                  <input
+                    type="file"
+                    className="form-control-file admin-dashboard__project-image-input"
+                    onChange={(e) => handleFileChange(e, project.id, "project")}
+                  />
+                  <button
+                    className="btn btn-danger btn-sm admin-dashboard__project-delete-button"
+                    onClick={() =>
+                      handleDelete(project.id, "project", project.imgURL)
+                    }
+                  >
+                    Delete
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
-
-export default Admin;
+export default AdminDashboard;

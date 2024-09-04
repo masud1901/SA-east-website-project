@@ -1,70 +1,53 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { collection, getDocs, query, orderBy } from "firebase/firestore";
+import { db } from "../firebase"; // Make sure to import your Firebase configuration
 import "../css/projectpage.css";
-import project1Image from "../../public/assets/project_images/project1.PNG";
-import project2Image from "../../public/assets/project_images/project2.PNG";
-import project3Image from "../../public/assets/hero_section/heroSection5.jpeg";
-import project4Image from "../../public/assets/project_images/project4.PNG";
 
 const ProjectPage = () => {
-  const projects = [
-    {
-      title: "PROJECT :RITE AND OUR WORK WITH THE CRCC, MAKKAH METRO ",
-      details: "",
-      imageSrc: project3Image,
-      imageAlt: "Project Three Image",
-    },
-    {
-      title:
-        "PROJECT: Our Experienced Cleaners are working Various kind of Showroom such as Sephora, Dior, Nice Store, Extra, Guess etc. With RITE GROUP,KSA ",
-      details: "",
-      imageSrc: project4Image,
-      imageAlt: "Project Four Image",
-    },
-    {
-      title: "PROJECT: KCH, SHAPOORJI PALLONJI, JEDDAH, KSA",
-      details: "",
-      imageSrc: project1Image,
-      imageAlt: "Project One Image",
-    },
-    {
-      title: "PROJECT: SWCC, LIMAK, JUBAIL,KSA",
-      details: "",
-      imageSrc: project2Image,
-      imageAlt: "Project Two Image",
-    },
-  ];
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const projectsCollection = collection(db, "projects");
+      const projectsQuery = query(
+        projectsCollection,
+        orderBy("createdAt", "desc")
+      );
+      const querySnapshot = await getDocs(projectsQuery);
+      const projectsList = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setProjects(projectsList);
+    };
+
+    fetchProjects();
+  }, []);
 
   const createProjectCard = (project, index) => {
     const isEven = index % 2 === 0;
 
     return (
-      <div className="project-card row mb-5" key={index}>
+      <div
+        key={project.id}
+        className={`project-card ${isEven ? "even" : "odd"}`}
+      >
         {isEven ? (
           <>
-            <div className="col-md-6 mb-3 mb-md-0">
-              <img
-                src={project.imageSrc}
-                alt={project.imageAlt}
-                className="img-fluid project-image"
-              />
+            <div className="project-image">
+              <img src={project.imgURL} alt={project.title} />
             </div>
-            <div className="col-md-6 d-flex flex-column justify-content-center">
-              <h2 className="mb-3 project-title">{project.title}</h2>
-              <p className="text-justify">{project.details}</p>
+            <div className="project-info">
+              <h3>{project.title}</h3>
             </div>
           </>
         ) : (
           <>
-            <div className="col-md-6 mb-3 mb-md-0 order-md-2">
-              <img
-                src={project.imageSrc}
-                alt={project.imageAlt}
-                className="img-fluid project-image"
-              />
+            <div className="project-info">
+              <h3>{project.title}</h3>
             </div>
-            <div className="col-md-6 d-flex flex-column justify-content-center order-md-1 mb-3 mb-md-0">
-              <h2 className="mb-3 project-title">{project.title}</h2>
-              <p className="text-justify">{project.details}</p>
+            <div className="project-image">
+              <img src={project.imgURL} alt={project.title} />
             </div>
           </>
         )}
@@ -94,9 +77,9 @@ const ProjectPage = () => {
   }, []);
 
   return (
-    <div className="projectContainer">
-      <div className="container my-5">
-        <div id="projectContainer">
+    <div className="project-page">
+      <div className="container">
+        <div className="project-list">
           {projects.map((project, index) => createProjectCard(project, index))}
         </div>
       </div>

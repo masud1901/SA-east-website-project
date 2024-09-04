@@ -1,81 +1,122 @@
+:root {
+  --primary-color: #023e8a;
+  --secondary-color: #f8f9fa;
+  --text-color: #333333;
+  --border-color: #d1d5db;
+  --button-hover-color: #022b67;
+  --input-background: #f1f5f9;
+}
+
+.project-page {
+  padding: 2rem 0;
+  background-color: var(--secondary-color);
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
 .project-card {
+  display: flex;
   opacity: 0;
-  /* Initial position to start animation */
-  transform: translateX(-50px); /* Adjust based on image side */
-  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
-  margin-bottom: 3rem;
-  padding: 2rem;
+  transform: translateX(-50px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    box-shadow 0.3s ease;
   border-radius: 10px;
-  box-shadow: 0 6px 6px rgba(21, 18, 18, 0.3);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
 }
 
 .project-card.visible {
   opacity: 1;
-  transform: translateX(0); /* Final position */
+  transform: translateX(0);
 }
 
 .project-card:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   transform: translateY(-5px);
 }
 
 .project-image {
-  height: 300px;
+  flex: 1;
+  max-width: 50%;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
-.project-card:hover .project-image {
+.project-card:hover .project-image img {
   transform: scale(1.05);
 }
 
-.project-title {
-  color: #333;
+.project-info {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-info h3 {
+  color: var(--text-color);
   transition: color 0.3s ease;
 }
 
-.project-card:hover .project-title {
-  color: #053971;
+.project-card:hover .project-info h3 {
+  color: var(--primary-color);
 }
 
-.text-justify {
-  text-align: justify;
+/* Styles for even cards */
+.project-card.even {
+  background-color: var(--secondary-color);
 }
 
-/* Animation for even cards */
-.project-card[data-is-even="true"] {
-  transform: translateX(-50px); /* Start from the left */
-  background-color: #60a5fa; /* Light blue background */
+/* Styles for odd cards */
+.project-card.odd {
+  background-color: var(--primary-color);
+  flex-direction: row-reverse;
 }
 
-/* Animation for odd cards */
-.project-card[data-is-even="false"] {
-  transform: translateX(50px); /* Start from the right */
-  background-color: #d71c0e; /* Light red background */
+.project-card.odd .project-info h3 {
+  color: var(--secondary-color);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  /* For screens smaller than 768px */
   .project-card {
     flex-direction: column;
-    /* Stack image and details vertically */
+    transform: translateY(-50px);
   }
 
-  .project-card[data-is-even="true"],
-  .project-card[data-is-even="false"] {
-    transform: translateY(-50px); /* Slide in from top */
+  .project-card.even,
+  .project-card.odd {
+    flex-direction: column;
   }
 
-  .col-md-6 {
-    width: 100%;
-    /* Full width on smaller screens */
+  .project-image,
+  .project-info {
+    max-width: 100%;
   }
 
-  .order-md-1,
-  .order-md-2 {
-    order: unset;
-    /* Reset order on smaller screens */
+  .project-image {
+    height: 200px;
+  }
+
+  .project-info {
+    padding: 1rem;
+  }
+
+  .project-card.odd .project-info {
+    background-color: var(--primary-color);
   }
 }
