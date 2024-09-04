@@ -1,12 +1,52 @@
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { collection, getDocs, query, orderBy, limit } from "firebase/firestore";
+import { db } from "../firebase"; // Ensure this path is correct
 import "../css/notice.css";
 import abuImage from "../../public/assets/abu.PNG";
 import aliImage from "../../public/assets/ali.PNG";
 import kabirImage from "../../public/assets/kabir.PNG";
 
 const Notice = () => {
+  const [notices, setNotices] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchNotices = async () => {
+      try {
+        const noticesQuery = query(
+          collection(db, "notices"),
+          orderBy("createdAt", "desc"),
+          limit(5)
+        );
+        const querySnapshot = await getDocs(noticesQuery);
+        setNotices(
+          querySnapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }))
+        );
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching notices:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchNotices();
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const formatDate = (timestamp) => {
+    const date = timestamp.toDate();
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    });
   };
 
   return (
@@ -109,11 +149,7 @@ const Notice = () => {
                       </h4>
                       <h4 className="title">Marketing Manager</h4>
                       <h4 className="title">
-                        <a
-                          href="tel:+966545666218
-"
-                          className="hotline-text"
-                        >
+                        <a href="tel:+966545666218" className="hotline-text">
                           Phone: +966545666218
                         </a>
                       </h4>
@@ -152,47 +188,26 @@ const Notice = () => {
                   </h3>
                 </div>
                 <div className="notice-content">
-                  <ul>
-                    <a href="">
-                      <li>
-                        <span className="important-notice">*</span>
-                        Urgent cleaner jobs required inside Saudi Arabia.
-                        <span className="notice-date">Aug 07, 2024</span>
-                      </li>
-                    </a>
-                    <a href="">
-                      <li>
-                        <span className="important-notice">*</span>
-                        Urgent cleaner jobs required inside Saudi Arabia.
-                        <span className="notice-date">Aug 07, 2024</span>
-                      </li>
-                    </a>
-                    <a href="">
-                      {" "}
-                      <li>
-                        <span className="important-notice">*</span>
-                        Urgent cleaner jobs required inside Saudi Arabia.
-                        <span className="notice-date">Jul 25, 2024</span>
-                      </li>
-                    </a>
-                    <a href="">
-                      <li>
-                        <span className="important-notice">*</span>
-                        Urgent cleaner jobs required inside Saudi Arabia.
-                        <span className="notice-date">Jul 17, 2024</span>
-                      </li>
-                    </a>
-                    <a href="">
-                      <li>
-                        <span className="important-notice">*</span>
-                        Urgent cleaner jobs required inside Saudi Arabia.
-                        <span className="notice-date">Jun 23, 2024</span>
-                      </li>
-                    </a>
-                  </ul>
-                  <a href="#" className="view-all">
+                  {loading ? (
+                    <p>Loading notices...</p>
+                  ) : (
+                    <ul>
+                      {notices.map((notice) => (
+                        <a href={notice.link} key={notice.id}>
+                          <li>
+                            <span className="important-notice">*</span>
+                            {notice.title}
+                            <span className="notice-date">
+                              {formatDate(notice.createdAt)}
+                            </span>
+                          </li>
+                        </a>
+                      ))}
+                    </ul>
+                  )}
+                  <Link to="/all-notices" className="view-all">
                     » View All
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

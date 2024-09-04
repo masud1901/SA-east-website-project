@@ -1,0 +1,56 @@
+.all-notices-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.all-notices-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.notices-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notice-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.notice-date {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.notice-link {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.notice-link:hover {
+    text-decoration: underline;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    background-color: white;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.pagination-button.active {
+    background-color: #007bff;
+    color: white;
+}

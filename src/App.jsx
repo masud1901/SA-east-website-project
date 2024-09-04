@@ -19,6 +19,12 @@ import ServicesSection from "./components/ServicesSection";
 import AboutUs from "./components/AboutUspage";
 import ProjectPage from "./components/projectSectionpage";
 import ServicePage from "./components/servicepage";
+import Login from "./components/Login";
+import Admin from "./components/AdminPage";
+import ProtectedRoute from "./components/ProtectedRoute";
+import AllNotices from './components/AllNotices';
+
+
 
 const App = () => {
   useEffect(() => {
@@ -36,13 +42,9 @@ const App = () => {
       });
     };
 
-    // Add event listener for scroll
     window.addEventListener("scroll", revealOnScroll);
-
-    // Trigger the reveal on page load
     revealOnScroll();
 
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("scroll", revealOnScroll);
     };
@@ -73,6 +75,16 @@ const App = () => {
         <Route path="/project" element={<ProjectPage />} />
         <Route path="/service" element={<ServicePage />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <Admin />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/all-notices" element={<AllNotices />} />
       </Routes>
       <Footer />
     </Router>
