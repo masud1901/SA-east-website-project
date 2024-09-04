@@ -34,10 +34,6 @@ const Notice = () => {
     fetchNotices();
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   const formatDate = (timestamp) => {
     const date = timestamp.toDate();
     return date.toLocaleDateString("en-US", {
@@ -57,18 +53,18 @@ const Notice = () => {
 
   return (
     <>
-      <div className="custom-notice-body">
+      <div className="custom-notice-body" id="notice">
         <div className="custom-container">
           <div className="row">
             {/* Notice Board */}
             <div className="col-12">
-              <div className="custom-notice-board">
-                <div className="custom-notice-header">
-                  <h3 className="custom-notice-title" id="notices">
+              <div className="notice-board">
+                <div className="notice-header">
+                  <h3 className="notice-title" id="notices">
                     <i className="bi bi-info-circle"></i> Job Notices
                   </h3>
                 </div>
-                <div className="custom-notice-content">
+                <div className="notice-content">
                   {loading ? (
                     <p>Loading notices...</p>
                   ) : (
@@ -77,18 +73,22 @@ const Notice = () => {
                         <li
                           key={notice.id}
                           onClick={() => handleNoticeClick(notice)}
-                          className="custom-notice-item"
                         >
-                          <span className="custom-important-notice">*</span>
-                          {notice.title}
-                          <span className="custom-notice-date">
+                          <a
+                            href="#notice"
+                            className="notice-link text-decoration-none"
+                          >
+                            <span className="important-notice">*</span>
+                            {notice.title}
+                          </a>
+                          <span className="notice-date">
                             {formatDate(notice.createdAt)}
                           </span>
                         </li>
                       ))}
                     </ul>
                   )}
-                  <Link to="/all-notices" className="custom-view-all">
+                  <Link to="/all-notices" className="view-all">
                     » View All
                   </Link>
                 </div>
@@ -104,7 +104,7 @@ const Notice = () => {
             <span className="custom-close" onClick={closeModal}>
               &times;
             </span>
-            <h2>{selectedNotice.title}</h2>
+            <h2 className="mt-5">{selectedNotice.title}</h2>
             <p>{selectedNotice.description}</p>
             {selectedNotice.imgURL && (
               <img

@@ -26,11 +26,12 @@ const ProjectPage = () => {
 
   const createProjectCard = (project, index) => {
     const isEven = index % 2 === 0;
+    const initialVisible = index < 2 ? "initial-visible" : "";
 
     return (
       <div
         key={project.id}
-        className={`project-card ${isEven ? "even" : "odd"}`}
+        className={`project-card ${isEven ? "even" : "odd"} ${initialVisible}`}
       >
         {isEven ? (
           <>
@@ -56,7 +57,9 @@ const ProjectPage = () => {
   };
 
   const checkVisibility = () => {
-    const cards = document.querySelectorAll(".project-card");
+    const cards = document.querySelectorAll(
+      ".project-card:not(.initial-visible)"
+    );
     cards.forEach((card) => {
       const rect = card.getBoundingClientRect();
       const isVisible =

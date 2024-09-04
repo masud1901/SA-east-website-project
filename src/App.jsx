@@ -8,6 +8,7 @@ import {
 import NoticeBoard from "./components/noticeBoard";
 import AboutSection from "./components/AboutSection";
 import ClientsSection from "./components/ClientsSection";
+import Management from "./components/Management";
 import Footer from "./components/Footer";
 import GoalsSection from "./components/GoalsSection";
 import Header from "./components/Header";
@@ -22,9 +23,7 @@ import ServicePage from "./components/servicepage";
 import Login from "./components/Login";
 import Admin from "./components/AdminPage";
 import ProtectedRoute from "./components/ProtectedRoute";
-import AllNotices from './components/AllNotices';
-
-
+import AllNotices from "./components/AllNotices";
 
 const App = () => {
   useEffect(() => {
@@ -52,30 +51,7 @@ const App = () => {
 
   return (
     <Router>
-      <Header />
       <Routes>
-        <Route path="/" element={<Navigate to="/home" replace />} />
-        <Route
-          path="/home"
-          element={
-            <>
-              <HeroSection />
-              <NoticeBoard />
-              <ProjectsSlider />
-              <AboutSection />
-              <WhyUsSection />
-              <ServicesSection />
-              <GoalsSection />
-              <ClientsSection />
-              <ContactUs />
-            </>
-          }
-        />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/project" element={<ProjectPage />} />
-        <Route path="/service" element={<ServicePage />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/login" element={<Login />} />
         <Route
           path="/admin"
           element={
@@ -84,9 +60,78 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-        <Route path="/all-notices" element={<AllNotices />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Navigate to="/home" replace />} />
+        <Route
+          path="/home"
+          element={
+            <>
+              <Header />
+              <HeroSection />
+              <Management />
+              <NoticeBoard />
+              <ProjectsSlider />
+              <AboutSection />
+              <WhyUsSection />
+              <ServicesSection />
+              <GoalsSection />
+              <ClientsSection />
+              <ContactUs />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <>
+              <Header />
+              <AboutUs />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/project"
+          element={
+            <>
+              <Header />
+              <ProjectPage />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/service"
+          element={
+            <>
+              <Header />
+              <ServicePage />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <>
+              <Header />
+              <ContactUs />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/all-notices"
+          element={
+            <>
+              <Header />
+              <AllNotices />
+              <Footer />
+            </>
+          }
+        />
       </Routes>
-      <Footer />
     </Router>
   );
 };

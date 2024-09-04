@@ -22,10 +22,7 @@
   display: flex;
   opacity: 0;
   transform: translateX(-50px);
-  transition:
-    opacity 0.5s ease,
-    transform 0.5s ease,
-    box-shadow 0.3s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
   border-radius: 10px;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -36,6 +33,10 @@
 .project-card.visible {
   opacity: 1;
   transform: translateX(0);
+}
+.project-card.initial-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project-card:hover {
@@ -74,21 +75,6 @@
 
 .project-card:hover .project-info h3 {
   color: var(--primary-color);
-}
-
-/* Styles for even cards */
-.project-card.even {
-  background-color: var(--secondary-color);
-}
-
-/* Styles for odd cards */
-.project-card.odd {
-  background-color: var(--primary-color);
-  flex-direction: row-reverse;
-}
-
-.project-card.odd .project-info h3 {
-  color: var(--secondary-color);
 }
 
 /* Responsive Design */

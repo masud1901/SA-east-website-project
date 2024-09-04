@@ -8,6 +8,7 @@ const AllNotices = () => {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [noticesPerPage] = useState(10);
+  const [selectedNotice, setSelectedNotice] = useState(null);
 
   useEffect(() => {
     const fetchNotices = async () => {
@@ -50,42 +51,90 @@ const AllNotices = () => {
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  const handleNoticeClick = (notice) => {
+    setSelectedNotice(notice);
+  };
+
+  const closeModal = () => {
+    setSelectedNotice(null);
+  };
+
   return (
-    <div className="all-notices-container">
-      <h1 className="all-notices-title">All Job Notices</h1>
+    <div className="container mt-4" id="notices">
+      <h1 className="all-notices-title text-center mb-4">All Job Notices</h1>
       {loading ? (
-        <p>Loading notices...</p>
+        <p className="text-center">Loading notices...</p>
       ) : (
         <>
-          <ul className="notices-list">
+          <ul className="list-group">
             {currentNotices.map((notice) => (
-              <li key={notice.id} className="notice-item">
-                <span className="notice-date">
-                  {formatDate(notice.createdAt)}
-                </span>
-                <a href={notice.link} className="notice-link">
+              <li
+                key={notice.id}
+                className="list-group-item d-flex justify-content-between align-items-center"
+                onClick={() => handleNoticeClick(notice)}
+              >
+                <a href="#notices" className="notice-link text-decoration-none">
+                  <span className="important-notice">*</span>
                   {notice.title}
                 </a>
+                <span className="notice-datee">
+                  {formatDate(notice.createdAt)}
+                </span>
               </li>
             ))}
           </ul>
-          <div className="pagination">
-            {Array.from(
-              { length: Math.ceil(notices.length / noticesPerPage) },
-              (_, i) => (
-                <button
-                  key={i}
-                  onClick={() => paginate(i + 1)}
-                  className={`pagination-button ${
-                    currentPage === i + 1 ? "active" : ""
-                  }`}
-                >
-                  {i + 1}
-                </button>
-              )
+          <nav className="mt-4">
+            <ul className="pagination justify-content-center">
+              {Array.from(
+                { length: Math.ceil(notices.length / noticesPerPage) },
+                (_, i) => (
+                  <li
+                    key={i}
+                    className={`page-item ${
+                      currentPage === i + 1 ? "active" : ""
+                    }`}
+                  >
+                    <button
+                      onClick={() => paginate(i + 1)}
+                      className="page-link"
+                    >
+                      {i + 1}
+                    </button>
+                  </li>
+                )
+              )}
+            </ul>
+          </nav>
+        </>
+      )}
+
+      {selectedNotice && (
+        <div className="custom-notice-modal">
+          <div className="custom-notice-modal-content">
+            <span className="custom-close" onClick={closeModal}>
+              &times;
+            </span>
+            <h2 className="mt-5">{selectedNotice.title}</h2>
+            <p>{selectedNotice.description}</p>
+            {selectedNotice.imgURL && (
+              <img
+                src={selectedNotice.imgURL}
+                alt="Notice"
+                className="custom-notice-image"
+              />
+            )}
+            {selectedNotice.link && (
+              <a
+                href={selectedNotice.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+              >
+                Read more
+              </a>
             )}
           </div>
-        </>
+        </div>
       )}
     </div>
   );

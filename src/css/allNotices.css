@@ -1,56 +1,79 @@
-.all-notices-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+/* General Styles */
+.all-notices-section {
+  background-color: #fbfbfb;
 }
-
 .all-notices-title {
-    text-align: center;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  color: #023e8a;
+  font-weight: bold;
 }
 
 .notices-list {
-    list-style-type: none;
-    padding: 0;
+  padding-left: 0;
+  margin: 0;
 }
 
 .notice-item {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.notice-date {
-    font-weight: bold;
-    margin-right: 10px;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .notice-link {
-    text-decoration: none;
-    color: #007bff;
+  color: #023e8a;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: left; /* Ensure title aligns to the left */
 }
 
-.notice-link:hover {
-    text-decoration: underline;
+.notice-datee {
+  color: #6c757d; /* Gray color for date */
+  text-align: right; /* Align date to the right */
+}
+
+/* Ensure spacing and alignment */
+.notice-item .notice-link,
+.notice-item .notice-date {
+  flex: 1;
+}
+
+.notice-date {
+  margin-left: 1rem; /* Space between title and date */
 }
 
 .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  margin-top: 1rem;
 }
 
-.pagination-button {
-    margin: 0 5px;
-    padding: 5px 10px;
-    border: 1px solid #007bff;
-    background-color: white;
-    color: #007bff;
-    cursor: pointer;
+.page-item.active .page-link {
+  background-color: #023e8a;
+  color: white;
 }
 
-.pagination-button.active {
-    background-color: #007bff;
-    color: white;
+.page-link {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  color: #023e8a;
+}
+
+.page-link:hover {
+  background-color: #e9ecef;
+}
+
+@media (max-width: 768px) {
+  .all-notices-title {
+    font-size: 1.5rem;
+  }
+
+  .notice-item {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .custom-notice-modal-content {
+    width: 90%;
+    padding: 1rem;
+  }
 }

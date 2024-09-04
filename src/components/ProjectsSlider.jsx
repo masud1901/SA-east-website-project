@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
@@ -43,10 +43,7 @@ const TrendingSlider = () => {
   return (
     <section id="CustomProjects">
       <div className="custom-projects-container reveal">
-        <h1 className="custom-section-heading">
-          Projects
-          <hr />
-        </h1>
+        <h1 className="custom-section-heading">Projects</h1>
       </div>
       <div className="custom-swiper-container reveal">
         <Swiper
