@@ -4,8 +4,9 @@
   overflow: hidden;
   position: relative;
   background-image: url("/assets/heroSection1.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%; /* Make the image cover the entire container */
+  background-position: top; /* Center the image within the container */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
   animation: image-change 20s infinite ease-in-out;
 }
 
@@ -49,17 +50,23 @@ h3 {
   0% {
     background-image: url("/assets/hero_section/heroSection2.jpeg");
   }
-  20% {
+  15% {
     background-image: url("/assets/hero_section/heroSection3.jpeg");
   }
-  40% {
+  30% {
     background-image: url("/assets/hero_section/heroSection4.jpg");
+  }
+  45% {
+    background-image: url("/assets/hero_section/heroSection6.png");
   }
   60% {
     background-image: url("/assets/hero_section/heroSection5.jpeg");
   }
-  80% {
-    background-image: url("/assets/hero_section/hero8.jpg");
+  60% {
+    background-image: url("/assets/hero_section/heroSection7.png");
+  }
+  75% {
+    background-image: url("/assets/hero_section/heroSection8.jpg");
   }
   100% {
     background-image: url("/assets/hero_section/heroSection2.jpeg");

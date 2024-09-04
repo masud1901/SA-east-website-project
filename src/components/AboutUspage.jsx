@@ -6,7 +6,7 @@ import AliImage from "../../public/assets/ali1.jpeg";
 import KabirImage from "../../public/assets/kabir1.jpeg";
 import Staff1 from "../../public/assets/staff/staff1.PNG";
 import Staff2 from "../../public/assets/staff/staff2.PNG";
-import Staff3 from "../../public/assets/staff/staff3.PNG";
+import Staff3 from "../../public/assets/staff/staff3.jpeg";
 import Staff4 from "../../public/assets/staff/staff4.PNG";
 import Staff5 from "../../public/assets/staff/staff5.PNG";
 import Staff6 from "../../public/assets/staff/staff6.PNG";
@@ -117,7 +117,7 @@ const AboutUs = () => {
                   name: "Ali Bin Abu Talib Al-Ghubaishi",
                   title: "General Manager",
                   description:
-                    "At Al-Shams Al-Amna Est. the only thing that matters is this word [value] the value of Human Being, the value of Assets, and the value of Services, at Al-Shams Al-Amna Est. we built our Est. at the core this word. We value our man power, our clients and their assets and the services we provide.",
+                    "At Al-Shams Al-Amna Est., the word that matters most is 'value'—the value of human beings, the value of assets, and the value of services. We've built our establishment on this core principle. We value our workforce, our clients and their assets, and the services we provide.",
                   image: AbuImage,
                   phone: "+966502711132",
                 },
@@ -125,7 +125,7 @@ const AboutUs = () => {
                   name: "Mohammad Anowar Hossain",
                   title: "Employment Management Manager",
                   description:
-                    "At Al-Shams Al-Amna Est. the only thing that matters is this word [value] the value of Human Being, the value of Assets, and the value of Services, at Al-Shams Al-Amna Est. we built our Est. at the core this word. We value our man power, our clients and their assets and the services we provide.",
+                    "At Al-Shams Al-Amna Est., the word that matters most is 'value'—the value of human beings, the value of assets, and the value of services. We've built our establishment on this core principle. We value our workforce, our clients and their assets, and the services we provide.",
                   image: AliImage,
                   phone: "+966568315773",
                 },
@@ -133,7 +133,7 @@ const AboutUs = () => {
                   name: "Humayun Kabir",
                   title: "Marketing Manager",
                   description:
-                    "At Al-Shams Al-Amna Est. the only thing that matters is this word [value] the value of Human Being, the value of Assets, and the value of Services, at Al-Shams Al-Amna Est. we built our Est. at the core this word. We value our man power, our clients and their assets and the services we provide.",
+                    "At Al-Shams Al-Amna Est., the word that matters most is 'value'—the value of human beings, the value of assets, and the value of services. We've built our establishment on this core principle. We value our workforce, our clients and their assets, and the services we provide.",
                   image: KabirImage,
                   phone: "+966545666218",
                 },
@@ -227,12 +227,12 @@ const AboutUs = () => {
                   <p className="text-center">SUPERVISOR</p>
                   <p className="text-center">
                     <a
-                      href="tel:+966545666218
+                      href="tel:+966543076308
 
 "
                       className="phone-link"
                     >
-                      Phone: +966545666218
+                      Phone: +966543076308
                     </a>
                   </p>
                 </div>
@@ -242,6 +242,16 @@ const AboutUs = () => {
                 <div className="card__data">
                   <h2 className="card__title">KHALED MOSHAROF</h2>
                   <p className="text-center">SUPERVISOR</p>
+                  <p className="text-center">
+                    <a
+                      href="tel:+966581139829
+
+"
+                      className="phone-link"
+                    >
+                      Phone: +966581139829
+                    </a>
+                  </p>
                 </div>
               </article>
               <article className="card__article">
@@ -249,6 +259,16 @@ const AboutUs = () => {
                 <div className="card__data">
                   <h2 className="card__title">MD TURJOY HOSSAIN</h2>
                   <p className="text-center">TEAM LEADER</p>
+                  <p className="text-center">
+                    <a
+                      href="tel:+966578224965
+
+"
+                      className="phone-link"
+                    >
+                      Phone: +966578224965
+                    </a>
+                  </p>
                 </div>
               </article>
 
@@ -257,6 +277,16 @@ const AboutUs = () => {
                 <div className="card__data">
                   <h2 className="card__title">MD ARIF</h2>
                   <p className="text-center">TEAM LEADER</p>
+                  <p className="text-center">
+                    <a
+                      href="tel:+966571262598
+
+"
+                      className="phone-link"
+                    >
+                      Phone: +966571262598
+                    </a>
+                  </p>
                 </div>
               </article>
               <article className="card__article">
@@ -264,6 +294,11 @@ const AboutUs = () => {
                 <div className="card__data">
                   <h2 className="card__title">MD HRYDOY</h2>
                   <p className="text-center">TEAM LEADER</p>
+                  <p className="text-center">
+                    <a href="tel:+966543379023" className="phone-link">
+                      Phone: +966543379023
+                    </a>
+                  </p>
                 </div>
               </article>
               <article className="card__article">
@@ -400,6 +435,9 @@ const AboutUs = () => {
           <h2 className="section-title">Photo Gallery</h2>
           <Row>
             {[
+              Imp3,
+              Imp1,
+              Imp2,
               Gal9,
               Gal10,
               Gal11,
@@ -428,9 +466,6 @@ const AboutUs = () => {
               Gal40,
               Gal41,
               Gal42,
-              Imp1,
-              Imp2,
-              Imp3,
               Imp4,
               Gal6,
               Gal7,

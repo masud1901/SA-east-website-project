@@ -7,8 +7,9 @@ const HeroSection = () => {
           <h1 className="sideLine">AL SHAMS AL AMNA ESTABLISHMENT</h1>
           <h3>FOR OPERATION AND MAINTENANCE</h3>
           <p className="ps-4">
-            We {`don't`} build services to make money, <br />
-            We make money to build better services
+            Success isn`t just our goal,
+            <br /> it`s a byproduct of our commitment to delivering exceptional
+            services every day.
           </p>
         </div>
       </section>
@@ -17,9 +18,9 @@ const HeroSection = () => {
           <span>✵</span>
           <span>AL SHAMS AL AMNA ESTABLISHMENT</span>
           <span>✵</span>
-          <span>AL SHAMS AL AMNA ESTABLISHMENT</span>
+          <span>SHAMS AL-NASEEM ESTABLISHMENT</span>
           <span>✵</span>
-          <span>AL SHAMS AL AMNA ESTABLISHMENT</span>
+          <span>MY COMFORT MASSAGE CENTER</span>
           <span>✵</span>
         </div>
       </div>
