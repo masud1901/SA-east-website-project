@@ -101,8 +101,4 @@
   .project-info {
     padding: 1rem;
   }
-
-  .project-card.odd .project-info {
-    background-color: var(--primary-color);
-  }
 }

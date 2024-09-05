@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram } from "lucide-react";
+import { MessageCircleMore } from "lucide-react";
 import { Link } from "react-router-dom";
 import mainLogo from "../../public/assets/main-logo.png";
 import "../css/footer.css";
@@ -69,25 +69,20 @@ const Footer = () => {
         </div>
 
         <div className="footer__social">
-          <h3 className="footer__section-title">Follow Us</h3>
+          <h3 className="footer__section-title">Chat with us on WhatsApp</h3>
           <div className="footer__social-icons">
             <div className="icon-names-and-logo">
-              <a href="#facebook" className="footer__social-icon">
-                <Facebook size={30} />
+              <a
+                href="https://wa.me/966564997029"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__social-icon"
+              >
+                <MessageCircleMore size={45} />
+                <small>
+                  <span>+966564997029</span>
+                </small>
               </a>
-              <span>Facebook</span>
-            </div>
-            <div className="icon-names-and-logo">
-              <a href="#twitter" className="footer__social-icon">
-                <Twitter size={30} />
-              </a>
-              <span>Twitter</span>
-            </div>
-            <div className="icon-names-and-logo">
-              <a href="#instagram" className="footer__social-icon">
-                <Instagram size={30} />
-              </a>
-              <span>Instagram</span>
             </div>
           </div>
         </div>

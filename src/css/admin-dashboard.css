@@ -31,6 +31,7 @@
   color: var(--text-color);
 }
 .admin-dashboard__logout-button {
+  background-color: #f1081f;
   margin-left: 10px;
 }
 

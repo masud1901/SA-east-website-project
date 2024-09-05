@@ -133,7 +133,7 @@ const Header = () => {
           HOME
         </Link>
         <Link
-          to=""
+          to="/all-notices"
           onClick={() => {
             scrollToTop();
             toggleSidebar();
