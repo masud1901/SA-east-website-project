@@ -37,7 +37,6 @@ const ContactForm = () => {
     e.preventDefault();
     if (validateForm()) {
       setIsSubmitting(true);
-      // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 2000));
       console.log("Form submitted:", formData);
       setIsSubmitting(false);

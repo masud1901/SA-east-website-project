@@ -61,7 +61,7 @@
   position: absolute;
   bottom: -15%;
   width: 60%;
-  background-color: rgb(208, 18, 18);
+  background-color: rgb(208, 18, 18) !important;
   border-radius: 0.3rem;
   color: white;
   padding: 1rem;

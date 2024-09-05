@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   collection,
   addDoc,
@@ -118,6 +118,8 @@ const AdminDashboard = () => {
       );
       console.log("Document written with ID: ", docRef.id);
 
+      alert("Post added");
+
       setNewItem({ title: "", imgURL: "", type: "notice" });
       type === "notice" ? fetchNotices() : fetchProjects();
     } catch (error) {
@@ -212,7 +214,7 @@ const AdminDashboard = () => {
             type="submit"
             className="btn admin-dashboard__form-submit-button"
           >
-            Add New Item
+            Add New Post
           </button>
         </form>
       )}
