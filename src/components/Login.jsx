@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { auth } from "../firebase";
 import mainLogo from "../../public/assets/main-logo.png";
 import "../css/login.css";
@@ -57,6 +57,9 @@ const Login = () => {
           </button>
         </form>
         {error && <p className="login-error">{error}</p>}
+        <Link to="/" className="back-to-home-button">
+          Back to Home
+        </Link>
       </div>
     </div>
   );
