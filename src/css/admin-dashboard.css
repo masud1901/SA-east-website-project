@@ -30,6 +30,9 @@
   margin-bottom: 1.25rem;
   color: var(--text-color);
 }
+.admin-dashboard__logout-button {
+  margin-left: 10px;
+}
 
 .admin-dashboard__form {
   background-color: #ffffff;

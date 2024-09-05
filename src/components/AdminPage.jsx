@@ -16,8 +16,9 @@ import {
   getDownloadURL,
   deleteObject,
 } from "firebase/storage";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth, db, storage } from "../firebase";
+import { useNavigate } from "react-router-dom";
 import "../css/admin-dashboard.css";
 
 const AdminDashboard = () => {
@@ -30,6 +31,7 @@ const AdminDashboard = () => {
   });
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -168,6 +170,15 @@ const AdminDashboard = () => {
     }
   };
 
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate("/login"); // Redirect to login page after logout
+    } catch (error) {
+      console.error("Error signing out: ", error);
+    }
+  };
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -176,7 +187,15 @@ const AdminDashboard = () => {
     <div className="admin-dashboard">
       <h1 className="admin-dashboard__title">Admin Dashboard</h1>
       {user ? (
-        <p className="admin-dashboard__user-info">Logged in as: {user.email}</p>
+        <div className="admin-dashboard__user-info">
+          <p>Logged in as: {user.email}</p>
+          <button
+            onClick={handleLogout}
+            className="btn btn-secondary admin-dashboard__logout-button"
+          >
+            Logout
+          </button>
+        </div>
       ) : (
         <p className="admin-dashboard__user-info">
           You are not logged in. You can view items but cannot make changes.
@@ -319,4 +338,5 @@ const AdminDashboard = () => {
     </div>
   );
 };
+
 export default AdminDashboard;
