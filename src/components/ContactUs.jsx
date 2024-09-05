@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import emailjs from "emailjs-com";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/contactUs.css";
 
@@ -33,15 +35,36 @@ const ContactForm = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     if (validateForm()) {
       setIsSubmitting(true);
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      console.log("Form submitted:", formData);
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ name: "", email: "", message: "" });
+
+      const emailParams = {
+        from_name: formData.name,
+        reply_to: formData.email,
+        message: formData.message,
+      };
+
+      emailjs
+        .send(
+          "service_2gdq2hq", // Replace with your EmailJS service ID
+          "template_4faqt0e", // Replace with your EmailJS template ID
+          emailParams,
+          "D8YOhxEAps3LkKVsm" // Replace with your EmailJS user ID
+        )
+        .then(
+          (result) => {
+            console.log("Success:", result.text);
+            setIsSubmitting(false);
+            setIsSubmitted(true);
+            setFormData({ name: "", email: "", message: "" });
+          },
+          (error) => {
+            console.error("Error:", error.text);
+            setIsSubmitting(false);
+          }
+        );
     }
   };
 
@@ -55,9 +78,12 @@ const ContactForm = () => {
           <div className="contact-card-body">
             <h2 className="contact-card-title mb-4">Thank You!</h2>
             <p className="contact-info-text">
-              Your message has been sent successfully. We'll get back to you
+              Your message has been sent successfully. We`ll get back to you
               soon!
             </p>
+            <Link to="/" className="back-to-home-button">
+              Back to Home
+            </Link>
           </div>
         </div>
       </div>
@@ -73,7 +99,7 @@ const ContactForm = () => {
               <h2 className="contact-card-title text-center mb-4">
                 Contact Us
               </h2>
-              <form onSubmit={handleSubmit} noValidate>
+              <form onSubmit={sendEmail} noValidate>
                 <div className="mb-3">
                   <input
                     type="text"

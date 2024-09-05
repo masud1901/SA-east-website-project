@@ -335,7 +335,7 @@ const AboutUs = () => {
             {[
               {
                 img: Inf1,
-                label: "AL-SHAMS AL-AMNA Est. ESTABLISHED",
+                label: "AL-SHAMS AL-AMNA Est.",
                 value: "2023",
               },
               {
