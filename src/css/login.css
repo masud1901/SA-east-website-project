@@ -104,6 +104,10 @@
 
 .back-to-home-button:hover {
   background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+.back-to-home-button:active {
+  transform: translateY(0);
 }
 
 /* Error Message */
