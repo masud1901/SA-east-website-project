@@ -2,9 +2,9 @@ import "../css/about.css";
 import { Link } from "react-router-dom";
 
 // Importing images
-import heroSection2 from "../../public/assets/hero_section/hero6.jpg";
-import heroSection3 from "../../public/assets/hero_section/hero7.jpg";
-import heroSection1 from "../../public/assets/hero_section/hero8.jpg";
+import Gal10 from "../../public/assets/about_page/gal10.jpeg";
+import Gal14 from "../../public/assets/about_page/gal14.jpeg";
+import Gal20 from "../../public/assets/about_page/gal20.jpeg";
 
 const About = () => {
   const scrollToTop = () => {
@@ -17,13 +17,13 @@ const About = () => {
           <div className="images">
             <div className="image1 pt-3">
               <img
-                src={heroSection2}
+                src={Gal10}
                 alt=""
                 style={{ width: "250px", height: "250px" }}
                 className="rounded pb-3"
               />
               <img
-                src={heroSection3}
+                src={Gal14}
                 alt=""
                 style={{ width: "250px", height: "180px" }}
                 className="rounded"
@@ -31,7 +31,7 @@ const About = () => {
             </div>
             <div className="image2">
               <img
-                src={heroSection1}
+                src={Gal20}
                 alt=""
                 style={{ width: "250px", height: "300px" }}
                 className="rounded"

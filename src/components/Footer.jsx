@@ -1,4 +1,4 @@
-import { MessageCircleMore } from "lucide-react";
+import { MessageCircleMore, Youtube, Music2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import mainLogo from "../../public/assets/main-logo.png";
 import "../css/footer.css";
@@ -69,7 +69,7 @@ const Footer = () => {
         </div>
 
         <div className="footer__social">
-          <h3 className="footer__section-title">Chat with us on WhatsApp</h3>
+          <h3 className="footer__section-title">Chat With Us On WhatsApp</h3>
           <div className="footer__social-icons">
             <div className="icon-names-and-logo">
               <a
@@ -78,10 +78,36 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="footer__social-icon"
               >
-                <MessageCircleMore size={45} />
+                <MessageCircleMore size={40} />
                 <small>
                   <span>+966564997029</span>
                 </small>
+              </a>
+            </div>
+          </div>
+          <br />
+          <h3 className="footer__section-title">Follow Us On</h3>
+          <div className="footer__social-icons">
+            <div className="icon-names-and-logo">
+              <a
+                href="https://www.youtube.com/@Al-ShamsAl-Amna"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__social-icon"
+              >
+                <Youtube size={40} />
+                <small>Youtube</small>
+              </a>
+            </div>
+            <div className="icon-names-and-logo">
+              <a
+                href="https://www.tiktok.com/@ak.parvag056?_t=8ppdkjG5CZc&_r=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__social-icon"
+              >
+                <Music2 size={40} />
+                <small>Tiktok</small>
               </a>
             </div>
           </div>
