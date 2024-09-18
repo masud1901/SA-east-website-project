@@ -344,7 +344,9 @@ const AboutUs = () => {
         </Container>
 
         <Container className="accommodation-gallery my-5">
-          <h2 className="section-title">OUR BUILDING STRUCTURE</h2>
+          <h2 className="section-title">
+            OUR ACCOMMODATION BUILDING STRUCTURE
+          </h2>
           <center>
             {" "}
             <img
