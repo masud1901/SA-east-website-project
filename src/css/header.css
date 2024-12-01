@@ -16,7 +16,7 @@
   transition: padding 0.3s ease, transform 0.3s ease;
 }
 .logo {
-  height: auto;
+  height: 4rem;
   width: 18rem;
 }
 .logo-item {

@@ -42,9 +42,9 @@ const Management = () => {
                       </h4>
                       <h4 className="title">General Manager</h4>
                       <h4 className="title">
-                        <a href="tel:+966502711132" className="hotline-text">
+                        {/* <a href="tel:+966502711132" className="hotline-text">
                           Phone: +966502711132
-                        </a>
+                        </a> */}
                       </h4>
                       <h4>
                         <a
