@@ -73,14 +73,14 @@ const Footer = () => {
           <div className="footer__social-icons">
             <div className="icon-names-and-logo">
               <a
-                href="https://wa.me/966564997029"
+                href="https://wa.me/966568315773"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer__social-icon"
               >
                 <MessageCircleMore size={40} />
                 <small>
-                  <span>+966564997029</span>
+                  <span>+966568315773</span>
                 </small>
               </a>
             </div>

@@ -75,7 +75,7 @@ const AboutUs = () => {
                   description:
                     "At Al-Shams Al-Amna Est., the word that matters most is 'value'—the value of human beings, the value of assets, and the value of services. We've built our establishment on this core principle. We value our workforce, our clients and their assets, and the services we provide.",
                   image: AbuImage,
-                  phone: "+966502711132",
+                  phone: "_",
                 },
                 {
                   name: "Mohammad Anowar Hossain",
@@ -200,12 +200,12 @@ const AboutUs = () => {
                   <p className="text-center">SUPERVISOR</p>
                   <p className="text-center">
                     <a
-                      href="tel:+966581139829
+                      href="tel:+966568315773
 
 "
                       className="phone-link"
                     >
-                      Phone: +966581139829
+                      Phone: +966568315773
                     </a>
                   </p>
                 </div>
