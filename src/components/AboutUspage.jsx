@@ -1,6 +1,6 @@
 import { Container, Row, Col, Card, Image } from "react-bootstrap";
 import "../css/aboutuspage.css";
-import Galary from "c:/Users/Hp/Desktop/SA-east-website-project/src/components/galarySection";
+import Galary from "./GalarySection";
 
 import AbuImage from "../../public/assets/abu1.png";
 import AliImage from "../../public/assets/ali1.jpeg";
