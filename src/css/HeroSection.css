@@ -48,28 +48,28 @@ h3 {
 
 @keyframes image-change {
   0% {
-    background-image: url("/assets/hero_section/heroSection2.jpeg");
+    background-image: url("/assets/hero_section/heroSection1.jpeg");
   }
   15% {
-    background-image: url("/assets/hero_section/heroSection3.jpeg");
+    background-image: url("/assets/hero_section/heroSection2.jpeg");
   }
   30% {
-    background-image: url("/assets/hero_section/heroSection4.jpg");
+    background-image: url("/assets/hero_section/heroSection3.jpeg");
   }
   45% {
+    background-image: url("/assets/hero_section/heroSection4.jpg");
+  }
+  60% {
     background-image: url("/assets/hero_section/heroSection6.png");
   }
-  60% {
-    background-image: url("/assets/hero_section/heroSection5.jpeg");
-  }
-  60% {
+  75% {
     background-image: url("/assets/hero_section/heroSection7.png");
   }
-  75% {
+  90% {
     background-image: url("/assets/hero_section/heroSection8.jpg");
   }
   100% {
-    background-image: url("/assets/hero_section/heroSection2.jpeg");
+    background-image: url("/assets/hero_section/heroSection1.jpeg");
   }
 }
 .marquee {
