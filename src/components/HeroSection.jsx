@@ -3,7 +3,7 @@ const HeroSection = () => {
   return (
     <div>
       <section className="section-top">
-        <div className="content text-white">
+        <div className="content">
           <h1 className="sideLine">AL SHAMS AL AMNA ESTABLISHMENT</h1>
           <h3>FOR OPERATION AND MAINTENANCE</h3>
           <p className="ps-4">
