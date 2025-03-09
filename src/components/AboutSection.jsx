@@ -10,6 +10,8 @@ const About = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  
   return (
     <>
       <div className="about reveal" id="about">
