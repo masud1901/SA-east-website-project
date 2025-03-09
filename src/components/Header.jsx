@@ -8,7 +8,6 @@ const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isNavbarShrunk, setIsNavbarShrunk] = useState(false);
 
-  // Toggle the sidebar
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
