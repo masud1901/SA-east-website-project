@@ -26,6 +26,7 @@ const Component = () => {
           blurBorders={false}
           blurBoderColor={"#fff"}
         >
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugit aut harum labore facere, eveniet pariatur, earum aliquam debitis error non unde sapiente tempora minus impedit repellat itaque saepe? Perspiciatis quos sit temporibus veniam libero reiciendis quia commodi vero sed quaerat rerum fuga nisi, alias expedita optio atque quae cupiditate minima dignissimos consequatur labore officia. Ea doloribus ipsum tempore vero doloremque officiis, reprehenderit itaque delectus autem voluptate ullam consequuntur culpa labore ipsa id corrupti laudantium fuga rem quasi, cupiditate sequi quae voluptates. Ipsam placeat dicta, tenetur temporibus, explicabo qui ullam, eaque fuga rerum illo iste repellat itaque? Sed, ut aliquam!</div>
           <Slider.Slide>
             <img
               src={client1}
