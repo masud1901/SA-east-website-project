@@ -166,11 +166,11 @@ const AboutUs = () => {
                   <p className="text-center">ACCOUNTANT</p>
                   <p className="text-center">
                     <a
-                      href="tel:+966578209137
+                      href="tel:+966509252685
 "
                       className="phone-link"
                     >
-                      Phone: +966578209137
+                      Phone: +966509252685
                     </a>
                   </p>
                 </div>

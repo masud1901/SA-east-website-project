@@ -1,21 +1,86 @@
 .section-top {
-  height: calc(100vh - 90px);
-  width: 100%;
-  overflow: hidden;
   position: relative;
-  background-image: url("/assets/heroSection1.jpeg");
-  background-size: 100% 100%; /* Make the image cover the entire container */
-  background-position: top; /* Center the image within the container */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  animation: image-change 20s infinite ease-in-out;
+  height: 100vh; /* Ensures the slider takes up the full viewport height */
+  overflow: hidden; /* Prevents overflow from images */
+  width: 100%; /* Makes the slider span the full width of the screen */
+}
+
+.section-top img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Stretches the image to the full width of the container */
+  height: 100%; /* Stretches the image to the full height of the container */
+  object-fit: fill; /* Ensures the entire image is visible without cropping */
+  object-position: center; /* Centers the image within the container */
+  opacity: 0; /* Initial transparency for fade-in effect */
+  animation: fade-in 40s infinite; /* Applies the fade-in animation */
+}
+
+/* Define fade-in animation */
+.section-top img:nth-child(1) {
+  animation-delay: 0s;
+}
+.section-top img:nth-child(2) {
+  animation-delay: 3s;
+}
+.section-top img:nth-child(3) {
+  animation-delay: 6s;
+}
+.section-top img:nth-child(4) {
+  animation-delay: 9s;
+}
+.section-top img:nth-child(5) {
+  animation-delay: 12s;
+}
+.section-top img:nth-child(6) {
+  animation-delay: 15s;
+}
+.section-top img:nth-child(7) {
+  animation-delay: 18s;
+}
+.section-top img:nth-child(8) {
+  animation-delay: 21s;
+}
+.section-top img:nth-child(9) {
+  animation-delay: 24s;
+}
+.section-top img:nth-child(10) {
+  animation-delay: 27s;
+}
+.section-top img:nth-child(11) {
+  animation-delay: 30s;
+}
+.section-top img:nth-child(12) {
+  animation-delay: 33s;
+}
+.section-top img:nth-child(13) {
+  animation-delay: 37s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .content {
   position: absolute;
   top: 30%;
   left: 7%;
-  color: rgb(10, 10, 247);
-  animation: slideIn 1s ease-out;
+  color: rgba(255, 0, 0, 0.997);
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
@@ -25,7 +90,6 @@
 h3 {
   position: relative;
   padding-left: 1.7rem;
-  /* Space for the vertical line */
 }
 
 .sideLine::before {
@@ -35,62 +99,10 @@ h3 {
   top: 0;
   width: 0.4rem;
   height: 100%;
-  background-color: #d71c0e; /* You can change this color if needed */
+  background-color: #d71c0e;
 }
 
-@keyframes slideIn {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes image-change {
-  0% {
-    background-image: url("/assets/hero_section/heroSection1.jpeg");
-  }
-  7% {
-    background-image: url("/assets/hero_section/heroSection2.jpeg");
-  }
-  14% {
-    background-image: url("/assets/hero_section/heroSection3.jpeg");
-  }
-  21% {
-    background-image: url("/assets/hero_section/p1.jpeg");
-  }
-  28% {
-    background-image: url("/assets/hero_section/p2.jpeg");
-  }
-  35% {
-    background-image: url("/assets/hero_section/p3.jpeg");
-  }
-  42% {
-    background-image: url("/assets/hero_section/p4.jpeg");
-  }
-  50% {
-    background-image: url("/assets/hero_section/p5.jpeg");
-  }
-  57% {
-    background-image: url("/assets/hero_section/p6.jpeg");
-  }
-  65% {
-    background-image: url("/assets/hero_section/heroSection4.jpg");
-  }
-  72% {
-    background-image: url("/assets/hero_section/heroSection6.png");
-  }
-  80% {
-    background-image: url("/assets/hero_section/heroSection7.png");
-  }
-  87% {
-    background-image: url("/assets/hero_section/heroSection8.jpg");
-  }
-  100% {
-    background-image: url("/assets/hero_section/heroSection1.jpeg");
-  }
-}
+/* Marquee Section */
 .marquee {
   width: 100%;
   overflow: hidden;
@@ -121,16 +133,13 @@ h3 {
   }
 }
 
+/* Responsive Design */
 @media (max-width: 700px) {
   .section-top {
-    height: 70vh;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    background-image: url("/assets/heroSection1.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    animation: image-change 20s infinite ease-in-out;
+    height: 100vh; /* Keeps the full height for smaller screens */
+  }
+
+  .content {
+    top: 20%; /* Adjusts content position for better visibility on small screens */
   }
 }
