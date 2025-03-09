@@ -1,0 +1,79 @@
+/* General Styles */
+.all-notices-section {
+  background-color: #fbfbfb;
+}
+.all-notices-title {
+  font-size: 2rem;
+  color: #023e8a;
+  font-weight: bold;
+}
+
+.notices-list {
+  padding-left: 0;
+  margin: 0;
+}
+
+.notice-item {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notice-link {
+  color: #023e8a;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: left; /* Ensure title aligns to the left */
+}
+
+.notice-datee {
+  color: #6c757d; /* Gray color for date */
+  text-align: right; /* Align date to the right */
+}
+
+/* Ensure spacing and alignment */
+.notice-item .notice-link,
+.notice-item .notice-date {
+  flex: 1;
+}
+
+.notice-date {
+  margin-left: 1rem; /* Space between title and date */
+}
+
+.pagination {
+  margin-top: 1rem;
+}
+
+.page-item.active .page-link {
+  background-color: #023e8a;
+  color: white;
+}
+
+.page-link {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  color: #023e8a;
+}
+
+.page-link:hover {
+  background-color: #e9ecef;
+}
+
+@media (max-width: 768px) {
+  .all-notices-title {
+    font-size: 1.5rem;
+  }
+
+  .notice-item {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .custom-notice-modal-content {
+    width: 90%;
+    padding: 1rem;
+  }
+}

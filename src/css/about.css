@@ -1,0 +1,66 @@
+.about {
+  background-image: linear-gradient(
+    to bottom,
+    #d9dee9 0%,
+    #ffffff 80%,
+    #ffffff 80%,
+    #ffffff 100%
+  );
+  height: 30rem;
+}
+.split {
+  display: flex;
+  margin-left: 7.5rem;
+  margin-right: 7rem;
+  gap: 50px;
+}
+.images {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.write h1 {
+  color: #023e8a;
+}
+.write p {
+  text-align: justify;
+  color: #ce2216;
+}
+.company {
+  font-size: 1.2rem;
+  color: #023e8a;
+}
+.write button {
+  color: #023e8a;
+  border: none;
+  padding: 15px 30px;
+  background-color: rgba(169, 166, 166, 0.304);
+  border-radius: 0.3rem;
+  font-weight: bold;
+}
+.write button:hover {
+  color: white;
+  background-color: #023e8a;
+}
+@media (max-width: 1100px) {
+  .about {
+    background-image: linear-gradient(
+      to bottom,
+      #fbfbfb 0%,
+      #fbfbfb 80%,
+      #ffffff 80%,
+      #ffffff 100%
+    );
+    height: 32rem;
+  }
+  .split {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    gap: 50px;
+  }
+  .images {
+    display: none;
+  }
+}
