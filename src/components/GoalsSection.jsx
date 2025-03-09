@@ -1,20 +1,46 @@
-const GoalsSection = () => {
+import "../css/goals.css";
+
+const Goals = () => {
   return (
-    <section id="goals" className="goals-section py-5 bg-light">
+    <section className="goals-section reveal">
+      <div className="goals-background">
+        <h2 className="goals-title">OUR GOALS</h2>
+      </div>
       <div className="container">
-        <h2 className="text-center mb-5">Our Goals</h2>
-        <div className="row text-center">
-          <div className="col-md-4">
-            <h4>Goal Title 1</h4>
-            <p>Description of the first goal.</p>
+        <div className="row justify-content-center">
+          <div className="col-12 col-md-4">
+            <div className="goal-card goal-card-1">
+              <h3 className="goal-card-title">Provide The Best Products</h3>
+              <p className="goal-card-text">
+                Our goals are to provide the best products, services, and
+                technology in the Kingdom of Saudi Arabia and the other markets
+                in which our operation is done.
+              </p>
+            </div>
           </div>
-          <div className="col-md-4">
-            <h4>Goal Title 2</h4>
-            <p>Description of the second goal.</p>
+          <div className="col-12 col-md-4">
+            <div className="goal-card goal-card-2">
+              <h3 className="goal-card-title">
+                Maintaining Distinguished Partnerships
+              </h3>
+              <p className="goal-card-text">
+                Maintaining distinguished partnerships with our customers,
+                employees, and partners in the Kingdom of Saudi Arabia and other
+                markets.
+              </p>
+            </div>
           </div>
-          <div className="col-md-4">
-            <h4>Goal Title 3</h4>
-            <p>Description of the third goal.</p>
+          <div className="col-12 col-md-4">
+            <div className="goal-card goal-card-3">
+              <h3 className="goal-card-title">
+                Provide Customers with the Best Products
+              </h3>
+              <p className="goal-card-text">
+                Our vision includes providing customers with the premium
+                products and specialized services they need in today{"'"}s
+                world.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -22,4 +48,4 @@ const GoalsSection = () => {
   );
 };
 
-export default GoalsSection;
+export default Goals;

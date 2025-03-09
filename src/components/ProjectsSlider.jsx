@@ -1,6 +1,9 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
+import { collection, getDocs, query, orderBy, limit } from "firebase/firestore";
+import { db } from "../firebase"; // Update this path
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -8,56 +11,41 @@ import "swiper/css/navigation";
 import "../css/ProjectsSlider.css";
 
 const TrendingSlider = () => {
+  const [slides, setSlides] = useState([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const projectsCollection = collection(db, "projects");
+      const projectsQuery = query(
+        projectsCollection,
+        orderBy("createdAt", "desc"),
+        limit(4)
+      );
+      const querySnapshot = await getDocs(projectsQuery);
+      const projectsList = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setSlides(projectsList);
+    };
+
+    fetchProjects();
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const handleButtonClick = () => {
-    // Add your button click logic here
     console.log("Button clicked!");
   };
-  const slides = [
-    {
-      img: "src/assets/heroSection1.jpeg",
-      price: "$20",
-      name: "Special Pizza",
-      rating: 4.5,
-    },
-    {
-      img: "src/assets/heroSection2.jpeg",
-      price: "$20",
-      name: "A Guy Working",
-      rating: 4.5,
-    },
-    {
-      img: "src/assets/heroSection3.jpeg",
-      price: "$40",
-      name: "A Guy Welding",
-      rating: 4.5,
-    },
-    {
-      img: "src/assets/heroSection1.jpeg",
-      price: "$20",
-      name: "A Guy",
-      rating: 4.5,
-    },
-    {
-      img: "src/assets/heroSection2.jpeg",
-      price: "$20",
-      name: "Meat Ball",
-      rating: 4.5,
-    },
-    {
-      img: "src/assets/heroSection3.jpeg",
-      price: "$40",
-      name: "Burger",
-      rating: 4.5,
-    },
-  ];
 
   return (
-    <section id="Projects">
-      <div className="container">
-        {/* <h3 className="text-center section-subheading">- popular Delivery -</h3> */}
-        <h1 className="text-center section-heading">Projects</h1>
+    <section id="CustomProjects">
+      <div className="custom-projects-container reveal">
+        <h1 className="custom-section-heading">Projects</h1>
       </div>
-      <div className="container">
+      <div className="custom-swiper-container reveal">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -70,50 +58,46 @@ const TrendingSlider = () => {
             depth: 100,
             modifier: 2.5,
           }}
-          pagination={{ el: ".swiper-pagination", clickable: true }}
+          pagination={{ el: ".custom-swiper-pagination", clickable: true }}
           navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".custom-swiper-button-next",
+            prevEl: ".custom-swiper-button-prev",
           }}
           modules={[EffectCoverflow, Pagination, Navigation]}
-          className="projects-slider"
+          className="custom-projects-slider"
         >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={index} className="projects-slide">
-              <div className="projects-slide-img">
-                <img src={slide.img} alt="projects" />
+          {slides.map((slide) => (
+            <SwiperSlide key={slide.id} className="custom-projects-slide">
+              <div className="custom-projects-slide-img">
+                <img src={slide.imgURL} alt={slide.title} />
               </div>
-              <div className="projects-slide-content">
-                {/* <h1 className="food-price">{slide.price}</h1> */}
-                <div className="projects-slide-content-bottom">
-                  <h2 className="food-name">{slide.name}</h2>
-                  <h3 className="food-rating">
-                    <span>{slide.rating}</span>
-                    <div className="rating">
-                      {[...Array(5)].map((_, i) => (
-                        <ion-icon key={i} name="star"></ion-icon>
-                      ))}
-                    </div>
-                  </h3>
-                </div>
+              <div className="custom-projects-slide-content">
+                <h2>{slide.title}</h2>
+                <p>{slide.details || ""}</p>
               </div>
             </SwiperSlide>
           ))}
-          <div className="projects-slider-control">
-            <div className="swiper-button-prev slider-arrow">
+          <div className="custom-projects-slider-control">
+            <div className="custom-swiper-button-prev custom-slider-arrow">
               <ion-icon name="arrow-back-outline"></ion-icon>
             </div>
-            <div className="swiper-button-next slider-arrow">
+            <div className="custom-swiper-pagination"></div>
+            <div className="custom-swiper-button-next custom-slider-arrow">
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </div>
-            <div className="swiper-pagination"></div>
           </div>
         </Swiper>
       </div>
-      <div className="button-container">
-        <button className="view-all-button" onClick={handleButtonClick}>
-          View All Projects
-        </button>
+      <div className="custom-button-projects-container">
+        <Link
+          to="/project"
+          onClick={() => {
+            scrollToTop();
+            handleButtonClick();
+          }}
+        >
+          <button className="custom-view-all-button">View All Projects</button>
+        </Link>
       </div>
     </section>
   );

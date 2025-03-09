@@ -1,0 +1,114 @@
+.notice-body {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #023e8a;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.management-cards {
+  margin-bottom: 1.5rem;
+}
+.our-team {
+  margin-bottom: 0.5rem;
+  height: 100%;
+  border-radius: 15px;
+  padding: 30px 0;
+  background: linear-gradient(135deg, #80a0cb 0%, #1e3c72 100%);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.our-team:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+.our-team .picture {
+  display: inline-block;
+  height: 10rem;
+  width: 10rem;
+  margin-bottom: 30px;
+  z-index: 1;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.our-team .picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.9s ease 0s, box-shadow 0.3s ease;
+}
+
+.our-team .picture::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #023e8a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+  opacity: 0.9;
+}
+
+.our-team:hover .picture::before {
+  transform: scale(1);
+}
+
+.our-team:hover .picture img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+
+.our-team .name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f7f5ec;
+  margin-bottom: 10px;
+}
+
+.our-team .title {
+  display: block;
+  font-size: 1.2rem;
+  color: #ced0e0;
+  text-transform: capitalize;
+}
+
+/* Responsive design */
+@media (max-width: 830px) {
+  .our-team {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    height: auto;
+    width: 100%; /* Adjust the height to auto for smaller screens */
+  }
+
+  .col-12.col-sm-6.col-md-4.col-lg-4,
+  .col-12.col-lg-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .reveal {
+    opacity: 1;
+  }
+}

@@ -16,7 +16,7 @@
   transition: padding 0.3s ease, transform 0.3s ease;
 }
 .logo {
-  height: auto;
+  height: 4rem;
   width: 18rem;
 }
 .logo-item {
@@ -47,7 +47,7 @@
   top: -10%;
   right: -100%;
   width: 16rem;
-  height: 100vh;
+  height: 110vh;
   background-color: #366199;
   overflow-x: hidden;
   transition: right 0.3s ease;
@@ -125,6 +125,8 @@
   .logo {
     width: 150px;
     height: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   .logo-item {
     margin-left: 1rem;

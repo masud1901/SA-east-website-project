@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-import "../css/header.css";
+import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import logo from "../../public/assets/logo.PNG";
+import "../css/header.css";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -39,13 +41,32 @@ const Header = () => {
     };
   }, []);
 
+  // Scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <div className="hotline-section">
         <div className="container">
           <div className="row">
             <div className="col text-end">
-              <p className="hotline-text">Hotline: +123 456 7890</p>
+              <p className="hotline-text">
+                <a href="tel:+966568315773" className="hotline-text">
+                  Hotline: +966568315773,
+                </a>
+                <a href="tel:+966573083568" className="hotline-text">
+                  +966573083568
+                </a>
+                <br />
+                <a
+                  href="mailto:support@saestgroup.com"
+                  className="hotline-text"
+                >
+                  Email: support@saestgroup.com
+                </a>
+              </p>
             </div>
           </div>
         </div>
@@ -57,26 +78,38 @@ const Header = () => {
       >
         <div className="d-flex justify-content-between align-items-center fw-bold">
           <div className="logo-item">
-            <a className="navbar-brand " href="">
-              <img src="/src/assets/logo.PNG" alt="" className="logo" />
-            </a>
+            <Link to="/home" className="navbar-brand" onClick={scrollToTop}>
+              <img src={logo} alt="" className="logo" />
+            </Link>
           </div>
           <div>
             <nav className="navbar mt-2 pe-5 me-5 d-none d-md-flex">
-              <a href="#">JOB NOTICE</a>
-              <a href="#Projects">PROJECTS</a>
-              <a href="#About">ABOUT</a>
-              <a href="#">SERVICES</a>
-              <a href="#">GOALS</a>
-              <a href="#">CONTACT</a>
-              <a href="#">
+              <Link to="/home" onClick={scrollToTop}>
+                HOME
+              </Link>
+              <a href="/all-notices" onClick={scrollToTop}>
+                JOB NOTICE
+              </a>
+              <Link to="/project" onClick={scrollToTop}>
+                PROJECT
+              </Link>
+              <Link to="/about" onClick={scrollToTop}>
+                ABOUT
+              </Link>
+              <Link to="/service" onClick={scrollToTop}>
+                SERVICES
+              </Link>
+              <Link to="/contact" onClick={scrollToTop}>
+                CONTACT
+              </Link>
+              {/* <a href="/home" onClick={scrollToTop}>
                 <img
-                  src="/src/assets/arabic.png"
+                  src={arabicImage}
                   alt=""
                   style={{ width: "35px", height: "auto" }}
                 />
                 ENGLISH
-              </a>
+              </a> */}
             </nav>
             <button
               className="navbar-toggler d-md-none me-2"
@@ -93,32 +126,74 @@ const Header = () => {
         <button className="close-btn" onClick={toggleSidebar}>
           ×
         </button>
-        <a href="" onClick={toggleSidebar}>
+        <Link
+          to="/home"
+          onClick={() => {
+            scrollToTop();
+            toggleSidebar();
+          }}
+        >
+          HOME
+        </Link>
+        <Link
+          to="/all-notices"
+          onClick={() => {
+            scrollToTop();
+            toggleSidebar();
+          }}
+        >
           JOB NOTICE
-        </a>
-        <a href="#projects" onClick={toggleSidebar}>
+        </Link>
+        <Link
+          to="/project"
+          onClick={() => {
+            scrollToTop();
+            toggleSidebar();
+          }}
+        >
           PROJECTS
-        </a>
-        <a href="#about" onClick={toggleSidebar}>
+        </Link>
+        <Link
+          to="/about"
+          onClick={() => {
+            scrollToTop();
+            toggleSidebar();
+          }}
+        >
           ABOUT
-        </a>
-        <a href="#services" onClick={toggleSidebar}>
+        </Link>
+        <Link
+          to="/service"
+          onClick={() => {
+            scrollToTop();
+            toggleSidebar();
+          }}
+        >
           SERVICES
-        </a>
-        <a href="#goals" onClick={toggleSidebar}>
-          GOALS
-        </a>
-        <a href="#contact" onClick={toggleSidebar}>
+        </Link>
+        <Link
+          to="/contact"
+          onClick={() => {
+            scrollToTop();
+            toggleSidebar();
+          }}
+        >
           CONTACT
-        </a>
-        <a href="" onClick={toggleSidebar}>
+        </Link>
+        {/* <a
+          href=""
+          onClick={() => {
+            scrollToTop();
+            toggleSidebar();
+          }}
+        >
           <img
-            src="/src/assets/arabic.png"
+            src={arabicImage}
             alt=""
             style={{ width: "35px", height: "auto" }}
           />
           ENGLISH
-        </a>
+        </a> */}
       </div>
     </>
   );
